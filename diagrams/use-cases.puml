@@ -1,1 +1,122 @@
+@startuml UseCaseOverview
+!include <C4/C4_Context>
 
+LAYOUT_WITH_LEGEND()
+
+actor :traveller: as tr
+actor :external person: as ep
+actor :anaylst: as an
+actor :help me agency: as hma
+actor :travel system: as ts
+actor :system: as sy
+
+rectangle RoadWarior {
+  usecase RIS as "register in systems
+  ..Requirements..
+  "
+  usecase lis as "login in system
+  ..Requirements..
+  "
+  usecase vd as "view dashboard
+  ..Requirements..
+  "
+    usecase mr as "manage reservatioins
+  ..Requirements..
+  "
+  usecase mt as "manage trip
+  ..Requirements..
+  "
+    usecase stsn as "share trip via social networks
+  ..Requirements..
+  "
+  usecase patep as "provide access to external people
+  ..Requirements..
+  "
+
+  usecase cmha as "configure help me! agency
+  ..Requirements..
+  "
+  usecase ater as "access to end of year reports
+  ..Requirements..
+  "
+
+  usecase dfawfe as "define filter and whitelist for email
+  ..Requirements..
+  "
+  usecase coctha as "chat or call to help! agency
+  ..Requirements..
+  "
+
+  usecase atsti as "access to shared trop information
+  ..Requirements..
+  "
+
+  usecase atar as "access to analytic reports
+  ..Requirements..
+  "
+
+  usecase at as "analyse trends
+  ..Requirements..
+  "
+  usecase rcocoefc as "recieve chats or calls or email from client
+  ..Requirements..
+  "
+
+  usecase riauaht as "receive information about user and his trips
+  ..Requirements..
+  "
+  usecase utd as "update travel data
+  ..Requirements..
+  "
+
+  usecase pe as "poll emails
+  ..Requirements..
+  "
+
+    usecase afawfe as "apply filter and whitelist for emails
+  ..Requirements..
+  "
+  usecase pnacit as "push notification about changes in trip
+  ..Requirements..
+  "
+    usecase rft as "remove finished trip
+  ..Requirements..
+  "
+
+  usecase cad as "collect analytical data
+  ..Requirements..
+  "
+
+
+}
+
+sy --> cad
+sy --> rft
+sy --> pnacit
+sy --> afawfe
+sy --> pe
+
+tr --> coctha
+tr --> RIS
+tr --> lis
+tr --> vd
+tr --> mr
+tr --> mt
+tr --> stsn
+tr --> patep
+tr --> cmha
+tr --> coctha
+tr --> ater
+tr --> dfawfe
+
+ep --> atsti
+
+an --> at
+an --> atar
+
+hma --> rcocoefc
+hma --> riauaht
+
+ts --> utd
+
+@enduml
