@@ -54,25 +54,24 @@ Non functional requirements are derived from functional and technical requiremen
 
 # Requirements overview
 
-| FR/TR   | Availability | Scalability | Performance | Consistency | Cost | Evolvability |
-| ------- | -----------  | ----------- | ----------- | ------- | ---- | ------------ |
-|FR0      |             |             |             |         |      |              |
-|FR1      |             |             |             |         |      |              |
-|FR2      |             |             |             |         |      |              |
-|FR3      |             |             |             |         |      |              |
-|FR4      |             |             |             |         |      |              |
-|FR5      |             |             |             |         |      |              |
-|FR6      |             |             |             |         |      |              |
-|FR7      |             |             |             |         |      |              |
-|FR8      |             |             |             |         |      |              |
-|FR9      |             |             |             |         |      |              |
-|FR10     |             |             |             |         |      |              |
-|FR11     |             |             |             |         |      |              |
-|FR12     |             |             |             |         |      |              |
-|FR1      |             |             |             |         |      |              |
-|TR1      |             |             |             |         |      |              |
-|TR2      |             |             |             |         |      |              |
-|TR3      |             |             |             |         |      |              |
-|TR4      |             |             |             |         |      |              |
-|TR5      |             |             |             |         |      |              |
-|TR6      |             |             |             |         |      |              |
+| FR/TR  | Availability | Scalability | Performance | Consistency | Cost | Evolvability |
+| ------ | ------------ | ----------- | ----------- | ----------- | ---- | ------------ |
+| [FR1]  | x            |             |             | x           | x    | x            |
+| [FR2]  |              |             |             |             |      |              |
+| [FR3]  |              |             |             |             |      |              |
+| [FR4]  |              |             |             | x           |      | x            |
+| [FR5]  |              |             |             | x           |      |              |
+| [FR6]  |              |             |             | x           |      |              |
+| [FR7]  |              |             |             |             |      | x            |
+| [FR8]  |              |             |             |             |      |              |
+| [FR9]  |              |             |             |             |      |              |
+| [FR10] |              |             |             |             |      | x            |
+| [FR11] |              |             |             |             |      |              |
+| [FR12] |              |             |             |             |      | x            |
+| [FR13] |              |             |             |             |      | x            |
+| [TR1]  |              |             |             |             |      | x            |
+| [TR2]  |              | x           |             |             |      |              |
+| [TR3]  |              | x           |             |             |      |              |
+| [TR4]  |              |             |             |             |      |              |
+| [TR5]  |              |             |             | x           |      |              |
+| [TR6]  |              |             | x           |             |      |              |
