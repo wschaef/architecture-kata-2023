@@ -23,7 +23,7 @@
 
 ## Technical Context
 
-![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/adrs/diagrams/context.puml)
+![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/context.puml)
 
 **\<Diagram or Table>**
 
