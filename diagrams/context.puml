@@ -1,0 +1,34 @@
+@startuml
+!include <C4/C4_Context>
+
+LAYOUT_WITH_LEGEND()
+
+Person(customer, "Customer", "Private users using Road Warrior to manage their trips") 
+Person_Ext(partnerUser, "Partners", " Business users accessing analytical data")
+System(system, "Road Warrior", "A platform enabling customers to manage their trips across multiple travel related systems") 
+System_Ext(travelAgency, "Travel Agency")
+System_Ext(emailProvider, "Email Provider")
+System_Ext(hotels, "Hotels")
+System_Ext(carRentals, "Car rentals")
+System_Ext(airlines, "Airlines")
+System_Ext(travelSystems, "Travel Systems", "(i.e, SABRE, APOLLO)")
+System_Ext(socialMedia, "Social Media")
+System_Ext(partnerSystems, "Partner Systems", "access analytical data")
+System_Ext(idps, "Identity Providers", "preferred indentity provider of the customer")
+
+customer --> system : Uses Mobile Apps or Web to manage own trips
+customer --> idps: login
+partnerUser --> system: access analytical data
+partnerUser --> partnerSystems: use
+system --> travelSystems : integrate
+system -L-> idps: uses for autentication 
+travelSystems --> travelAgency : integrate
+travelSystems --> hotels : integrate
+travelSystems --> carRentals : integrate
+travelSystems --> airlines : integrate
+system --> emailProvider: integrate
+system --> socialMedia: share trips
+partnerSystems -L-> system: access analytical data
+
+@enduml
+
