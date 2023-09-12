@@ -28,11 +28,11 @@ rectangle RoadWarior {
   usecase mt as "manage trip
   ..Requirements..
   "
-  }
-  together  {
     usecase stsn as "share trip via social networks
   ..Requirements..
   "
+  }
+  together  {
   usecase patep as "provide access to external people
   ..Requirements..
   "
@@ -47,11 +47,12 @@ rectangle RoadWarior {
   usecase dfawfe as "define filter and whitelist for email
   ..Requirements..
   "
-    }
-  together {
-  usecase coctha as "chat or call to help! agency
+    usecase coctha as "chat or call to help! agency
   ..Requirements..
   "
+
+    }
+  together {
 
   usecase atsti as "access to shared trop information
   ..Requirements..
@@ -64,9 +65,6 @@ rectangle RoadWarior {
   usecase at as "analyse trends
   ..Requirements..
   "
-  usecase rcocoefc as "recieve chats or calls or email from client
-  ..Requirements..
-  "
   }
   together {
   usecase riauaht as "receive information about user and his trips
@@ -75,6 +73,11 @@ rectangle RoadWarior {
   usecase utd as "update travel data
   ..Requirements..
   "
+  usecase rcocoefc as "recieve chats or calls or email from client
+  ..Requirements..
+  "
+  }
+  together {
 
   usecase pe as "poll emails
   ..Requirements..
@@ -86,8 +89,7 @@ rectangle RoadWarior {
   usecase pnacit as "push notification about changes in trip
   ..Requirements..
   "
-    }
-  together {
+    
     usecase rft as "remove finished trip
   ..Requirements..
   "
@@ -99,7 +101,7 @@ rectangle RoadWarior {
     }
 }
 
-sy --> cad
+sy -R-> cad
 sy --> rft
 sy --> pnacit
 sy --> afawfe
@@ -128,9 +130,9 @@ hma --> riauaht
 ts --> utd
 
 'Include dependencies, so that they are not in a single line
-RIS -[hidden]- stsn
-stsn -[hidden]- coctha
-coctha -[hidden]- riauaht 
+RIS -[hidden]- patep
+patep -[hidden]- atsti
+atsti -[hidden]- riauaht 
 riauaht -[hidden]- rft
 
 @enduml
