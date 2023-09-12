@@ -3,6 +3,8 @@
 
 LAYOUT_WITH_LEGEND()
 
+title System Context diagram for Road Warrio a trip manament platform
+
 Person(customer, "Customer", "Private users using Road Warrior to manage their trips") 
 Person_Ext(partnerUser, "Partners", " Business users accessing analytical data")
 System(system, "Road Warrior", "A platform enabling customers to manage their trips across multiple travel related systems") 
