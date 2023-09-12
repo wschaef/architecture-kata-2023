@@ -43,6 +43,7 @@ Non functional requirements are derived from functional and technical requiremen
 - **[NFR4]** Consistency
   -  Travel updates must be presented in the app within 5 minutes of generation by the source <- **[TR5]**
   -  Once the trip is complete, the items should automatically be removed from the dashboard <- **[FR5][FR6]**
+  -  End Year report must be consistent with active and inactive trips <- **[FR9]**
 - **[NFR5]** Cost
   - system must by cost efficient <- **[FR1]** 
 - **[NFR6]** Evolvability
@@ -56,22 +57,22 @@ Non functional requirements are derived from functional and technical requiremen
 
 | FR/TR  | Availability | Scalability | Performance | Consistency | Cost | Evolvability |
 | ------ | ------------ | ----------- | ----------- | ----------- | ---- | ------------ |
-| [FR1]  | x            |             |             | x           | x    | x            |
-| [FR2]  |              |             |             |             |      |              |
-| [FR3]  |              |             |             |             |      |              |
-| [FR4]  |              |             |             | x           |      | x            |
+| [FR1]  |              |             |             |             | x    | x            |
+| [FR2]  |              |             |             |             |      | x            |
+| [FR3]  |              |             |             |             |      | x            |
+| [FR4]  |              |             |             |             |      | x            |
 | [FR5]  |              |             |             | x           |      |              |
 | [FR6]  |              |             |             | x           |      |              |
 | [FR7]  |              |             |             |             |      | x            |
-| [FR8]  |              |             |             |             |      |              |
-| [FR9]  |              |             |             |             |      |              |
-| [FR10] |              |             |             |             |      | x            |
-| [FR11] |              |             |             |             |      |              |
+| [FR8]  |              |             |             |             |      | x            |
+| [FR9]  |              |             |             | x           |      |              |
+| [FR10] |              |             |             |             |      |              |
+| [FR11] |              |             |             |             |      | x            |
 | [FR12] |              |             |             |             |      | x            |
 | [FR13] |              |             |             |             |      | x            |
 | [TR1]  |              |             |             |             |      | x            |
 | [TR2]  |              | x           |             |             |      |              |
 | [TR3]  |              | x           |             |             |      |              |
-| [TR4]  |              |             |             |             |      |              |
+| [TR4]  | x            |             |             |             |      |              |
 | [TR5]  |              |             |             | x           |      |              |
 | [TR6]  |              |             | x           |             |      |              |
