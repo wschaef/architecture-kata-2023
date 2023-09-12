@@ -44,6 +44,7 @@ Non functional requirements are derived from functional and technical requiremen
   -  Travel updates must be presented in the app within 5 minutes of generation by the source <- **[TR5]**
   -  Once the trip is complete, the items should automatically be removed from the dashboard <- **[FR5][FR6]**
   -  End Year report must be consistent with active and inactive trips <- **[FR9]**
+  -  Analytical data must be consistent with operational data <- **[FR10]**
 - **[NFR5]** Cost
   - system must by cost efficient <- **[FR1]** 
 - **[NFR6]** Evolvability
@@ -52,6 +53,7 @@ Non functional requirements are derived from functional and technical requiremen
   -  adding new features to ui must be efficient <- **[FR1][FR8][FR11]**
   -  adding new import source for trips or trip parts must be efficient <- **[FR2],[FR3]** //we do not believe that the majority of the users will accept access to their emails, and assume that this requirement will evolve
   -  adding new social media sharing functionality must be efficient <- **[FR7]**
+  -  changing data structure of the analytical data should be efficient <- **[FR10]**
 
 # Requirements overview
 
@@ -66,7 +68,7 @@ Non functional requirements are derived from functional and technical requiremen
 | [FR7]  |              |             |             |             |      | x            |
 | [FR8]  |              |             |             |             |      | x            |
 | [FR9]  |              |             |             | x           |      |              |
-| [FR10] |              |             |             |             |      |              |
+| [FR10] |              |             |             | x           |      | x            |
 | [FR11] |              |             |             |             |      | x            |
 | [FR12] |              |             |             |             |      | x            |
 | [FR13] |              |             |             |             |      | x            |
