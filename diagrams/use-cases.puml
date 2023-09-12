@@ -11,7 +11,8 @@ actor :travel system: as ts
 actor :system: as sy
 
 rectangle RoadWarior {
-  usecase RIS as "register in systems
+    together {
+  usecase RIS as "register in systems 
   ..Requirements..
   "
   usecase lis as "login in system
@@ -20,12 +21,15 @@ rectangle RoadWarior {
   usecase vd as "view dashboard
   ..Requirements..
   "
+  
     usecase mr as "manage reservatioins
   ..Requirements..
   "
   usecase mt as "manage trip
   ..Requirements..
   "
+  }
+  together  {
     usecase stsn as "share trip via social networks
   ..Requirements..
   "
@@ -43,6 +47,8 @@ rectangle RoadWarior {
   usecase dfawfe as "define filter and whitelist for email
   ..Requirements..
   "
+    }
+  together {
   usecase coctha as "chat or call to help! agency
   ..Requirements..
   "
@@ -61,7 +67,8 @@ rectangle RoadWarior {
   usecase rcocoefc as "recieve chats or calls or email from client
   ..Requirements..
   "
-
+  }
+  together {
   usecase riauaht as "receive information about user and his trips
   ..Requirements..
   "
@@ -79,6 +86,8 @@ rectangle RoadWarior {
   usecase pnacit as "push notification about changes in trip
   ..Requirements..
   "
+    }
+  together {
     usecase rft as "remove finished trip
   ..Requirements..
   "
@@ -87,7 +96,7 @@ rectangle RoadWarior {
   ..Requirements..
   "
 
-
+    }
 }
 
 sy --> cad
@@ -96,7 +105,6 @@ sy --> pnacit
 sy --> afawfe
 sy --> pe
 
-tr --> coctha
 tr --> RIS
 tr --> lis
 tr --> vd
@@ -118,5 +126,11 @@ hma --> rcocoefc
 hma --> riauaht
 
 ts --> utd
+
+'Include dependencies, so that they are not in a single line
+RIS -[hidden]- stsn
+stsn -[hidden]- coctha
+coctha -[hidden]- riauaht 
+riauaht -[hidden]- rft
 
 @enduml
