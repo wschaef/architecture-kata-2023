@@ -2,6 +2,8 @@
 
 ## Requirements Overview
 
+[List of functional, technical and non functional requirements](requirements.md)
+
 ## Quality Goals
 
 ## Stakeholders
