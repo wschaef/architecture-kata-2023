@@ -7,11 +7,11 @@
 | UC03 | View dashboard | Traveller gets an overview of his trips. | Traveller | FR6 |
 | UC04 | Manage reservations | Traveller add, removes reservations manually. | Traveller | FR6 |
 | UC05 | Manage trip | Traveller creates trips, add new reservation to it, etc. | Traveller | FR6 |
-| UC06 | Share trip via social networks | Traveller transfers his trip to social media  | Traveller | FR7 |
-| UC07 | Provide access to external peopl | Traveller gives a direct link to a person to view his trip. | Traveller | FR7 |
+| UC06 | Share trip via social networks | Traveller transfers his trip to social media.  | Traveller | FR7 |
+| UC07 | Provide access to external people | Traveller gives a direct link to a person to view his trip. | Traveller | FR7 |
 | UC08 | Access end of year report | Traveller view the result of the yearly report on his trips. | Traveller | FR9 |
 | UC09 | Define filter and whitelist for email | Traveller configures the email poll, including the filter and whitelisting. | Traveller | FR3 |
-| UC11 | Access to shared trip information | External Person view a trip of a Traveller | External Person | FR7 |
+| UC11 | Access to shared trip information | External Person view a trip of a Traveller. | External Person | FR7 |
 | UC12 | Access to analytic reports | Analyst views analytic reports from the system. | Analyst | FR10 |
 | UC13 | Analyse trends | is this redundant and not needed? | Analyst | FR10 |
 | UC14 | Update travel data | System updates the received data for a reservation. | Travel System | FR4 |
