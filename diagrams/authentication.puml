@@ -1,0 +1,47 @@
+@startuml
+autonumber "<font color=magenta> <b> [00]"
+
+title authentication using delegation from internal IDP to a 3rd party IDP using nested authorization code grant flow
+
+participant User as user
+participant Device as device
+participant "Backend for Frontend \n BFF" as bff
+participant "internal IDP" as IDP1
+participant "3rd party IDP" as IDP2
+
+
+=== confidential client authentication flow ==
+
+user -> device: triggers login 
+group bff code flow with internal IDP
+    device -> bff: login
+    device <- bff: redirect to internal IDP
+    device -> IDP1:  authorization code request to /authorize
+    device <- IDP1: Username input page (identifier first pattern)
+    user <- device: Ask for username input
+    user -> device: Enter username
+    device -> IDP1: username
+    IDP1 -> IDP1: derive the 3rd party IDP from username
+    group internal IDP code flow with 3rd party IDP
+        device <- IDP1: redirect to 3rd party IDP (including username as login_hint)
+        device -> IDP2: authorization code request to /authorize
+        device <- IDP2: Credential input page
+        user <- device: Ask for credential input
+        user -> device: enter credentials
+        device -> IDP2: credentials
+        IDP2 -> IDP2: check credentials
+        device <- IDP2: redirect with authorization code (from 3rd party for internal)
+        device -> IDP1: redirect_uri
+        IDP1 -> IDP2: get tokens with authorization code
+        IDP1 <- IDP2: tokens
+    end group
+    IDP1 -> IDP1: map 3rd party tokens to internal tokens
+    device <- IDP1: redirect with authorization code (from internal for bff)
+    device -> bff: redirect_uri
+    bff -> IDP1: get tokens
+    bff <- IDP1: tokens (from internal)
+end group
+bff -> bff: save tokens in user session
+bff -> device: starting page or requested page
+
+@enduml

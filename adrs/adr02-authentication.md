@@ -30,7 +30,7 @@ The critical decision criteria include:
 
 Options:
 
-1. Allow users to create user accounts in "Road Warrior" by completing a registration form.
+1. Offer users to create user accounts in "Road Warrior" by completing a registration form.
 2. Employ third-party accounts (e.g., Google, Apple, etc.) for user authentication.
 
 ## Decision
@@ -45,6 +45,9 @@ We have identified several advantages in this approach:
 - Our components only need to trust a single identity provider.
 - Adding new third-party login options is cost-efficient.
 
+
 ## Consequences
 
 As a result of this decision, we will need to establish an internal identity provider and implement OpenID Connect for authentication.
+
+Optionally, we can create a button labeled 'Create Local Account.' When a user clicks on it, we can display a message stating that this feature is planned for implementation. Once a significant number of clicks are achieved, we can allocate resources to implement it.

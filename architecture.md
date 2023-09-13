@@ -29,7 +29,7 @@ Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard i
 ## Stakeholders
 
 | Role/Name   | Contact        | Expectations       |
-|-------------|----------------|--------------------|
+| ----------- | -------------- | ------------------ |
 | *\<Role-1>* | *\<Contact-1>* | *\<Expectation-1>* |
 | *\<Role-2>* | *\<Contact-2>* | *\<Expectation-2>* |
 
@@ -155,12 +155,12 @@ Important Interfaces
 
 # Runtime View
 
-## \<Runtime Scenario 1>
+## \<Runtime Scenario authentication >
 
--   *\<insert runtime diagram or textual description of the scenario>*
+Following flow describes the authentication process with 3rd party Identity Provider (IDP)
+Corresponding architecture decision record is adr02-authentication
 
--   *\<insert description of the notable aspects of the interactions
-    between the building block instances depicted in this diagram.>*
+![Authentication Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/authentication.puml)
 
 ## \<Runtime Scenario 2>
 
@@ -217,6 +217,9 @@ Mapping of Building Blocks to Infrastructure
 
 # Architecture Decisions
 
+[ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
+[ADR 2 User Onboarding and Authentication Strategy](adrs/adr01-ArchitectureStyle.md)
+
 # Quality Requirements
 
 ## Quality Tree
@@ -227,10 +230,16 @@ Mapping of Building Blocks to Infrastructure
 
 # Glossary
 
-| Term        | Definition        |
-|-------------|-------------------|
-| *\<Term-1>* | *\<definition-1>* |
-| *\<Term-2>* | *\<definition-2>* |
+| Term             | Definition                                                                                                                                                       |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *Trip*           | *\<definition-1>*                                                                                                                                                |
+| *Reservation*    | *\<definition-2>*                                                                                                                                                |
+| *Booking*        | *\<definition-2>*                                                                                                                                                |
+| *Travel angency* | *\<definition-2>*                                                                                                                                                |
+| *ADR*            | *ADR stands for "Architecture Decision Record." It is a document that captures important architectural decisions made during the software development process. * |
+| *NFR*            | *NFR stands for non functional requirements, derived from input given by the stakeholders*                                                                       |
+| *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect*                                    |
+| *BFF*            | *Backend for Frontend is a server responsible to provide data for a frontend line a mobile app or web app*                                                       |
 
 # References
 * Arc42 Template Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
