@@ -20,7 +20,8 @@
 ## Business Context
 
 **\<Diagram or Table>**
-![use case overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/use-cases.puml)
+[use case overview](usecases.md)
+[actor overview](actors.md)
 **\<optionally: Explanation of external domain interfaces>**
 
 ## Technical Context
