@@ -9,7 +9,7 @@ Travel information which can be assumed:
 - partner might want to correlate
 
 
-Traveler Profile:
+## Potentionally relevant travel info's:
 - Demographics: Age, gender, nationality, and travel history.
 - Travel preferences: Preferred travel destinations, travel style (e.g., adventure, luxury, budget), and interests (e.g., sports, culture, nature).
 - Travel history: Past trips, favorite destinations, and travel behavior.
