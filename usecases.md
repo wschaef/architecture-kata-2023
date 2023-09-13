@@ -2,8 +2,8 @@
 
 | # | Use Case | Short Description | Actor | Requirement |
 | - | -------- | ----------------- | ----- | ----------- |
-| UC01 | Login in system | User logs into the system | Traveller, Analyst |  |
-| UC02 | Register in system | Traveller registers as a new user to system | Traveller |  |
+| UC01 | Login in system | User logs into the system. | Traveller, Analyst |  |
+| UC02 | Register in system | Traveller registers as a new user to system. | Traveller |  |
 | UC03 | View dashboard | Traveller gets an overview of his trips. | Traveller | FR6 |
 | UC04 | Manage reservatioins | Traveller add, removes reservations manually. | Traveller | FR6 |
 | UC05 | Manage trip | Traveller creates trips, add new reservation to it, etc. | Traveller | FR6 |
