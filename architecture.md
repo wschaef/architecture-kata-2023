@@ -47,7 +47,7 @@ Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard i
 
 ## Technical Context
 
-![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/context.puml)
+<img src="diagrams/Context.drawio.svg">
 
 **\<Diagram or Table>**
 
