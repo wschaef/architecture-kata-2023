@@ -18,4 +18,4 @@
 | UC15 | Poll emails  | System polls email system of traveller. | System | FR2 |
 | UC16 | Push notification about changes in trip | System pushes the information received from email, Travel system, etc. towards the traveller. | System | FR4 |
 | UC17 | Remove finished trip | Do we really need this use case? | System | FR6 |
-| UC18 | Collect analytical data | System collect information from all Travellers for later analytical work on it. | System | FR10 |
+| UC18 | Collect analytical data | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System | FR10 |
