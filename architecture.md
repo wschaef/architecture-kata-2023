@@ -19,9 +19,9 @@
 
 ## Business Context
 
-!INCLUDE "usecases.md"
+ {% include usecases.md %}
 
-!INCLUDE "actors.md"
+ "actors.md"
 **\<optionally: Explanation of external domain interfaces>**
 
 ## Technical Context
