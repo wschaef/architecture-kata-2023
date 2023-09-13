@@ -64,6 +64,9 @@ Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard i
 ***\<Overview Diagram>***
 <img src="diagrams/Container.drawio.svg">
 
+***\<Detailed Component Diagram>***
+<img src="diagrams/Component overview.drawio.svg">
+
 Motivation  
 *\<text explanation>*
 
