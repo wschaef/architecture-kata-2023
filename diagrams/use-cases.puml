@@ -1,7 +1,6 @@
 @startuml UseCaseOverview
-!include <C4/C4_Context>
 
-LAYOUT_WITH_LEGEND()
+title Use Cases for Road Warrior
 
 actor :traveller: as tr
 actor :external person: as ep
