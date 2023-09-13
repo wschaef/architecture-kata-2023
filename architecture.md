@@ -62,12 +62,32 @@ Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard i
 ## Whitebox Overall System
 
 ***\<Overview Diagram>***
+<img src="diagrams/Component overview.drawio.svg">
 
 Motivation  
 *\<text explanation>*
 
 Contained Building Blocks  
 *\<Description of contained building block (black boxes)>*
+
+**Reporting domain** - responsible for collect data for reports, create reports and provide access to reports. This domain has persistent data like raw analytical data and generated reports. Reporting domain includes folloing components:
+* Data Collector - recive notification from external systems and store them
+* Data Viewer - provide access to raw analytic data.
+* End-Of-Year report creation and caching - report generation engine and storage for generated reports.
+  
+**Integration domain** - provide capabilities for collect information from external sources like emailboxes, external travel systems and agancies. Several components included in domain:
+* Notification - component which reicve updated from external systems via integration layer and notify other domains about changes.
+* EMail processing - engine for reading emails from user mailboxes. Also apply filters and whitelist rules and parse email for get information about reservation.
+* Airlines/Hotel/Car rental integrations - Integration with several Agencies via standard APIs.
+* Travel system integraion - integrate with APPOLO, SABRE system in order to collect information about reservation and recieve updates regarding these reservations.
+
+**Trip organizer domain** - allow use to manage his trips, create new one, delete and add reservations to this trips.
+Data ingested from integration domain.
+
+**Authorization and Authentication domain** - covers all aspect of registration, authentication and authorization user.
+
+
+
 
 Important Interfaces  
 *\<Description of important interfaces>*
