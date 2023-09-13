@@ -5,10 +5,12 @@ LAYOUT_WITH_LEGEND()
 
 title System Context diagram for Road Warrio a trip manament platform
 
-Person(customer, "Customer", "Private users using Road Warrior to manage their trips") 
-Person_Ext(partnerUser, "Partners", " Business users accessing analytical data")
+Person(customer, "Traveller", "Private user using Road Warrior to manage his trips") 
+Person(partnerUser, "Analyst", " Business user accessing analytical data")
+Person_Ext(extPerson, "Eternal Person", " A person having access to a trip")
 System(system, "Road Warrior", "A platform enabling customers to manage their trips across multiple travel related systems") 
 System_Ext(travelAgency, "Travel Agency")
+System_Ext(supportingAgency, "Supporting Agency")
 System_Ext(emailProvider, "Email Provider")
 System_Ext(hotels, "Hotels")
 System_Ext(carRentals, "Car rentals")
@@ -18,19 +20,21 @@ System_Ext(socialMedia, "Social Media")
 System_Ext(partnerSystems, "Partner Systems", "access analytical data")
 System_Ext(idps, "Identity Providers", "preferred indentity provider of the customer")
 
-customer --> system : Uses Mobile Apps or Web to manage own trips
+customer --> system :50 Uses Mobile Apps or Web to manage own trips
 customer --> idps: login
+extPerson --> system: view a shared trip
 partnerUser --> system: access analytical data
-partnerUser --> partnerSystems: use
-system --> travelSystems : integrate
-system -L-> idps: uses for autentication 
+partnerUser --> partnerSystems: access analytical data
+system --> travelSystems : get data on reservations, bookings from tavel agencies, hotels, car rentals, airlines
+system -L-> idps: use for autentication 
 travelSystems --> travelAgency : integrate
 travelSystems --> hotels : integrate
 travelSystems --> carRentals : integrate
 travelSystems --> airlines : integrate
-system --> emailProvider: integrate
+system --> emailProvider: polls emails to get data on reservations and bookings
 system --> socialMedia: share trips
-partnerSystems -L-> system: access analytical data
+system --> supportingAgency: forward the traveller to in order to get support
+partnerSystems -L-> system: import analytical data
 
 @enduml
 
