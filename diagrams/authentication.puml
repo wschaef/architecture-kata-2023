@@ -1,4 +1,5 @@
 @startuml
+!theme carbon-gray
 autonumber "<font color=magenta> <b> [00]"
 
 title authentication using delegation from internal IDP to a 3rd party IDP using nested authorization code grant flow
