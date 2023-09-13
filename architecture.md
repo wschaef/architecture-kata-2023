@@ -19,9 +19,9 @@
 
 ## Business Context
 
-**\<Diagram or Table>**
-[use case overview](usecases.md)
-[actor overview](actors.md)
+!INCLUDE "usecases.md"
+
+!INCLUDE "actors.md"
 **\<optionally: Explanation of external domain interfaces>**
 
 ## Technical Context
