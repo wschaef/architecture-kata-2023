@@ -228,7 +228,7 @@ Usecase vs domains tracebility:
 | UC07 | Provide access to external people       |          |               | X       |                |     |
 | UC08 | Access end-of-year report               | X        |               | X       |                |     |
 | UC09 | Define filter and whitelist for email   |          | X             | X       |                |     |
-| UC10 | Contact with "HelpMe!" Agency|          |          |               | X       |                |     |
+| UC10 | Contact with "HelpMe!" Agency           |          |               | X       |                |     |
 | UC11 | Access to shared trip information       |          |               | X       |                |     |
 | UC12 | Access to analytic reports              | X        |               |         |                |     |
 | UC14 | Update travel data                      |          |               |         | X              |     | X           
