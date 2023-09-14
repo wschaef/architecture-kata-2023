@@ -110,7 +110,7 @@ Non functional requirements are derived from functional and technical requiremen
 
 ## Stakeholders
 
-| Role/Name                          | Contact         |
+| Role                               | Name            |
 | ---------------------------------- | --------------- |
 | Architecture Kata 2023 Jury Member | *Neal Ford*     |
 | Architecture Kata 2023 Jury Member | *Mark Richards* |
@@ -125,7 +125,7 @@ For a startup in a greenfield development scenario, there are minimal limitation
 # System Scope and Context
 
 ## Business Context
-
+The Road Warrior platform serves various actors, including Travellers, External Persons, Analysts, Travel Systems, and the System itself. Travellers can log in, register, view their dashboard, manage reservations and trips, share trips on social media, provide access to external people, view end-of-year reports, configure email settings, and contact the "HelpMe!" agency for support. External Persons can access shared trip information, while Analysts access analytical reports. Travel Systems update travel data, and the System performs tasks such as polling emails, sending notifications, and collecting analytical data for end-of-year reports and analysis.
 ### Actors overview
 
 | Actor           | Description                                                                                                                                                     | Use Case Reference                                         |
@@ -250,8 +250,8 @@ _Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of
 #### Architecture characteristics
 Even all Architecture characteristics should be taking in account when we design and implement domains, some of Architecture characteristics played more important role and influence significantly on component design and deployment.
 
-| quality attributes | Analytic | Configuration | Channel | Trip organizer | IAM    | Integration |
-| ------------------ | -------- | ------------- | ------- | -------------- | ------ | ----------- |
+| Architecture characteristic | Analytic | Configuration | Channel | Trip organizer | IAM    | Integration |
+| --------------------------- | -------- | ------------- | ------- | -------------- | ------ | ----------- |
 | availability       | medium   | medium        | High    | High           | High   | High        |
 | compatibility      | High     | low           | low     | low            | High   | High        |
 | evolvability       | High     | low           | High    | high           | low    | medium      |
@@ -262,72 +262,108 @@ Even all Architecture characteristics should be taking in account when we design
 Based on this analyses we can see that all domains has different Architecture characteristics and as result we are not able to combine them.
 
 
-#### Contained Building Blocks  
-*\<Description of contained building block (black boxes)>*
+### Contained Building Blocks
 
-**Analytic domain** - responsible for collect data for reports, create reports and provide access to reports. This domain has persistent data like raw analytical data and generated reports. 
+This chapter provides an overview of the different domains that compose the Road Warrior system. Each subchapter describes a domain, its responsibilities, interfaces with other domains, and the rationale behind its existence.
 
-Cross domain interfaces:
-* Analytic domain delivery end-of-year reports Channel domain.
-* Analytic domain recieve  notification directly from Integration domain in order to have actual information in Analytic domain and also it allow as to analyse behaviour of Agencies. (for example how often Deutsche Bahn delayed his train)
-* Analytic domain read data from Trip Organizer domain to collect information about Trips and Reservation
+#### Analytic Domain
 
-Reason: This domain is separated because from strategic point of view it can be purschased from third party.
-Most of non functional requirments for this domain don't clear in the beginning of project, because no clear view how we can use collected analytic data which metrics we need to collect. But generation "end-of year" report requires hight elasticity at the end of calendar year.  
+**What the domain does:**
 
-**Configuration domain** - responsible for manage configuraiton mailbox for polling and definitions for filters and whitelist.
+The Analytic domain is responsible for collecting data for reports, creating reports, and providing access to reports. This domain handles persistent data like raw analytical data and generated reports.
 
-Cross domain interfaces:
-* User able to change configuration for Whitelist/filters and mailboxes via Channel Domain.
-* Integration domain used configuration from Configuration domain.
+**Interfaces:**
 
-Reason: This domain one of simples one and we don't expect high performance requirements and many changes during project evolution. 
+- Delivers end-of-year reports to the Channel domain
+- Receives notifications directly from the Integration domain for updated information and analysis of agency behavior
+- Reads data from the Trip Organizer domain to collect information about trips and reservations
 
-**Trip organizer domain** - allow use to manage his trips, create new one, delete and add reservations to this trips.
-Data ingested from integration domain.
+**Why we have the domain:**
 
-Cross domain interfaces:
-* Integration domain send all notification about changes in reservation to Trip Organizer in order to have actual information in trip repository.
-* Trip organizer send notification about changes in reservations to Channel domain in order to delivery it to end-user with minimum delays. (Channel domain can use websocket or iOS/Android notification service to delivery notification to clients)
-* Trip organizer domain provide API for client applications (Channel domain) to get information about trips and reservation.
-* Trip organizer read detailed data about reservation via Integration domain from Travel systems and Agencies.
-* Trip organizer provide data to Analytic domain about trips and reservations.
-  
-Reason: It is core of our business and our differention from our competitors. We need very high evolvalibity for component in this area. And is we store customer data here this components has dedicated security level and personal data should be protected.
+This domain is separated from others because it can be purchased from a third party. Non-functional requirements for this domain are unclear at the beginning of the project, but generating "end-of-year" reports requires high elasticity at the end of the calendar year.
 
-**Channel domain** - responsibe for providing user interfaces like web-application and mobile applications.
+#### Configuration Domain
 
-Cross domain interfaces:
-* Channel domain recieve all notification about changes in reservation to Trip Organizer and update content in user interfaces.
-* Channel domain use API of Trip Organizer in order to get information about trips and reservation.
-* Channel domain use IAM for register and login user (token exchange)
-* Channel domain recieve end-of-year report from Analytic domain
-* Channel domain provide configuration to Configuration domain
+**What the domain does:**
 
-Reason: This domain is our "face" to end-user and we have very high requirement for quality in this area (testability) and also high level of evolvalibity. This domain is critical from UX perspecitve and we expect that we will have a lot changes and they should be delivered to user asap. 
+The Configuration domain manages the configuration of mailboxes for polling, as well as filter and whitelist definitions.
 
+**Interfaces:**
 
-**IAM domain** - covers all aspect of registration, authentication and authorization user.
-In order simplify diagram only interaction with Channel domain displayed. Other like Analytic and Trip Organizer also integrated with IAM in order to validate OpenID tokens and access rights.
+- Users can change configuration for whitelists, filters, and mailboxes via the Channel domain
+- The Integration domain uses the configuration from the Configuration domain
 
-Cross domain interfaces:
-* IAM domain cover regiteration and login process for Channel (token exchange)
-* IAM domain used by Channel, Analytic and Trip Organizer domain for token validaion (not shown on diagram)
+**Why we have the domain:**
 
+This domain is relatively simple and does not require high performance or many changes during project evolution.
 
-Reason: It is standard pattern to have IAM as separate domain, because this domain already well developed and not depend of business specific of project. Also in most case we can reuse existing out-of-box solutions with minum configuration and customisation.
+#### Trip Organizer Domain
 
-**Integration domain** - provide capabilities for collect information from external sources like emailboxes, external travel systems and agancies. Several components included in domain:
+**What the domain does:**
 
-Cross domain interfaces:
-* Integration domain sent  notification directly to Analytic domain in order to have actual information in Analytic domain
-and also it allow as to analyse behaviour of Agencies. (for example how often Deutsche Bahn delayed his train)
-* Integration domain use configuration from Configuration domain.
-* Integration domain provide detailed data about reservation via Integration domain from Travel systems and Agencies to Trip Organizer domain
-* Integration domain sent notification directly to Trip Organizer domain in order to update reservations and inform users. 
- 
-Reason: This domain is our door to external Travel world, and we need to organize all integration in very similar way in order to reduce data model aligment in other domains. We expect very hight load on this component, becuase 2 mln active will add new reservations in system and we need to request external partners for details about this reservation. Also we expect that all active reservaion (in active trips) can recieve updates via Travel systems, emails or from agencies.
+The Trip Organizer domain allows users to manage their trips, create new ones, delete trips, and add reservations. Data is ingested from the Integration domain.
 
+**Interfaces:**
+
+- The Integration domain sends all notifications about changes in reservations to the Trip Organizer to maintain up-to-date information in the trip repository
+- The Trip Organizer sends notifications about changes in reservations to the Channel domain for delivery to end-users
+- The Trip Organizer domain provides an API for client applications (Channel domain) to access information about trips and reservations
+- The Trip Organizer reads detailed data about reservations via the Integration domain from Travel systems and Agencies
+- The Trip Organizer provides data to the Analytic domain about trips and reservations
+
+**Why we have the domain:**
+
+This domain is the core of the business and differentiates the platform from competitors. It requires high evolvability and dedicated security due to the storage of customer data.
+
+#### Channel Domain
+
+**What the domain does:**
+
+The Channel domain is responsible for providing user interfaces, such as web applications and mobile applications.
+
+**Interfaces:**
+
+- Receives all notifications about changes in reservations from the Trip Organizer and updates content in user interfaces
+- Uses the API of the Trip Organizer to access information about trips and reservations
+- Uses IAM for user registration and login (token exchange)
+- Receives end-of-year reports from the Analytic domain
+- Provides configuration to the Configuration domain
+
+**Why we have the domain:**
+
+This domain represents the "face" of the platform to end-users and requires high quality (testability) and evolvability. It is critical from a UX perspective and is expected to undergo many changes that need to be delivered to users quickly.
+
+#### IAM Domain
+
+**What the domain does:**
+
+The IAM domain covers all aspects of user registration, authentication, and authorization.
+
+**Interfaces:**
+
+- Manages registration and login processes for the Channel domain (token exchange)
+- Validates tokens for Channel, Analytic, and Trip Organizer domains (not shown in the diagram)
+
+**Why we have the domain:**
+
+It is a standard pattern to have IAM as a separate domain since it is well-developed and independent of the project's business specifics. It typically allows for the reuse of existing out-of-the-box solutions with minimal customization and configuration.
+
+#### Integration Domain
+
+**What the domain does:**
+
+The Integration domain provides capabilities for collecting information from external sources like email inboxes, external travel systems, and agencies.
+
+**Interfaces:**
+
+- Sends notifications directly to the Analytic domain for updated information and analysis of agency behavior
+- Uses configuration from the Configuration domain
+- Provides detailed data about reservations from Travel systems and agencies to the Trip Organizer domain
+- Sends notifications directly to the Trip Organizer domain to update reservations and inform users
+
+**Why we have the domain:**
+
+This domain serves as the gateway to the external travel world, organizing all integrations in a similar way to reduce data model alignment in other domains. It is expected to experience high loads due to the addition of new reservations and the need to request details about these reservations from external partners. Additionally, all active reservations (in active trips) can receive updates via Travel systems, emails, or from agencies.
 
 Important Interfaces  
 *\<Description of important interfaces>*
