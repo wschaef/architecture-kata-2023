@@ -110,13 +110,13 @@ Non functional requirements are derived from functional and technical requiremen
 
 ## Stakeholders
 
-| Role/Name   | Contact        | 
-| ----------- | -------------- |
-| Architecture Kata 2023 Jury Member  | *Neal Ford*     | 
-| Architecture Kata 2023 Jury Member  | *Mark Richards* | 
-| Architecture Kata 2023 Jury Member  | *Jacqui Read*   | 
-| Architecture Kata 2023 Jury Member  | *Clare Sudbery* | 
-| Architecture Kata 2023 Jury Member  | *Robin Losey*   | 
+| Role/Name                          | Contact         |
+| ---------------------------------- | --------------- |
+| Architecture Kata 2023 Jury Member | *Neal Ford*     |
+| Architecture Kata 2023 Jury Member | *Mark Richards* |
+| Architecture Kata 2023 Jury Member | *Jacqui Read*   |
+| Architecture Kata 2023 Jury Member | *Clare Sudbery* |
+| Architecture Kata 2023 Jury Member | *Robin Losey*   |
 
 # Architecture Constraints
 
@@ -126,33 +126,33 @@ Non functional requirements are derived from functional and technical requiremen
 
 ### Actors overview
 
-| Actor | Description | Use Case Reference |
-| ------ | ----------- | ------------------ |
-| Traveller   | Private or Business user using Road Warrior to manage his trips. | UC01, UC02, UC03, UC04, UC05, UC06, UC07, UC08, UC09, UC10 |
-| External Person | A person having access to a trip, which is shared by Traveller. | UC11 |
-| Anaylst | Business user accessing analytical data. | UC01, UC12 |
-| Travel System | System Actor to deliver information on changes on reservations. It includes Travel systems like APOLLO as well as dedicated Airline/Hotels/Car rental agencies.  | U14 |
-| System | Some activities are initiated by the system. | UC15, UC16, UC18 |
+| Actor           | Description                                                                                                                                                     | Use Case Reference                                         |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Traveller       | Private or Business user using Road Warrior to manage his trips.                                                                                                | UC01, UC02, UC03, UC04, UC05, UC06, UC07, UC08, UC09, UC10 |
+| External Person | A person having access to a trip, which is shared by Traveller.                                                                                                 | UC11                                                       |
+| Anaylst         | Business user accessing analytical data.                                                                                                                        | UC01, UC12                                                 |
+| Travel System   | System Actor to deliver information on changes on reservations. It includes Travel systems like APOLLO as well as dedicated Airline/Hotels/Car rental agencies. | U14                                                        |
+| System          | Some activities are initiated by the system.                                                                                                                    | UC15, UC16, UC18                                           |
 
 ### Use case overview
 
-| # | Use Case | Short Description | Actor | Requirement |
-| - | -------- | ----------------- | ----- | ----------- |
-| UC01 | Login in system | User logs into the system. | Traveller, Analyst |  |
-| UC02 | Register in system | Traveller registers as a new user to system. | Traveller |  |
-| UC03 | View dashboard | Traveller gets an overview of his trips. | Traveller | FR6 |
-| UC04 | Manage reservations | Traveller add, edit removes reservations manually. | Traveller | FR6 |
-| UC05 | Manage trip | Traveller creates trips, add new reservation to it, etc. | Traveller | FR6 |
-| UC06 | Share trip via social networks | Traveller transfers his trip to social media.  | Traveller | FR7 |
-| UC07 | Provide access to external people | Traveller gives a direct link to a person to view his trip. | Traveller | FR7 |
-| UC08 | Access end-of-year report | Traveller view the result of the yearly report on his trips. | Traveller | FR9 |
-| UC09 | Define filter and whitelist for email | Traveller configures the email poll, including the filter and whitelisting. | Traveller | FR3 |
-| UC11 | Access to shared trip information | External Person view a trip of a Traveller. | External Person | FR7 |
-| UC12 | Access to analytic reports | Analyst views analytic reports from the system. | Analyst | FR10 |
-| UC14 | Update travel data | System updates the received data for a reservation. | Travel System | FR4 |
-| UC15 | Poll emails  | System polls email system of traveller. | System | FR2 |
-| UC16 | Push notification about changes in trip | System pushes the information received from email, Travel system, etc. towards the traveller. | System | FR4 |
-| UC18 | Collect analytical data | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System | FR10 |
+| #    | Use Case                                | Short Description                                                                                                     | Actor              | Requirement |
+| ---- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------- |
+| UC01 | Login in system                         | User logs into the system.                                                                                            | Traveller, Analyst |             |
+| UC02 | Register in system                      | Traveller registers as a new user to system.                                                                          | Traveller          |             |
+| UC03 | View dashboard                          | Traveller gets an overview of his trips.                                                                              | Traveller          | FR6         |
+| UC04 | Manage reservations                     | Traveller add, edit removes reservations manually.                                                                    | Traveller          | FR6         |
+| UC05 | Manage trip                             | Traveller creates trips, add new reservation to it, etc.                                                              | Traveller          | FR6         |
+| UC06 | Share trip via social networks          | Traveller transfers his trip to social media.                                                                         | Traveller          | FR7         |
+| UC07 | Provide access to external people       | Traveller gives a direct link to a person to view his trip.                                                           | Traveller          | FR7         |
+| UC08 | Access end-of-year report               | Traveller view the result of the yearly report on his trips.                                                          | Traveller          | FR9         |
+| UC09 | Define filter and whitelist for email   | Traveller configures the email poll, including the filter and whitelisting.                                           | Traveller          | FR3         |
+| UC11 | Access to shared trip information       | External Person view a trip of a Traveller.                                                                           | External Person    | FR7         |
+| UC12 | Access to analytic reports              | Analyst views analytic reports from the system.                                                                       | Analyst            | FR10        |
+| UC14 | Update travel data                      | System updates the received data for a reservation.                                                                   | Travel System      | FR4         |
+| UC15 | Poll emails                             | System polls email system of traveller.                                                                               | System             | FR2         |
+| UC16 | Push notification about changes in trip | System pushes the information received from email, Travel system, etc. towards the traveller.                         | System             | FR4         |
+| UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
 
 
 *\<optionally: Explanation of external domain interfaces>**
@@ -202,35 +202,35 @@ Firstly look how we can split functionality (UseCases) between our domains. Inde
 In formal terms: we improve _Loose coupling_ and _Cohesion_.
 
 
-| Domain |  Use Case Reference | Use Cases name
-| ------ | ----------- | ------------------ |
-|Analytic domain| UC08 <br> UC12 <br> UC18| Access end-of-year report <br> Access to analytic reports <br> Collect analytical data
-|Configuration domain| UC09 | Define filter and whitelist for email
-|Channel| UC01 <br> UC02 <br> UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC09<br> UC11 <br> UC12 <br> UC16|Login in system <br> Register in system <br> View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report <br> Define filter and whitelist for email <br> Access to shared trip information <br> Access to analytic reports	<br> Push notification about changes in trip	
-|Trip organizer|UC03 <br> UC04 <br> UC05 <br> UC14 <br> UC16| View dashboard <br> Manage reservations	<br> Manage trip	<br> Push notification about changes in trip	
-|IAM domain|UC01 <br> UC02|Login in system<br> Register in system	
-|Integration domain| UC14 <br> UC15 <br> UC16 | Update travel data	<br> Poll emails	<br> Push notification about changes in trip	
+| Domain               | Use Case Reference                                                                                                | Use Cases name                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Analytic domain      | UC08 <br> UC12 <br> UC18                                                                                          | Access end-of-year report <br> Access to analytic reports <br> Collect analytical data                                                                                                                                                                                                                                                                                         |
+| Configuration domain | UC09                                                                                                              | Define filter and whitelist for email                                                                                                                                                                                                                                                                                                                                          |
+| Channel              | UC01 <br> UC02 <br> UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC09<br> UC11 <br> UC12 <br> UC16 | Login in system <br> Register in system <br> View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report <br> Define filter and whitelist for email <br> Access to shared trip information <br> Access to analytic reports	<br> Push notification about changes in trip |
+| Trip organizer       | UC03 <br> UC04 <br> UC05 <br> UC14 <br> UC16                                                                      | View dashboard <br> Manage reservations	<br> Manage trip	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                          |
+| IAM domain           | UC01 <br> UC02                                                                                                    | Login in system<br> Register in system                                                                                                                                                                                                                                                                                                                                         |
+| Integration domain   | UC14 <br> UC15 <br> UC16                                                                                          | Update travel data	<br> Poll emails	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                               |
 
 _Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
 
 Usecase vs domains tracebility:
-| # | Use Case                                  | Analytic | Configuration | Channel |Trip organizer|IAM|Integration
-| -    | ---------------------------------------| -------- | ------------- |---------|------------- |---|-----------
-| UC01 | Login in system                        |          |               |   X     |              | X |
-| UC02 | Register in system                     |          |               |   X     |              | X |
-| UC03 | View dashboard                         |          |               |   X     |      X       |   |
-| UC04 | Manage reservations                    |          |               |   X     |      X       |   |
-| UC05 | Manage trip                            |          |               |   X     |      X       |   |
-| UC06 | Share trip via social networks         |          |               |   X     |              |   |
-| UC07 | Provide access to external people      |          |               |   X     |              |   |
-| UC08 | Access end-of-year report              |    X     |               |   X     |              |   |
-| UC09 | Define filter and whitelist for email  |          |     X         |   X     |              |   |
-| UC11 | Access to shared trip information      |          |               |   X     |              |   |
-| UC12 | Access to analytic reports             |    X     |               |         |              |   |
-| UC14 | Update travel data                     |          |               |         |       X      |   |  X
-| UC15 | Poll emails                            |          |               |         |              |   |  X
-| UC16 | Push notification about changes in trip|          |               |   X     |       X      |   |  X
-| UC18 | Collect analytical data                |    X     |               |         |              |   |
+| #    | Use Case                                | Analytic | Configuration | Channel | Trip organizer | IAM | Integration |
+| ---- | --------------------------------------- | -------- | ------------- | ------- | -------------- | --- | ----------- |
+| UC01 | Login in system                         |          |               | X       |                | X   |
+| UC02 | Register in system                      |          |               | X       |                | X   |
+| UC03 | View dashboard                          |          |               | X       | X              |     |
+| UC04 | Manage reservations                     |          |               | X       | X              |     |
+| UC05 | Manage trip                             |          |               | X       | X              |     |
+| UC06 | Share trip via social networks          |          |               | X       |                |     |
+| UC07 | Provide access to external people       |          |               | X       |                |     |
+| UC08 | Access end-of-year report               | X        |               | X       |                |     |
+| UC09 | Define filter and whitelist for email   |          | X             | X       |                |     |
+| UC11 | Access to shared trip information       |          |               | X       |                |     |
+| UC12 | Access to analytic reports              | X        |               |         |                |     |
+| UC14 | Update travel data                      |          |               |         | X              |     | X           |
+| UC15 | Poll emails                             |          |               |         |                |     | X           |
+| UC16 | Push notification about changes in trip |          |               | X       | X              |     | X           |
+| UC18 | Collect analytical data                 | X        |               |         |                |     |
 
 As you can see in table: we have very high independet domains.
 
@@ -240,14 +240,14 @@ _Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of
 Even all quality attributes should be taking in account when we design and implement domains, some of quality attributes 
 played more important role and influence on component design and deployment.
 
-| quality attributes| Analytic | Configuration | Channel |Trip organizer|IAM|Integration
-| ---------------   | -------- | ------------- |---------|------------- |---|-----------
-| availability      |  medium  |  medium       |   High  |     High     | High | High
-| compatibility     |  High    |  low          |   low   | low          |High| High
-| evolvability      |  High    |  low          |   High  | high         | low| medium
-| localizability    | low      | low           | high    | high         |low | medium
-| testability       |  low     | low           | high    | high         |medium| medium
-| traceability      |  high    | low           | low     | medium       |high| high
+| quality attributes | Analytic | Configuration | Channel | Trip organizer | IAM    | Integration |
+| ------------------ | -------- | ------------- | ------- | -------------- | ------ | ----------- |
+| availability       | medium   | medium        | High    | High           | High   | High        |
+| compatibility      | High     | low           | low     | low            | High   | High        |
+| evolvability       | High     | low           | High    | high           | low    | medium      |
+| localizability     | low      | low           | high    | high           | low    | medium      |
+| testability        | low      | low           | high    | high           | medium | medium      |
+| traceability       | high     | low           | low     | medium         | high   | high        |
 
 Based on this analyses we can see that all domains has differnt quality drivers and as result we are not able to combine them.
 
@@ -440,6 +440,8 @@ Mapping of Building Blocks to Infrastructure
 
 [ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
 [ADR 2 User Onboarding and Authentication Strategy](adrs/adr01-ArchitectureStyle.md)
+[ADR 3 How to share share trips](adr03-SharingTrip.md)
+[ADR 4 Frontend technology](adr04-FrontendTechnology)
 
 # Quality Requirements
 
