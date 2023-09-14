@@ -110,10 +110,13 @@ Non functional requirements are derived from functional and technical requiremen
 
 ## Stakeholders
 
-| Role/Name   | Contact        | Expectations       |
-| ----------- | -------------- | ------------------ |
-| *\<Role-1>* | *\<Contact-1>* | *\<Expectation-1>* |
-| *\<Role-2>* | *\<Contact-2>* | *\<Expectation-2>* |
+| Role/Name   | Contact        | 
+| ----------- | -------------- |
+| Architecture Kata 2023 Jury Member  | *Neal Ford*     | 
+| Architecture Kata 2023 Jury Member  | *Mark Richards* | 
+| Architecture Kata 2023 Jury Member  | *Jacqui Read*   | 
+| Architecture Kata 2023 Jury Member  | *Clare Sudbery* | 
+| Architecture Kata 2023 Jury Member  | *Robin Losey*   | 
 
 # Architecture Constraints
 
