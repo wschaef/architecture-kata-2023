@@ -202,12 +202,34 @@ Splitting functionality between domains:
 | Domain |  Use Case Reference | Use Cases name
 | ------ | ----------- | ------------------ |
 |Analytic domain| UC08 <br> UC12 <br> UC18| Access end-of-year report <br> Access to analytic reports <br> Collect analytical data
-|Channel| UC01 <br> UC02 <br> UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC09<br> UC11 <br> UC12 <br> UC16|Login in system <br> Register in system <br> View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report <br> Define filter and whitelist for email <br> Access to shared trip information <br> Access to analytic reports	<br> Push notification about changes in trip	
 |Configuration domain| UC09 | Define filter and whitelist for email
+|Channel| UC01 <br> UC02 <br> UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC09<br> UC11 <br> UC12 <br> UC16|Login in system <br> Register in system <br> View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report <br> Define filter and whitelist for email <br> Access to shared trip information <br> Access to analytic reports	<br> Push notification about changes in trip	
 |Trip organizer|UC03 <br> UC04 <br> UC05 <br> UC14 <br> UC16| View dashboard <br> Manage reservations	<br> Manage trip	<br> Push notification about changes in trip	
-|Integration domain| UC14 <br> UC15 <br> UC16 | Update travel data	<br> Poll emails	<br> Push notification about changes in trip	
 |IAM domain|UC01 <br> UC02|Login in system<br> Register in system	
+|Integration domain| UC14 <br> UC15 <br> UC16 | Update travel data	<br> Poll emails	<br> Push notification about changes in trip	
 
+_Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
+
+Usecase vs domains tracebility:
+| # | Use Case                                  | Analytic | Configuration | Channel |Trip organizer|IAM|Integration
+| -    | ---------------------------------------| -------- | ------------- |---------|------------- |---|-----------
+| UC01 | Login in system                        |          |               |   X     |              | X |
+| UC02 | Register in system                     |          |               |   X     |              | X |
+| UC03 | View dashboard                         |          |               |   X     |      X       |   |
+| UC04 | Manage reservations                    |          |               |   X     |      X       |   |
+| UC05 | Manage trip                            |          |               |   X     |      X       |   |
+| UC06 | Share trip via social networks         |          |               |   X     |              |   |
+| UC07 | Provide access to external people      |          |               |   X     |              |   |
+| UC08 | Access end-of-year report              |    X     |               |   X     |              |   |
+| UC09 | Define filter and whitelist for email  |          |     X         |   X     |              |   |
+| UC11 | Access to shared trip information      |          |               |   X     |              |   |
+| UC12 | Access to analytic reports             |    X     |               |         |              |   |
+| UC14 | Update travel data                     |          |               |         |       X      |   | 
+| UC15 | Poll emails                            |          |               |         |              |   | 
+| UC16 | Push notification about changes in trip|          |               |   X     |       X      |   | 
+| UC18 | Collect analytical data                |    X     |               |         |              |   |
+
+_Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
 
 Contained Building Blocks  
 *\<Description of contained building block (black boxes)>*
