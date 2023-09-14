@@ -7,13 +7,20 @@
 **Stakeholders**:
 
 - [x] @wschaef
-- [x] @uweTelco Should we refer on the last section of the event driven towards the TR5?
+- [x] @uweTelco
 - [ ] @slookin
 - [ ] @mauermbq
 
 ## Context
 
 **Scope**: This decision pertains to the entire Road Warrior system.
+
+**Requirements**:
+
+- **[TR2]** - 2 million active users/week
+- **[TR3]** - total users: 15 million (user accounts)
+- **[TR5]** - Travel updates must be presented in the app within 5 minutes of generation by the source
+- **[TR6]** - Response time from web (800ms) and mobile (First-contentful paint of under 1.4 sec)
 
 In response to the requirements specified by our stakeholders, we have identified a set of critical non-functional requirements (NFRs). Before delving into the architecture design phase, it is imperative that we reach a consensus on the fundamental architectural style for our system. This decision carries significant weight, as altering it later in the process can prove to be costly. Therefore, it is the first decision we are making.
 
