@@ -120,6 +120,8 @@ Non functional requirements are derived from functional and technical requiremen
 
 # Architecture Constraints
 
+For a startup in a greenfield development scenario, there are minimal limitations on technology choices. However, the solution space is constrained by the specific [Technical Requirements](#technical-requirements) outlined by the stakeholders. These technical requirements serve as the primary guiding constraints for the project's architecture and technology decisions.
+
 # System Scope and Context
 
 ## Business Context
