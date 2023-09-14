@@ -196,14 +196,20 @@ Motivation
 
 Contained Building Blocks  
 *\<Description of contained building block (black boxes)>*
-Based on neccessary functionality and different non-functional requirements solution splitted to following 
+Based on neccessary functionality and different non-functional requirements solution splitted to following domains and components.
 
 **Analytic domain** - responsible for collect data for reports, create reports and provide access to reports. This domain has persistent data like raw analytical data and generated reports. Reporting domain includes folloing components:
 * Data Collector - recive notification from external systems and store them
 * Data Viewer - provide access to raw analytic data.
 * End-Of-Year report creation and caching - report generation engine and storage for generated reports.
 
+Reason: This domain is separated because from strategic point of view it can be purschased from third party.
+Most of non functional requirments for this domain don't clear in the beginning of project, because no clear view how we can use collected analytic data which metrics we need to collect. But generation "end-of year" report requires hight elasticity at the end of calendar year.  
+
 **Configuration domain** - responsible for manage configuraiton mailbox for polling and definitions for filters and whitelist.
+
+Reason: This domain one of simples one and we don't expect high performance requirements and many changes during project evolution. 
+
   
 **Integration domain** - provide capabilities for collect information from external sources like emailboxes, external travel systems and agancies. Several components included in domain:
 * Notification - component which reicve updated from external systems via integration layer and notify other domains about changes.
@@ -211,10 +217,17 @@ Based on neccessary functionality and different non-functional requirements solu
 * Airlines/Hotel/Car rental integrations - Integration with several Agencies via standard APIs.
 * Travel system integraion - integrate with APPOLO, SABRE system in order to collect information about reservation and recieve updates regarding these reservations.
 
+Reason: This domain is our door to external Travel world, and we need to organize all integration in very similar way in order to reduce data model aligment in other domains. We expect very hight load on this component, becuase 2 mln active will add new reservations in system and we need to request external partners for details about this reservation. Also we expect that all active reservaion (in active trips) can recieve updates via Travel systems, emails or from agencies.
+
 **Trip organizer domain** - allow use to manage his trips, create new one, delete and add reservations to this trips.
 Data ingested from integration domain.
 
+Reason: It is core of our business and our differention from our competitors. We need very high evolvalibity for component in this area. And is we store customer data here this components has dedicated security level and personal data should be protected.
+
+
 **IAM domain** - covers all aspect of registration, authentication and authorization user.
+
+Reason: It is standard pattern to have IAM as separate domain, because this domain already well developed and not depend of business specific of project. Also in most case we can reuse existing out-of-box solutions with minum configuration and customisation.
 
 Important Internal Interfaces  
 
