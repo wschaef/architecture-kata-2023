@@ -194,10 +194,13 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 ***\<Detailed Component Diagram>***
 <img src="diagrams/Component overview.drawio.svg">
 
-Motivation  
+### Motivation  
 Based on neccessary functionality and different non-functional requirements solution splitted to following domains and components. See component description below.
 
-Splitting functionality between domains:
+#### Function analyses
+Firstly look how we can split functionality (UseCases) between our domains. Independed set of Use Cases in each domain allow us to develop domain independetly and has less interdependicies as well in development as well in run-time.
+In formal terms: we improve _Loose coupling_ and _Cohesion_.
+
 
 | Domain |  Use Case Reference | Use Cases name
 | ------ | ----------- | ------------------ |
@@ -229,7 +232,25 @@ Usecase vs domains tracebility:
 | UC16 | Push notification about changes in trip|          |               |   X     |       X      |   | 
 | UC18 | Collect analytical data                |    X     |               |         |              |   |
 
+As you can see in table: we have very high independet domains.
+
 _Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
+
+#### Quality attributes
+Even all quality attributes should be taking in account when we design and implement domains, some of quality attributes 
+played more important role and influence on component design and deployment.
+
+| quality attributes| Analytic | Configuration | Channel |Trip organizer|IAM|Integration
+| ---------------   | -------- | ------------- |---------|------------- |---|-----------
+| availability      |  medium  |  medium       |   High  |     High     | High | High
+| compatibility     |  High    |  low          |   low   | low          |High| High
+| evolvability      |  High    |  low          |   High  | high         | low| medium
+| localizability    | low      | low           | high    | high         |low | medium
+| testability       |  low     | low           | high    | high         |medium| medium
+| traceability      |  high    | low           | low     | medium       |high| high
+
+Basedom on this analyses we can see that all domains has differnt quality drivers and as result we are not able to combine them.
+
 
 Contained Building Blocks  
 *\<Description of contained building block (black boxes)>*
