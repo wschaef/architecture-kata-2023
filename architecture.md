@@ -96,6 +96,11 @@ Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard i
 ***\<Detailed Component Diagram>***
 <img src="diagrams/Component overview.drawio.svg">
 
+***\<Compient solutions>***
+<img src="diagrams/Container_uwe.drawio.svg">
+
+
+
 Motivation  
 *\<text explanation>*
 
