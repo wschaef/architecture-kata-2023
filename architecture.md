@@ -198,11 +198,14 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 <img src="diagrams/Component overview.drawio.svg">
 
 ### Motivation  
-Based on neccessary functionality and different non-functional requirements solution splitted to following domains and components. See component description below.
+In the context of our architecture, the decision to split our solution into several domains stems from a fundamental understanding of the necessary functionality and a keen consideration of various non-functional requirements. By dissecting our system into distinct domains and components, we embark on a journey to achieve greater flexibility and efficiency in our development process. 
 
 #### Function analyses
-Firstly look how we can split functionality (UseCases) between our domains. Independed set of Use Cases in each domain allow us to develop domain independetly and has less interdependicies as well in development as well in run-time.
-In formal terms: we improve _Loose coupling_ and _Cohesion_.
+In our pursuit of an optimized and well-structured solution, we turn our attention to the deliberate division of functionality, specifically the distribution of Use Cases across our distinct domains. 
+
+By meticulously organizing an independent set of Use Cases within each domain, we not only foster a more agile and self-contained development process but also reduce the inherent complexities associated with interdependencies
+
+In more formal terminology, this strategic approach directly contributes to the enhancement of 'Loose coupling' and 'Cohesion' within our system, reinforcing the foundational principles that guide our architectural choices
 
 
 | Domain               | Use Case Reference                                                                                                | Use Cases name                                                                                                                                                                                                                                                                                                                                                                 |
