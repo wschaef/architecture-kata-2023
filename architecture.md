@@ -292,15 +292,23 @@ Reason: This domain is our door to external Travel world, and we need to organiz
 
 #### Important Internal Interfaces  
 Q1 - event based. integration domain send all notification directly to analytic domain in order to have actual information in Analytic domain and also it allow as to analyse behaviour of Agencies. (for example how often Deutsche Bahn delayed his train)
+
 Q2 - event based. Trip organizer send notification about changes in reservations to Channel domain in order to delivery it to end-user with minimum delays. (Channel domain can use websocket or iOS/Android notification service to delivery notification to clients)
+
 Q3 - event based. Integration domain send all notification about changes in reservation to Trip Organizer in order to have actual information in  trip repository.
 
 I1 - Analytic domain delivery end-of-year reports Channel domain.
+
 I2 - User can change configuration for Whitelist/filters and mailboxes
+
 I3 - Main interface for client applications to get information about trips and reservation. 
+
 I4 - IAM exchange tokens with applications.
+
 I5 - Integration domain used configuration from Configuration domain.
+
 I6 - Trip Organizer used integration capablities to fetch detailed data about user reservation.
+
 
 Important Interfaces  
 *\<Description of important interfaces>*
