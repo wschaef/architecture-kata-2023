@@ -7,7 +7,7 @@
 **Stakeholders**
 
 - [ ] @wschaef
-- [ ] @uweTelco
+- [x] @uweTelco
 - [ ] @slookin
 - [x] @mauermbq
 
