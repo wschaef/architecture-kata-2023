@@ -37,9 +37,10 @@ The critical decision criteria include:
 ## Decision
 
 - Use serverless Data warehouse technologies for analytical purposes (Big Query)
+- Separation of Concern between Cloud storage and analytical processing. This means no closed shop analytical componet with proprietary data management and storgae.
+- Handle data as objects: Data Upload is on Google Cloud Storage (GCS)
 - Use Availab Frontend technologies for analytical purposes (Looker), as long as not already one exists in the company
-- Handle external data as objects: Data Upload is on Google Cloud Storage (GCS)
-- Use Google Cloud Dataflow to create a data pipeline that reads from Cloud SQL and writes to BigQuery. This method is particularly useful if you need to perform transformations on the data before it gets to BigQuery. (to be clarified)
+- Use Google Cloud Dataflow to create a data pipeline that reads from Cloud SQL and writes to BigQuery. Eventually direct export is sufficinet for MVP. This method is particularly useful if you need to perform transformations on the data before it gets to BigQuery. (to be clarified)
 
 ### Ratioanle for Serverless Data Warehouse
 
