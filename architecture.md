@@ -302,8 +302,6 @@ I4 - IAM exchange tokens with applications.
 I5 - Integration domain used configuration from Configuration domain.
 I6 - Trip Organizer used integration capablities to fetch detailed data about user reservation.
 
-
-
 Important Interfaces  
 *\<Description of important interfaces>*
 
