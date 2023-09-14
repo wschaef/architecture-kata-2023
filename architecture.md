@@ -249,7 +249,7 @@ played more important role and influence on component design and deployment.
 | testability       |  low     | low           | high    | high         |medium| medium
 | traceability      |  high    | low           | low     | medium       |high| high
 
-Basedom on this analyses we can see that all domains has differnt quality drivers and as result we are not able to combine them.
+Based on this analyses we can see that all domains has differnt quality drivers and as result we are not able to combine them.
 
 
 Contained Building Blocks  
