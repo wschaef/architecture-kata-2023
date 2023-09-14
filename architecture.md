@@ -178,11 +178,6 @@ Non functional requirements are derived from functional and technical requiremen
 ***\<Detailed Component Diagram>***
 <img src="diagrams/Component overview.drawio.svg">
 
-***\<Compient solutions>***
-<img src="diagrams/Container_uwe.drawio.svg">
-
-
-
 Motivation  
 *\<text explanation>*
 
@@ -211,7 +206,9 @@ Data ingested from integration domain.
 Important Interfaces  
 *\<Description of important interfaces>*
 
-### \<Name black box 1>
+### Channels
+
+<img src="diagrams/Component-Channels.drawio.svg">
 
 *\<Purpose/Responsibility>*
 
