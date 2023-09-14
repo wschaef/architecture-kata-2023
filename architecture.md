@@ -181,11 +181,14 @@ Motivation
 
 Contained Building Blocks  
 *\<Description of contained building block (black boxes)>*
+Based on neccessary functionality and different non-functional requirements solution splitted to following 
 
-**Reporting domain** - responsible for collect data for reports, create reports and provide access to reports. This domain has persistent data like raw analytical data and generated reports. Reporting domain includes folloing components:
+**Analytic domain** - responsible for collect data for reports, create reports and provide access to reports. This domain has persistent data like raw analytical data and generated reports. Reporting domain includes folloing components:
 * Data Collector - recive notification from external systems and store them
 * Data Viewer - provide access to raw analytic data.
 * End-Of-Year report creation and caching - report generation engine and storage for generated reports.
+
+**Configuration domain** - responsible for manage configuraiton mailbox for polling and definitions for filters and whitelist.
   
 **Integration domain** - provide capabilities for collect information from external sources like emailboxes, external travel systems and agancies. Several components included in domain:
 * Notification - component which reicve updated from external systems via integration layer and notify other domains about changes.
@@ -196,8 +199,9 @@ Contained Building Blocks
 **Trip organizer domain** - allow use to manage his trips, create new one, delete and add reservations to this trips.
 Data ingested from integration domain.
 
-**Authorization and Authentication domain** - covers all aspect of registration, authentication and authorization user.
+**IAM domain** - covers all aspect of registration, authentication and authorization user.
 
+Important Internal Interfaces  
 
 
 
