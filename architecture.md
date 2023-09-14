@@ -227,9 +227,9 @@ Usecase vs domains tracebility:
 | UC09 | Define filter and whitelist for email  |          |     X         |   X     |              |   |
 | UC11 | Access to shared trip information      |          |               |   X     |              |   |
 | UC12 | Access to analytic reports             |    X     |               |         |              |   |
-| UC14 | Update travel data                     |          |               |         |       X      |   | 
-| UC15 | Poll emails                            |          |               |         |              |   | 
-| UC16 | Push notification about changes in trip|          |               |   X     |       X      |   | 
+| UC14 | Update travel data                     |          |               |         |       X      |   |  X
+| UC15 | Poll emails                            |          |               |         |              |   |  X
+| UC16 | Push notification about changes in trip|          |               |   X     |       X      |   |  X
 | UC18 | Collect analytical data                |    X     |               |         |              |   |
 
 As you can see in table: we have very high independet domains.
