@@ -8,7 +8,7 @@
 **Stakeholders**:
 
 - [x] @wschaef
-- [ ] @uweTelco
+- [x] @uweTelco
 - [ ] @slookin
 - [ ] @mauermbq
 
@@ -25,7 +25,7 @@ Our objective is to determine the most efficient approach for onboarding users w
 
 The critical decision criteria include:
 
-- User Experience (UC1: Login, UC2: Register)
+- User Experience (UC01: Login, UC02: Register)
 - Consistency in the identity referenced within the system
 
 Options:

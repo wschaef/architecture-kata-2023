@@ -7,7 +7,7 @@
 **Stakeholders**:
 
 - [x] @wschaef
-- [ ] @uweTelco
+- [x] @uweTelco Should we refer on the last section of the event driven towards the TR5?
 - [ ] @slookin
 - [ ] @mauermbq
 
