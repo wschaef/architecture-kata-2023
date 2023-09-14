@@ -147,12 +147,15 @@ Non functional requirements are derived from functional and technical requiremen
 | UC07 | Provide access to external people       | Traveller gives a direct link to a person to view his trip.                                                           | Traveller          | FR7         |
 | UC08 | Access end-of-year report               | Traveller view the result of the yearly report on his trips.                                                          | Traveller          | FR9         |
 | UC09 | Define filter and whitelist for email   | Traveller configures the email poll, including the filter and whitelisting.                                           | Traveller          | FR3         |
+| UC10 | Contact with "HelpMe!" Agency           | Traveller contact with agency for resoving issues.                                                                    | Traveller          | FR12        |
 | UC11 | Access to shared trip information       | External Person view a trip of a Traveller.                                                                           | External Person    | FR7         |
 | UC12 | Access to analytic reports              | Analyst views analytic reports from the system.                                                                       | Analyst            | FR10        |
 | UC14 | Update travel data                      | System updates the received data for a reservation.                                                                   | Travel System      | FR4         |
 | UC15 | Poll emails                             | System polls email system of traveller.                                                                               | System             | FR2         |
 | UC16 | Push notification about changes in trip | System pushes the information received from email, Travel system, etc. towards the traveller.                         | System             | FR4         |
 | UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
+| UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller          | FR12        |
+
 
 
 *\<optionally: Explanation of external domain interfaces>**
