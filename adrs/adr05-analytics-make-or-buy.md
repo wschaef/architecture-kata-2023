@@ -1,4 +1,4 @@
-# ADR Title
+# ADR Analytics make of buy
 
 **Status** : proposed / accepted / superseded
 
