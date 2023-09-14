@@ -239,8 +239,9 @@ Important Interfaces
 
 *\<(optional) Open Issues/Problems/Risks>*
 
-### \<Name black box 2>
+### IAM
 
+<img src="diagrams/Component-IAM.drawio.svg">
 *\<black box template>*
 
 ### \<Name black box n>
