@@ -192,11 +192,13 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 <img src="diagrams/Component overview.drawio.svg">
 
 Motivation  
-*\<text explanation>*
+Based on neccessary functionality and different non-functional requirements solution splitted to following domains and components. See component description below.
+
+
+
 
 Contained Building Blocks  
 *\<Description of contained building block (black boxes)>*
-Based on neccessary functionality and different non-functional requirements solution splitted to following domains and components.
 
 **Analytic domain** - responsible for collect data for reports, create reports and provide access to reports. This domain has persistent data like raw analytical data and generated reports. Reporting domain includes folloing components:
 * Data Collector - recive notification from external systems and store them
