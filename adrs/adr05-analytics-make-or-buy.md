@@ -41,7 +41,6 @@ The critical decision criteria include:
 - Handle external data as objects: Data Upload is on Google Cloud Storage (GCS)
 - Use Google Cloud Dataflow to create a data pipeline that reads from Cloud SQL and writes to BigQuery. This method is particularly useful if you need to perform transformations on the data before it gets to BigQuery. (to be clarified)
 
-
 ### Ratioanle for Serverless Data Warehouse
 
 By reducing the overhead associated with infrastructure management and offering powerful tools and integrations out-of-the-box, serverless data warehouses like BigQuery enable businesses to focus on data analytics and insights rather than the intricacies of data storage and management.
