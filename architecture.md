@@ -199,9 +199,9 @@ Splitting functionality between domains:
 | Domain |  Use Case Reference | Use Cases name
 | ------ | ----------- | ------------------ |
 |Analytic domain| UC08 <br> UC12 | Access end-of-year report <br> Access to analytic reports
-|Channel| UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC11| View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report <IC09> Define filter and whitelist for email <br> Access to shared trip information
+|Channel| UC01 <br> UC02 <br> UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC09<br> UC11 <br> UC12 <br> UC16|Login in system <br> Register in system <br> View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report <br> Define filter and whitelist for email <br> Access to shared trip information <br> Access to analytic reports	<br> Push notification about changes in trip	
 |Configuration domain| UC09 | Define filter and whitelist for email
-|Trip organizer|UC03 <br> UC04 <br> UC05 <br> UC14 | View dashboard <br> Manage reservations	<br> Manage trip	<
+|Trip organizer|UC03 <br> UC04 <br> UC05 <br> UC14 <br> UC16| View dashboard <br> Manage reservations	<br> Manage trip	<br> Push notification about changes in trip	
 |Integration domain| UC14 <br> UC15 <br> UC16 | Update travel data	<br> Poll emails	<br> Push notification about changes in trip	
 |IAM domain|UC01 <br> UC02|Login in system<br> Register in system	
 
