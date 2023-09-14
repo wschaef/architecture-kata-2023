@@ -1,0 +1,22 @@
+@startuml
+
+participant EmailReader as "Email Reader\n(Integration Domain)"
+participant TravelSystemIntegration as "Travel System\n(Integration Domain)"
+participant ReservationManager as "Reservation Manager\n(Trip Organizer Domain)"
+participant DataCollector as "Data Collector\n(Analytics Domain)"
+participant BFF as "BFF\n(Channel Domain)"
+participant WebApplication as "Web Application\n(Channel Domain)"
+participant IOSApp as "iOS App\n(Channel Domain)"
+participant AndroidApp as "Android App\n(Channel Domain)"
+
+EmailReader -> ReservationManager : Input
+TravelSystemIntegration -> ReservationManager : Input
+
+ReservationManager -> DataCollector : Forward change
+ReservationManager -> BFF : Forward change
+
+BFF -> WebApplication : Update
+BFF -> IOSApp : Update
+BFF -> AndroidApp : Update
+
+@enduml
