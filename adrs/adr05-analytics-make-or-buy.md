@@ -38,7 +38,9 @@ The critical decision criteria include:
 
 - Use serverless Data warehouse technologies for analytical purposes (Big Query)
 - Use Availab Frontend technologies for analytical purposes (Looker), as long as not already one exists in the company
-- Data Upload is on Google Cloud Storage (GCS)
+- Handle external data as objects: Data Upload is on Google Cloud Storage (GCS)
+- Use Google Cloud Dataflow to create a data pipeline that reads from Cloud SQL and writes to BigQuery. This method is particularly useful if you need to perform transformations on the data before it gets to BigQuery. (to be clarified)
+
 
 ### Ratioanle for Serverless Data Warehouse
 
