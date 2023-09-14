@@ -317,9 +317,9 @@ Reason: It is standard pattern to have IAM as separate domain, because this doma
 Cross domain interfaces:
 * Integration domain sent  notification directly to Analytic domain in order to have actual information in Analytic domain
 and also it allow as to analyse behaviour of Agencies. (for example how often Deutsche Bahn delayed his train)
-
-* Integration domain sent  notification directly to Analytic domain in order to have actual information in Analytic domain and also it allow as to analyse behaviour of Agencies. (for example how often Deutsche Bahn delayed his train)
-TBDTBDBTBDBD
+* Integration domain use configuration from Configuration domain.
+* Integration domain provide detailed data about reservation via Integration domain from Travel systems and Agencies to Trip Organizer domain
+* Integration domain sent notification directly to Trip Organizer domain in order to update reservations and inform users. 
  
 Reason: This domain is our door to external Travel world, and we need to organize all integration in very similar way in order to reduce data model aligment in other domains. We expect very hight load on this component, becuase 2 mln active will add new reservations in system and we need to request external partners for details about this reservation. Also we expect that all active reservaion (in active trips) can recieve updates via Travel systems, emails or from agencies.
 
