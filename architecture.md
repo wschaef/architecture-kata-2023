@@ -165,6 +165,21 @@ Non functional requirements are derived from functional and technical requiremen
 **\<Mapping Input/Output to Channels>**
 
 # Solution Strategy
+The solution strategy for the Road Warrior Travel Management Dashboard focuses on simplifying integration with external systems, prioritizing core features for the MVP, and leveraging cloud services for cost-effectiveness. By adopting Agile development methodologies, the project aims to ensure iterative progress, flexibility, and improved collaboration between the team and stakeholders. This approach balances efficient development with adaptability, allowing the platform to deliver a seamless and user-friendly experience for managing travel plans.
+
+1. **Implement email forwarding functionality** instead of direct integration with Email Providers. Users can forward their travel-related emails to a specific email address provided by the platform. This will simplify the initial development and reduce the complexity of integrating with various email providers.
+
+2. **Utilize public Identity Providers (IDPs) for user authentication** (as per ADR2). This will allow users to log in using popular services like Google or Facebook, reducing the need for a custom authentication system and simplifying the onboarding process.
+
+3. **Exclude analytics and reporting features from the MVP scope**. Focus on the core functionality of trip organization and management, which will allow for faster development and testing of the essential features of the platform.
+
+4. **Integrate only with Travel Systems** (such as SABRE, APOLLO) for retrieving travel information, and skip direct integration with hotels, car rentals, and airlines. This will streamline the development process and allow the platform to focus on a single integration point for travel data.
+
+5. **Leverage native services in the public cloud (XaaS)** instead of building custom solutions. Utilize cloud-based infrastructure, databases, and other services to reduce development time, maintenance efforts, and costs.
+
+6. **Research and adopt industry standards and best practices** for each component of the platform. This will ensure a high level of interoperability, reliability, and maintainability of the system.
+
+7. **Adopt Agile development methodologies** to ensure iterative progress, flexibility, and better collaboration between the development team and stakeholders. Implement practices such as product backlog management, sprints, daily stand-ups, continuous integration, code reviews, testing, and sprint retrospectives to continuously refine the project based on feedback and learnings from each sprint.
 
 # Building Block View
 
