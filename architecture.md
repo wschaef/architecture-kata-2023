@@ -521,22 +521,17 @@ Following quality attributes are important for components in this domain:
 
 **Purpose/Responsibility**
 
-**Interface(s)**:
+Mailbox setting, Filters and Whitelists settings, Supporting agency settings - allow to manage user specific settings.
 
-Integration domain consume one interface from User Setting domain - configuration for user mailboxes, filters and whitelists.
+**Interface(s)**
 
-Integration domain provide following interfaces:
+User Settings domain provide one interface which user by 
+* Channels domain - CRUD operations on settings
+* Integration domain - reading configuration for mailboxes, filters and whitelists.
 
-**Quality/Performance Characteristics**:
-
-Following quality attributes are important for components in this domain:
-
-- availability - 99.99%
-- compatibility - we need to follow SABRE, Appolo and standard agency interfaces.
-- tracebility - we need to be able to understand which message and when goes from which source.
-
-
-**This domain covers following Use Cases**:
+**This domain covers following Use Cases**
+* UC09 Define filter and whitelist for email
+* UC19 Configure "HelpMe!" Agency (Supporting agency)
 
 ### Aanlytics Domain (C4-Level3)
 
