@@ -8,7 +8,7 @@
 
 - [x] @wschaef
 - [x] @uweTelco
-- [ ] @slookin
+- [x] @slookin
 - [ ] @mauermbq
 
 ## Context
