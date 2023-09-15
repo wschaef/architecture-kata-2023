@@ -557,12 +557,11 @@ In the diagram below, you can see a high-level view of the explicit trust relati
 This multi-layered approach to security ensures the protection of our "Road Warrior" system from various threats and vulnerabilities.
 
 ## Architecture Decisions
-
-[ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
-[ADR 2 User Onboarding and Authentication Strategy](adrs/adrs02-authentication.md)
-[ADR 3 How to share share trips](adrs/adr03-SharingTrip.md)
-[ADR 4 Frontend technology](adrs/adr04-FrontendTechnology)
-[ADR 5 Backend technology](adrs/adr05-analytics-make-or-buy.md)
+* [ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
+* [ADR 2 User Onboarding and Authentication Strategy](adrs/adrs02-authentication.md)
+* [ADR 3 How to share share trips](adrs/adr03-SharingTrip.md)
+* [ADR 4 Frontend technology](adrs/adr04-FrontendTechnology)
+* [ADR 5 Backend technology](adrs/adr05-analytics-make-or-buy.md)
 
 ## Risks and Technical Debts
 
