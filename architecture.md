@@ -273,7 +273,7 @@ Supportive  | User Settings 			            | A supporting domain is a domain tha
 
 This chapter provides an overview of the different domains that compose the Road Warrior system. Each subchapter describes a domain, its responsibilities, interfaces with other domains, and the rationale behind its existence.
 
-#### Analytic domain
+#### Analytics domain
 
 **What the domain does:**
 
@@ -292,6 +292,7 @@ This domain is separated from others because it serves for a data driven busines
 **Information needs:**
 
 Currently there are no clear requirments on information needs for this domain. Ideation: [First scetch of information model](analytic-information-model.md).
+
 #### User Settings domain
 
 **What the domain does:**
@@ -325,7 +326,7 @@ The Trip Organizer domain allows users to manage their trips, create new ones, d
 
 This domain is the core of the business and differentiates the platform from competitors. It requires high evolvability and dedicated security due to the storage of customer data.
 
-#### Channel Domain
+#### Channels Domain
 
 **What the domain does:**
 
@@ -337,7 +338,7 @@ The Channel domain is responsible for providing user interfaces, such as web app
 - Uses the API of the Trip Organizer to access information about trips and reservations
 - Uses IAM for user registration and login (token exchange)
 - Receives end-of-year reports from the Analytic domain
-- Provides configuration to the Configuration domain
+- Provides configuration to the User Settings domain
 
 **Why we have the domain:**
 
@@ -382,9 +383,41 @@ It describes each container/domain as a whitebox concentrating on the components
 
 ### Channels Domain (C4-Level3)
 
+In our system, the user interface (UI) serves as one of the channels to interact with users. As per the requirements, we have identified three explicit channels for this interface:
+
+- **Web**
+- **iOS**
+- **Android**
+
+Importantly, we've designed our system to be flexible and modular. Adding a new channel, such as car entertainment, should be a local change within this domain and does not impact other domains.
+
+To ensure the effectiveness of our UI channels and to maintain architectural coherence, we've made three significant architecture decisions with a primary focus on this domain:
+
+1. [**ADR 2 User Onboarding and Authentication Strategy**](adrs/adrs02-authentication.md): This decision addresses the strategy for user onboarding and authentication within our UI channels.
+
+2. [**ADR 3 How to share trips**](adrs/adr03-SharingTrip.md): This decision outlines how trip-sharing functionality is implemented and integrated into our UI.
+
+3. [**ADR 4 Frontend Technology**](adrs/adr04-FrontendTechnology): This decision pertains to the selection of frontend technologies to be used in developing our UI channels.
+
+These decisions should reduce costs and time to market by following best ptractices as "stateful web url", "3rd party login" and open protocols as OpenID connect.
+
 <img src="diagrams/Component-Channels.drawio.svg">
 
 ### IAM Domain (C4-Level3)
+
+The Identity and Access Management (IAM) domain plays a pivotal role in our architecture, serving as a foundational and supportive element relevant to all other domains. Due to its high degree of harmonization and well-established principles, IAM becomes an invaluable resource that can be harnessed by public providers.
+
+One notable addition to our IAM framework is the integration of Zero Trust principles. Zero Trust represents a paradigm shift in authorization, moving from a perimeter-based model to a more granular approach. In this model, authorization is extended to each individual component within the system.
+
+Our implementation of Zero Trust is bolstered by the presence of an internal Identity Provider (IDP). This IDP serves as a crucial mechanism, enabling us to decouple each component from potential changes made by third-party Identity Providers (IDPs). 
+
+For further details on our security concept, including the Zero Trust implementation, please refer to the [Security Concept](architecture.md#security) chapter.
+
+The following architectural decision is particularly relevant to the IAM domain:
+
+- [**ADR 2 User Onboarding and Authentication Strategy**](adrs/adrs02-authentication.md)
+
+This decision forms a key component of our strategy within the IAM domain, addressing user onboarding and authentication, which are fundamental aspects of identity and access management.
 
 <img src="diagrams/Component-IAM.drawio.svg">
 
@@ -535,7 +568,7 @@ Interface(s) for the start:
 ### \<Runtime Scenario authentication >
 
 Following flow describes the authentication process with 3rd party Identity Provider (IDP)
-Corresponding architecture decision record is adr02-authentication
+Corresponding architecture decision record is [ADR 2 User Onboarding and Authentication Strategy](adrs/adrs02-authentication.md)
 
 ![Authentication Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/authentication.puml)
 
@@ -578,11 +611,12 @@ In the diagram below, you can see a high-level view of the explicit trust relati
 This multi-layered approach to security ensures the protection of our "Road Warrior" system from various threats and vulnerabilities.
 
 ## Architecture Decisions
-* [ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
-* [ADR 2 User Onboarding and Authentication Strategy](adrs/adrs02-authentication.md)
-* [ADR 3 How to share share trips](adrs/adr03-SharingTrip.md)
-* [ADR 4 Frontend technology](adrs/adr04-FrontendTechnology)
-* [ADR 5 Backend technology](adrs/adr05-analytics-make-or-buy.md)
+
+- [ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
+- [ADR 2 User Onboarding and Authentication Strategy](adrs/adrs02-authentication.md)
+- [ADR 3 How to share share trips](adrs/adr03-SharingTrip.md)
+- [ADR 4 Frontend technology](adrs/adr04-FrontendTechnology)
+- [ADR 5 Backend technology](adrs/adr05-analytics-make-or-buy.md)
 
 ## Risks and Technical Debts
 
