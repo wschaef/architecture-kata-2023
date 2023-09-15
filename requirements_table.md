@@ -4,8 +4,8 @@
 
 Functional requirements are derived from input given by the stakeholders documented there [input](input.md)|
 
- #     | Requirement                                                                                                                                                   |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| # | Requirement |
+|---|-------------|
 | FR1   | Road Warrior is system built and managed by a start up                                                                                                       |
 | FR2   | Poll email looking for travel-related emails                                                                                                                 |
 | FR3   | Filter and whitelist certain emails                                                                                                                          |
