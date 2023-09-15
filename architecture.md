@@ -58,7 +58,6 @@ Technical requirements are derived from input given by the stakeholders document
 | TR6   | Response time from web (800ms) and mobile (First-contentful paint of under 1.4 sec)                           |
 | TR7   | Must work internationally                                                                                      |
 
-  
 ### Non Functional
 
 Non functional requirements are derived from functional and technical requirements
@@ -243,10 +242,9 @@ Usecase vs domains tracebility:
 | UC18 | Collect analytical data                 | X        |               |         |                |     |
 | UC19 | Configure "HelpMe!" Agency              |          |  X            | X       |                |     |
 
-
 As you can see in table: we have very high independent domains.
 
-_Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
+*Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
 
 ### Architecture characteristics
 
@@ -291,6 +289,9 @@ The Analytic domain is responsible for collecting data for reports, creating rep
 
 This domain is separated from others because it serves for a data driven business model. Non-functional requirements for this domain are unclear at the beginning of the project. Espicially information needs might evolve and requires additional Analytical and ML capabilities.
 
+**Information needs:**
+
+Currently there are no clear requirments on information needs for this domain. Ideation: [First scetch of information model](analytic-information-model.md).
 #### User Settings domain
 
 **What the domain does:**
@@ -388,12 +389,13 @@ It describes each container/domain as a whitebox concentrating on the components
 <img src="diagrams/Component-IAM.drawio.svg">
 
 ### Trip Organizer Domain (C4-Level3)
+
 The Trip Organizer domain allows users to manage their trips, create new ones, delete trips, and add reservations. Data is ingested from the Integration domain.
 Following diagram represent components which involved in this domain.
 
 <img src="diagrams/Component-TripOrganizer.drawio.svg">
 
-**Purpose/Responsibility**
+**Purpose/Responsibility**:
 
 Reservation Manager component - Reservation Manager received notifications are from Travel Systems/Agencies or email inboxes, 
 which are subsequently used to update the internal database with the latest reservation information. 
@@ -441,11 +443,6 @@ Following quality attributes are important for components in this domain:
 
 <img src="diagrams/Component-Integration.drawio.svg">
 
-
-tbd Mark
-
-
-
 **Purpose/Responsibility**:
 
 Notification - The technical component receives data pushes from integration components and generates notifications for the Analytic and Trip Organizer domains.
@@ -479,35 +476,59 @@ Following quality attributes are important for components in this domain:
 - compatibility - we need to follow SABRE, Appolo and standard agency interfaces.
 - tracebility - we need to be able to understand which message and when goes from which source.
 
-**This domain covers following Use Cases**
-* UC14 Update travel data
-* UC15 Poll emails
-* UC16 Push notification about changes in trip
+**This domain covers following Use Cases**:
 
- ### User Settings Domain(C4-Level3)
+- UC14 Update travel data
+- UC15 Poll emails
+- UC16 Push notification about changes in trip
+
+### User Settings (C4-Level3)
 
 <img src="diagrams/Component-UserSetting.drawio.svg">
 
 **Purpose/Responsibility**
 
-Mailbox setting, Filters and Whitelists settings, Supporting agency settings - allow to manage user specific settings.
+**Interface(s)**:
+
+Integration domain consume one interface from User Setting domain - configuration for user mailboxes, filters and whitelists.
+
+Integration domain provide following interfaces:
+
+**Quality/Performance Characteristics**:
+
+Following quality attributes are important for components in this domain:
+
+- availability - 99.99%
+- compatibility - we need to follow SABRE, Appolo and standard agency interfaces.
+- tracebility - we need to be able to understand which message and when goes from which source.
 
 
-**Interface(s)**
-
-User Settings domain provide one interface which user by 
-* Channels domain - CRUD operations on settings
-* Integration domain - reading configuration for mailboxes, filters and whitelists.
-
-**This domain covers following Use Cases**
-* UC09 Define filter and whitelist for email
-* UC19 Configure "HelpMe!" Agency (Supporting agency)
-
-
+**This domain covers following Use Cases**:
 
 ### Aanlytics Domain (C4-Level3)
 
+The analytical domain is responsible for collecting data for reports, creating reports, and providing access to reports. This domain handles persistent data like raw analytical data and generated reports.
+
 ![Component Overview](diagrams/Analytics-logical.drawio.svg)
+
+In order to focus on business development and fast time to market, we decided to start with a lean serverless approach that reduces the effort for infrastructure management and maintenance to a minimum (see [Rationale for Analytics components](adrs/adr05-analytics-make-or-buy.md)). In essence, a serverless data warehouse abstracts away the complexities of infrastructure and management, allowing Road warrior to focus on deriving insights from their data. It offers a combination of flexibility, scalability, and cost-effectiveness that is start of the art in the market. This approach allows us to focus on the core business and to scale the system easily.  
+
+Separatoin of concern: User will have access to reports through Dashboard Frontend (Looker), which an optional API acces ([Looker API](https://developers.looker.com/api/overview/)).
+
+For the sake of security and consitency users do no have direct access to the storgage layer (GCS). All data handling is done by the serverless components which are authorized by Service Users only.
+
+Uploads from the Trip Organizer domain are done via File upload to GCS. The data is then processed and upladed by a serverless dockerized Knative component (Cloud Run) and stored in BigQuery. Automated scheduling and orchestration is done by Cloud Scheduler or DataFlow (based upon APACHE Airflow).
+
+Interface(s) for the start:
+
+- Federated Query from BigQuery: can directly query data stored in Cloud SQL using federated queries. The queries can be scheduled for periodical updates.
+- File Interface: Data which are acquired by Trip organizer are pushed on GCS object store. 
+
+**This domain covers following Use Cases**:
+
+- UC08 Access end-of-year report
+- UC12 Access to analytic reports
+- UC18 Collect analytical data
 
 ## Runtime View
 
