@@ -165,7 +165,7 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
 | UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller          | FR12        |
 
-### Technical Context
+### Technical Context (C4-Level1)
 
 ![Context Diagram](diagrams/Context.drawio.svg)
 
@@ -189,13 +189,10 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 ## Building Block View
 
-## Whitebox Overall System (L2)
+## Whitebox Overall System (C4-Level2)
 
 ***\<Overview Diagram>***
 ![Container Diagram](diagrams/Container.drawio.svg)
-
-***\<Component Diagram>***
-![Component Overview](diagrams/Component-overview.drawio.svg)
 
 ### Motivation
 
@@ -374,7 +371,7 @@ This domain serves as the gateway to the external travel world, organizing all i
 Important Interfaces  
 *\<Description of important interfaces>*
 
-### Channels
+### Channels (C4-Level3)
 
 <img src="diagrams/Component-Channels.drawio.svg">
 
@@ -390,11 +387,11 @@ Important Interfaces
 
 *\<(optional) Open Issues/Problems/Risks>*
 
-### IAM
+### IAM (C4-Level3)
 
 <img src="diagrams/Component-IAM.drawio.svg">
 
-### Trip Organizer
+### Trip Organizer (C4-Level3)
 The Trip Organizer domain allows users to manage their trips, create new ones, delete trips, and add reservations. Data is ingested from the Integration domain.
 Following diagram represent components which involved in this domain.
 
@@ -441,7 +438,7 @@ Following quality attributes are important for components in this domain:
 * UC14	Update travel data
 * UC16	Push notification about changes in trip
 
-### Integration domain
+### Integration domain (C4-Level3)
 
 <img src="diagrams/Component-Integration.drawio.svg">
 
@@ -484,36 +481,30 @@ Following quality attributes are important for components in this domain:
 * UC15 Poll emails
 * UC16 Push notification about changes in trip
 
-### Aanlytics Domain
+### Aanlytics Domain (C4-Level3)
 
 ![Component Overview](diagrams/Analytics-logical.drawio.svg)
 
-# Runtime View
+## Runtime View
 
-## \<Runtime Scenario authentication >
+### \<Runtime Scenario authentication >
 
 Following flow describes the authentication process with 3rd party Identity Provider (IDP)
 Corresponding architecture decision record is adr02-authentication
 
 ![Authentication Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/authentication.puml)
 
-## \<Runtime Scenario 2>
-
-## …
-
-## \<Runtime Scenario n>
-
-# Deployment View
+## Deployment View
 
 <img src="diagrams/Deployment.drawio.svg">
 
-# Cross-cutting Concepts
+## Cross-cutting Concepts
 
-## *Security*
+### *Security*
 
 In our security strategy for the "Road Warrior" system, we implement multiple layers of defense to ensure a robust and secure operation.
 
-### First Level of Defense
+#### First Level of Defense
 
 At the first level of defense, we rely on cloud-native offerings to enhance the security of our system:
 
@@ -521,13 +512,13 @@ At the first level of defense, we rely on cloud-native offerings to enhance the 
 
 - **Virtual Private Cloud (VPC)**: We leverage VPC to create a private network environment and implement network firewalls that require explicit configuration for each external connection. This approach enhances control and security.
 
-### Second Level of Defense
+#### Second Level of Defense
 
 Building upon the first level of defense, we introduce custom security measures:
 
 - **Internal Identity Provider (IDP)**: We implement an internal IDP to convert every token received from third-party IDPs into an internal token format. All internal servers are required to verify these internal tokens, rejecting any that are not valid.
 
-### Zero Trust Concept
+#### Zero Trust Concept
 
 Our security strategy aligns with the "Zero Trust" concept by:
 
@@ -541,30 +532,14 @@ In the diagram below, you can see a high-level view of the explicit trust relati
 
 This multi-layered approach to security ensures the protection of our "Road Warrior" system from various threats and vulnerabilities.
 
-## *\<Concept 2>*
-
-*\<explanation>*
-
-…
-
-## *\<Concept n>*
-
-*\<explanation>*
-
-# Architecture Decisions
+## Architecture Decisions
 
 [ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
 [ADR 2 User Onboarding and Authentication Strategy](adrs/adr01-ArchitectureStyle.md)
 [ADR 3 How to share share trips](adr03-SharingTrip.md)
 [ADR 4 Frontend technology](adr04-FrontendTechnology)
 
-# Quality Requirements
-
-## Quality Tree
-
-## Quality Scenarios
-
-# Risks and Technical Debts
+## Risks and Technical Debts
 
 We see following risks:
 
@@ -576,7 +551,7 @@ Requesting access to users' emails, whether granted to all or none, poses signif
 
 Integrating interfaces from various entities like hotels, car agencies, and airlines directly can introduce complexities and costs. This approach may hinder system evolution and maintenance, potentially leading to increased expenses and limited adaptability.
 
-# Glossary
+## Glossary
 
 | Term             | Definition                                                                                                                                                       |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -589,6 +564,6 @@ Integrating interfaces from various entities like hotels, car agencies, and airl
 | *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect*                                    |
 | *BFF*            | *Backend for Frontend is a server responsible to provide data for a frontend line a mobile app or web app*                                                       |
 
-# References
+## References
 * Arc42 Template Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. See <https://arc42.org>.
