@@ -195,16 +195,13 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 ## Building Block View
 
-## Whitebox Overall System
+## Whitebox Overall System (L2)
 
 ***\<Overview Diagram>***
 ![Container Diagram](diagrams/Container.drawio.svg)
 
 ***\<Component Diagram>***
 ![Component Overview](diagrams/Component-overview.drawio.svg)
-
-***\<Aanlytics Diagram>***
-![Component Overview](diagrams/Analytics-logical.drawio.svg)
 
 ### Motivation
 
@@ -493,46 +490,9 @@ Following quality attributes are important for components in this domain:
 * UC15 Poll emails
 * UC16 Push notification about changes in trip
 
+### Aanlytics Domain
 
-### \<Name black box n>
-
-*\<black box template>*
-
-### \<Name interface 1>
-
-…
-
-### \<Name interface m>
-
-## Level 2
-
-### White Box *\<building block 1>*
-
-*\<white box template>*
-
-### White Box *\<building block 2>*
-
-*\<white box template>*
-
-…
-
-### White Box *\<building block m>*
-
-*\<white box template>*
-
-## Level 3
-
-### White Box \<\_building block x.1\_\>
-
-*\<white box template>*
-
-### White Box \<\_building block x.2\_\>
-
-*\<white box template>*
-
-### White Box \<\_building block y.1\_\>
-
-*\<white box template>*
+![Component Overview](diagrams/Analytics-logical.drawio.svg)
 
 # Runtime View
 
