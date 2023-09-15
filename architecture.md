@@ -402,18 +402,44 @@ Following diagram represent components which involved in this domain.
 <img src="diagrams/Component-TripOrganizer.drawio.svg">
 
 *Purpose/Responsibility*
+Reservation Manager component - Reservation Manager received notifications are from Travel Systems/Agencies or email inboxes, 
+which are subsequently used to update the internal database with the latest reservation information. 
+If these updates are deemed significant for the user, notifications are then dispatched via the Channel Notification component. 
+In cases where reservations are manually created or generated via email, the Reservation Manager has the capability to request 
+supplementary reservation details from Travel Systems or Agencies. Additionally, channels have the ability to request reservation information via REST API.
+
+Trip Manager component - The Trip Manager facilitates users in performing Create, Read, Update, and Delete (CRUD) operations on trip entities and establishes associations between trips and reservations.
+
+Channel notification - Technical component which distribute notification from Reservation manager to Channel domain.
 
 
-*\<Interface(s)>*
+*Interface(s)*
 
-*\<(Optional) Quality/Performance Characteristics>*
+Trip organizer provide following interfaces:
+* REST interface for Channel domain for manage reservations
+* REST interface for Channel domain for manage trips
+* Message interface for Channel domain for inform user about reservation changes
+* DB access for Analytic domain for collection metrics
 
-*\<(Optional) Directory/File Location>*
+Trip organizer consume following interfaces:
+* REST interface form Integration domain for reading details about reservation
+* Message interface from Integration domain to recive changes in reservation
+ 
 
-*\<(Optional) Fulfilled Requirements>*
+*Quality/Performance Characteristics*
+Following quality attributes are important for components in this domain:
+* availability - 99.99
+* evolvability - because we need to change our system very fast if our hypotises are wrong
+* security - this component has user personal data (as a part of reservations) and need follow regulator rules (GDRP for exmaple)
+* testability - as we expect a lot of changes in these components then we should have good test automatization and transparency on test coverage.
+* localizability - as we work intenationally we need to support different localization for users and for reservations
 
-*\<(optional) Open Issues/Problems/Risks>*
-
+*This domain covers following Use Cases*
+* UC03	View dashboard
+* UC04	Manage reservations
+* UC05	Manage trip
+* UC14	Update travel data
+* UC16	Push notification about changes in trip
 
 ### \<Name black box n>
 
