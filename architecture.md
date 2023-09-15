@@ -269,6 +269,14 @@ Even all Architecture characteristics should be taking in account when we design
 
 Based on this analyses we can see that all domains has different Architecture characteristics and as result we are not able to combine them.
 
+### Strategic Design
+
+Category    | Domain                   | Explanation
+--------    | ------------------------------------ | -----------
+Core        | Channel <br> Trip organizer <br> Integration domain  | A core domain makes an organization unique and different from others. An organization cannot succeed (or even exist) without being exceptionally good in its core domain. Because the core domain is so important, it should receive the highest priority, the biggest effort, and the best developers. 
+Generic     | Analytic domain <br> Integration domain           | Generic domain is a domain that does not contain anything special to the organization but is still needed for the overall solution to work.We can tryi to use off-the-shelf software for your generic subdomains in order to save of time and work.
+Supportive  | User Settings 			            | A supporting domain is a domain that is necessary for succeed, but it does not fall into the core domain category. It is not generic either because it still requires some level of specialization for the organization in question. We can start with an existing solution and tweak it or extend it to your specific needs.
+
 ### Contained Building Blocks
 
 This chapter provides an overview of the different domains that compose the Road Warrior system. Each subchapter describes a domain, its responsibilities, interfaces with other domains, and the rationale behind its existence.
