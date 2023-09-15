@@ -2,7 +2,7 @@
 
 ### Functional Requiremens
 
-Functional requirements are derived from input given by the stakeholders documented there [input](input.md)|
+Functional requirements are derived from input given by the stakeholders documented there [input](input.md).
 
 | # | Requirement |
 |---|-------------|
