@@ -478,6 +478,16 @@ Mapping of Building Blocks to Infrastructure
 
 # Risks and Technical Debts
 
+We see following risks:
+
+**Risk: Requesting Email Access**
+
+Requesting access to users' emails, whether granted to all or none, poses significant data privacy challenges. This can potentially lead to unintended exposure of sensitive information and raise concerns about user privacy.
+
+**Risk: Diversity in Interface Integration**
+
+Integrating interfaces from various entities like hotels, car agencies, and airlines directly can introduce complexities and costs. This approach may hinder system evolution and maintenance, potentially leading to increased expenses and limited adaptability.
+
 # Glossary
 
 | Term             | Definition                                                                                                                                                       |
