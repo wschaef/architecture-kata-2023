@@ -200,7 +200,7 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 ![Component Overview](diagrams/Component-overview.drawio.svg)
 
 ***\<Aanlytics Diagram>***
-![Component Overview](diagrams/Component-overview.drawio.svg)
+![Component Overview](diagrams/Aanalytics-logical.drawio.svg)
 
 ### Motivation
 
