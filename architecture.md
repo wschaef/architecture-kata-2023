@@ -401,7 +401,8 @@ Following diagram represent components which involved in this domain.
 
 <img src="diagrams/Component-TripOrganizer.drawio.svg">
 
-*Purpose/Responsibility*
+**Purpose/Responsibility**
+
 Reservation Manager component - Reservation Manager received notifications are from Travel Systems/Agencies or email inboxes, 
 which are subsequently used to update the internal database with the latest reservation information. 
 If these updates are deemed significant for the user, notifications are then dispatched via the Channel Notification component. 
@@ -413,7 +414,7 @@ Trip Manager component - The Trip Manager facilitates users in performing Create
 Channel notification - Technical component which distribute notification from Reservation manager to Channel domain.
 
 
-*Interface(s)*
+**Interface(s)**
 
 Trip organizer provide following interfaces:
 * REST interface for Channel domain for manage reservations
@@ -426,7 +427,8 @@ Trip organizer consume following interfaces:
 * Message interface from Integration domain to recive changes in reservation
  
 
-*Quality/Performance Characteristics*
+**Quality/Performance Characteristics**
+
 Following quality attributes are important for components in this domain:
 * availability - 99.99
 * evolvability - because we need to change our system very fast if our hypotises are wrong
@@ -434,7 +436,8 @@ Following quality attributes are important for components in this domain:
 * testability - as we expect a lot of changes in these components then we should have good test automatization and transparency on test coverage.
 * localizability - as we work intenationally we need to support different localization for users and for reservations
 
-*This domain covers following Use Cases*
+**This domain covers following Use Cases**
+
 * UC03	View dashboard
 * UC04	Manage reservations
 * UC05	Manage trip
