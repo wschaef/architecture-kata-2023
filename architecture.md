@@ -555,9 +555,37 @@ Corresponding architecture decision record is adr02-authentication
 
 # Cross-cutting Concepts
 
-## *\<Concept 1>*
+## *Security*
 
-*\<explanation>*
+In our security strategy for the "Road Warrior" system, we implement multiple layers of defense to ensure a robust and secure operation.
+
+### First Level of Defense
+
+At the first level of defense, we rely on cloud-native offerings to enhance the security of our system:
+
+- **Cloud Armor**: We use Cloud Armor as a web application firewall (WAF) to defend against Distributed Denial of Service (DDOS) attacks and reduce the risk associated with the OWASP Top Ten vulnerabilities.
+
+- **Virtual Private Cloud (VPC)**: We leverage VPC to create a private network environment and implement network firewalls that require explicit configuration for each external connection. This approach enhances control and security.
+
+### Second Level of Defense
+
+Building upon the first level of defense, we introduce custom security measures:
+
+- **Internal Identity Provider (IDP)**: We implement an internal IDP to convert every token received from third-party IDPs into an internal token format. All internal servers are required to verify these internal tokens, rejecting any that are not valid.
+
+### Zero Trust Concept
+
+Our security strategy aligns with the "Zero Trust" concept by:
+
+- Designing trust explicitly: We do not assume trust by default but establish trust through verified mechanisms.
+
+- Reducing the risk of lateral movement: With our internal IDP and token verification, we limit the potential for unauthorized access and lateral movement within the system.
+
+In the diagram below, you can see a high-level view of the explicit trust relationships within our system:
+
+<img src="diagrams/Security.drawio.svg">
+
+This multi-layered approach to security ensures the protection of our "Road Warrior" system from various threats and vulnerabilities.
 
 ## *\<Concept 2>*
 
