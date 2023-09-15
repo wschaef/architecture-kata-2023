@@ -2,7 +2,7 @@
 
 ## Business context and goal
 
-The Road Warrior platform serves various actors, including Travellers, External Persons, Analysts, Travel Systems, and the System itself. Travellers can log in, register, view their dashboard, manage reservations and trips, share trips on social media, provide access to external people, view end-of-year reports, configure email settings, and contact the "HelpMe!" agency for support. External Persons can access shared trip information, while Analysts access analytical reports. Travel Systems update travel data, and the System performs tasks such as polling emails, sending notifications, and collecting analytical data for end-of-year reports and analysis.
+In the ever-evolving landscape of travel, we as new player comes – a dynamic startup that stands apart from the affiliations of traditional travel agencies.
 
 ### Vision
 
@@ -123,6 +123,8 @@ For a startup in a greenfield development scenario, there are minimal limitation
 ## System Scope and Context
 
 ## Business Context
+
+The Road Warrior platform serves various actors, including Travellers, External Persons, Analysts, Travel Systems, and the System itself. Travellers can log in, register, view their dashboard, manage reservations and trips, share trips on social media, provide access to external people, view end-of-year reports, configure email settings, and contact the "HelpMe!" agency for support. External Persons can access shared trip information, while Analysts access analytical reports. Travel Systems update travel data, and the System performs tasks such as polling emails, sending notifications, and collecting analytical data for end-of-year reports and analysis.
 
 ### Actors overview
 
