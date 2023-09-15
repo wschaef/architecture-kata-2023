@@ -159,8 +159,6 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
 | UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller          | FR12        |
 
-*\<optionally: Explanation of external domain interfaces>**
-
 ## Technical Context
 
 ![Context Diagram](diagrams/Context.drawio.svg)
