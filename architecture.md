@@ -196,7 +196,7 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 ## Whitebox Overall System (C4-Level2)
 
-This aligns with Level 2 of the C4 Model, specifically the [System Context diagram](https://c4model.com/#ContainerDiagram). This diagram provides an internal view of the system, focusing on its components and their interactions with external systems. In our system, we equate containers with domains, and both terms are used interchangeably.
+This aligns with Level 2 of the C4 Model, specifically the [Container diagram](https://c4model.com/#ContainerDiagram). This diagram provides an internal view of the system, focusing on its components and their interactions with external systems. In our system, we equate containers with domains, and both terms are used interchangeably.
 
 ![Container Diagram](diagrams/Container.drawio.svg)
 
@@ -375,6 +375,9 @@ The Integration domain provides capabilities for collecting information from ext
 This domain serves as the gateway to the external travel world, organizing all integrations in a similar way to reduce data model alignment in other domains. It is expected to experience high loads due to the addition of new reservations and the need to request details about these reservations from external partners. Additionally, all active reservations (in active trips) can receive updates via Travel systems, emails, or from agencies.
 
 ## Whitebox view on each Domain (C4-Level3)
+
+This corresponds to C4 Model Level 3 [Component diagram](https://c4model.com/#ComponentDiagram). 
+It describes each container/domain as a whitebox concentrating on the components inside container/domain and their dependencies to other containers/domains.
 
 ### Channels Domain (C4-Level3)
 
