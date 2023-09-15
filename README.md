@@ -32,7 +32,7 @@ As participants, we took part at the initial Architectural Kata event:
 ## Results
 
 We had about 5 days time to design an architecture for the given [Problem Description](input.md).
-The starting point is the [architecture.md](architecture.md). Have fun with it and feel free to comment.
+The starting point is the [architecture.md](architecture.md). Have fun with it and feel free to comment!
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
