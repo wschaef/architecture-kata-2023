@@ -36,7 +36,6 @@ The starting point is the [architecture.md](architecture.md). Have fun with it a
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [Architecture description](architecture.md#architecture-description)
   * [Introduction and Goals](architecture.md#introduction-and-goals)
   * [Business context and goal](architecture.md#business-context-and-goal)
   * [Requirements Overview](architecture.md#requirements-overview)
