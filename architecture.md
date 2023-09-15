@@ -159,13 +159,11 @@ For a startup in a greenfield development scenario, there are minimal limitation
 | UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
 | UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller          | FR12        |
 
-
-
 *\<optionally: Explanation of external domain interfaces>**
 
 ## Technical Context
 
-<img src="diagrams/Context.drawio.svg">
+![Context Diagram](diagrams/Context.drawio.svg)
 
 **\<Diagram or Table>**
 
@@ -173,7 +171,8 @@ For a startup in a greenfield development scenario, there are minimal limitation
 
 **\<Mapping Input/Output to Channels>**
 
-# Solution Strategy
+## Solution Strategy
+
 The solution strategy for the Road Warrior Travel Management Dashboard focuses on simplifying integration with external systems, prioritizing core features for the MVP, and leveraging cloud services for cost-effectiveness. By adopting Agile development methodologies, the project aims to ensure iterative progress, flexibility, and improved collaboration between the team and stakeholders. This approach balances efficient development with adaptability, allowing the platform to deliver a seamless and user-friendly experience for managing travel plans.
 
 1. **Implement email forwarding functionality** instead of direct integration with Email Providers. Users can forward their travel-related emails to a specific email address provided by the platform. This will simplify the initial development and reduce the complexity of integrating with various email providers.
