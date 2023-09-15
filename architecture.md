@@ -389,6 +389,23 @@ Important Interfaces
 <img src="diagrams/Component-IAM.drawio.svg">
 *\<black box template>*
 
+### Trip Organizer
+
+<img src="diagrams/Component-TripOrganizer.drawio.svg">
+
+*\<Purpose/Responsibility>*
+
+*\<Interface(s)>*
+
+*\<(Optional) Quality/Performance Characteristics>*
+
+*\<(Optional) Directory/File Location>*
+
+*\<(Optional) Fulfilled Requirements>*
+
+*\<(optional) Open Issues/Problems/Risks>*
+
+
 ### \<Name black box n>
 
 *\<black box template>*
