@@ -57,7 +57,7 @@ Technical requirements are derived from input given by the stakeholders document
 | TR7   | Must work internationally                                                                                      |
 
   
-### Non Functional
+### Non Functional requirements
 
 Non functional requirements are derived from functional and technical requirements
 
@@ -110,7 +110,6 @@ Non functional requirements are derived from functional and technical requiremen
 | [TR6]  |              |             | x           |             |      |              |            |
 | [TR7]  |              |             |             |             |      | x            |            |
 
-## Quality Goals
 
 ## Stakeholders
 
@@ -122,17 +121,17 @@ Non functional requirements are derived from functional and technical requiremen
 | Architecture Kata 2023 Jury Member | *Clare Sudbery* |
 | Architecture Kata 2023 Jury Member | *Robin Losey*   |
 
-## Architecture Constraints
+# Architecture Constraints
 
 For a startup in a greenfield development scenario, there are minimal limitations on technology choices. However, the solution space is constrained by the specific [Technical Requirements](#technical-requirements) outlined by the stakeholders. These technical requirements serve as the primary guiding constraints for the project's architecture and technology decisions.
 
-## System Scope and Context
+# System Scope and Context
 
-### Business Context
+## Business Context
 
 The Road Warrior platform serves various actors, including Travellers, External Persons, Analysts, Travel Systems, and the System itself. Travellers can log in, register, view their dashboard, manage reservations and trips, share trips on social media, provide access to external people, view end-of-year reports, configure email settings, and contact the "HelpMe!" agency for support. External Persons can access shared trip information, while Analysts access analytical reports. Travel Systems update travel data, and the System performs tasks such as polling emails, sending notifications, and collecting analytical data for end-of-year reports and analysis.
 
-#### Actors overview
+### Actors overview
 
 | Actor           | Description                                                                                                                                                     | Use Case Reference                                         |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -143,7 +142,7 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | Supporting agency| User selected agency for support and resolve issues. ("HelpMe! agency)                                                           													    | U10, U19                                                   |
 | System          | Some activities are initiated by the system.                                                                                                                    | UC15, UC16, UC18                                           |
 
-#### Use case overview
+### Use case overview
 
 | #    | Use Case                                | Short Description                                                                                                     | Actor              | Requirement |
 | ---- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------- |
@@ -165,11 +164,11 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
 | UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller          | FR12        |
 
-### Technical Context (C4-Level1)
+## Technical Context (C4-Level1)
 
 ![Context Diagram](diagrams/Context.drawio.svg)
 
-## Solution Strategy
+# Solution Strategy
 
 The solution strategy for the Road Warrior Travel Management Dashboard focuses on simplifying integration with external systems, prioritizing core features for the MVP, and leveraging cloud services for cost-effectiveness. By adopting Agile development methodologies, the project aims to ensure iterative progress, flexibility, and improved collaboration between the team and stakeholders. This approach balances efficient development with adaptability, allowing the platform to deliver a seamless and user-friendly experience for managing travel plans.
 
@@ -187,11 +186,11 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 7. **Adopt Agile development methodologies** to ensure iterative progress, flexibility, and better collaboration between the development team and stakeholders. Implement practices such as product backlog management, sprints, daily stand-ups, continuous integration, code reviews, testing, and sprint retrospectives to continuously refine the project based on feedback and learnings from each sprint.
 
-## Building Block View
+# Building Block View
 
 ## Whitebox Overall System (C4-Level2)
 
-***\<Overview Diagram>***
+***Container Diagram C4 level 2***
 ![Container Diagram](diagrams/Container.drawio.svg)
 
 ### Motivation
@@ -371,21 +370,11 @@ This domain serves as the gateway to the external travel world, organizing all i
 Important Interfaces  
 *\<Description of important interfaces>*
 
+## Whitebox view on each Domain (C4-Level3)
+
 ### Channels (C4-Level3)
 
 <img src="diagrams/Component-Channels.drawio.svg">
-
-*\<Purpose/Responsibility>*
-
-*\<Interface(s)>*
-
-*\<(Optional) Quality/Performance Characteristics>*
-
-*\<(Optional) Directory/File Location>*
-
-*\<(Optional) Fulfilled Requirements>*
-
-*\<(optional) Open Issues/Problems/Risks>*
 
 ### IAM (C4-Level3)
 
@@ -485,26 +474,26 @@ Following quality attributes are important for components in this domain:
 
 ![Component Overview](diagrams/Analytics-logical.drawio.svg)
 
-## Runtime View
+# Runtime View
 
-### \<Runtime Scenario authentication >
+## Runtime Scenario Authentication
 
 Following flow describes the authentication process with 3rd party Identity Provider (IDP)
 Corresponding architecture decision record is adr02-authentication
 
 ![Authentication Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/authentication.puml)
 
-## Deployment View
+# Deployment View
 
 <img src="diagrams/Deployment.drawio.svg">
 
-## Cross-cutting Concepts
+# Cross-cutting Concepts
 
-### *Security*
+## *Security*
 
 In our security strategy for the "Road Warrior" system, we implement multiple layers of defense to ensure a robust and secure operation.
 
-#### First Level of Defense
+### First Level of Defense
 
 At the first level of defense, we rely on cloud-native offerings to enhance the security of our system:
 
@@ -512,13 +501,13 @@ At the first level of defense, we rely on cloud-native offerings to enhance the 
 
 - **Virtual Private Cloud (VPC)**: We leverage VPC to create a private network environment and implement network firewalls that require explicit configuration for each external connection. This approach enhances control and security.
 
-#### Second Level of Defense
+### Second Level of Defense
 
 Building upon the first level of defense, we introduce custom security measures:
 
 - **Internal Identity Provider (IDP)**: We implement an internal IDP to convert every token received from third-party IDPs into an internal token format. All internal servers are required to verify these internal tokens, rejecting any that are not valid.
 
-#### Zero Trust Concept
+### Zero Trust Concept
 
 Our security strategy aligns with the "Zero Trust" concept by:
 
@@ -532,14 +521,14 @@ In the diagram below, you can see a high-level view of the explicit trust relati
 
 This multi-layered approach to security ensures the protection of our "Road Warrior" system from various threats and vulnerabilities.
 
-## Architecture Decisions
+# Architecture Decisions
 
 [ADR 1 Architecture Style](adrs/adr01-ArchitectureStyle.md)
 [ADR 2 User Onboarding and Authentication Strategy](adrs/adr01-ArchitectureStyle.md)
 [ADR 3 How to share share trips](adr03-SharingTrip.md)
 [ADR 4 Frontend technology](adr04-FrontendTechnology)
 
-## Risks and Technical Debts
+# Risks and Technical Debts
 
 We see following risks:
 
@@ -551,7 +540,7 @@ Requesting access to users' emails, whether granted to all or none, poses signif
 
 Integrating interfaces from various entities like hotels, car agencies, and airlines directly can introduce complexities and costs. This approach may hinder system evolution and maintenance, potentially leading to increased expenses and limited adaptability.
 
-## Glossary
+# Glossary
 
 | Term             | Definition                                                                                                                                                       |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -564,6 +553,6 @@ Integrating interfaces from various entities like hotels, car agencies, and airl
 | *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect*                                    |
 | *BFF*            | *Backend for Frontend is a server responsible to provide data for a frontend line a mobile app or web app*                                                       |
 
-## References
+# References
 * Arc42 Template Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. See <https://arc42.org>.
