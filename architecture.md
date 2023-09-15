@@ -297,7 +297,7 @@ The Analytic domain is responsible for collecting data for reports, creating rep
 
 This domain is separated from others because it serves for a data driven business model. Non-functional requirements for this domain are unclear at the beginning of the project. Espicially information needs might evolve and requires additional Analytical and ML capabilities
 
-#### User Settings
+#### User Settings domain
 
 **What the domain does:**
 
