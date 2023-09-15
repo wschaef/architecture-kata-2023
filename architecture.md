@@ -480,28 +480,23 @@ Following quality attributes are important for components in this domain:
 * UC15 Poll emails
 * UC16 Push notification about changes in trip
 
- ### User Settings (C4-Level3)
+ ### User Settings Domain(C4-Level3)
 
 <img src="diagrams/Component-UserSetting.drawio.svg">
 
 **Purpose/Responsibility**
 
+Mailbox setting, Filters and Whitelists settings, Supporting agency settings - allow to manage user specific settings.
+
+
 **Interface(s)**
 
-Integration domain consume one interface from User Setting domain - configuration for user mailboxes, filters and whitelists.
-
-Integration domain provide following interfaces:
-
-
-**Quality/Performance Characteristics**
-
-Following quality attributes are important for components in this domain:
-* availability - 99.99%
-* compatibility - we need to follow SABRE, Appolo and standard agency interfaces.
-* tracebility - we need to be able to understand which message and when goes from which source.
-
+User Settings domain provide one interface which user by Channels domain - CRUD operations on settings and by Integration domain - reading configuration for mailboxes, filters and whitelists.
 
 **This domain covers following Use Cases**
+* UC09 Define filter and whitelist for email
+* UC19 Configure "HelpMe!" Agency (Supporting agency)
+
 
 
 ### Aanlytics Domain (C4-Level3)
