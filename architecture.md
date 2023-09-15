@@ -128,11 +128,11 @@ For a startup in a greenfield development scenario, there are minimal limitation
 
 ## System Scope and Context
 
-## Business Context
+### Business Context
 
 The Road Warrior platform serves various actors, including Travellers, External Persons, Analysts, Travel Systems, and the System itself. Travellers can log in, register, view their dashboard, manage reservations and trips, share trips on social media, provide access to external people, view end-of-year reports, configure email settings, and contact the "HelpMe!" agency for support. External Persons can access shared trip information, while Analysts access analytical reports. Travel Systems update travel data, and the System performs tasks such as polling emails, sending notifications, and collecting analytical data for end-of-year reports and analysis.
 
-### Actors overview
+#### Actors overview
 
 | Actor           | Description                                                                                                                                                     | Use Case Reference                                         |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -143,7 +143,7 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | Supporting agency| User selected agency for support and resolve issues. ("HelpMe! agency)                                                           													    | U10, U19                                                   |
 | System          | Some activities are initiated by the system.                                                                                                                    | UC15, UC16, UC18                                           |
 
-### Use case overview
+#### Use case overview
 
 | #    | Use Case                                | Short Description                                                                                                     | Actor              | Requirement |
 | ---- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------- |
@@ -165,15 +165,9 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
 | UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller          | FR12        |
 
-## Technical Context
+### Technical Context
 
 ![Context Diagram](diagrams/Context.drawio.svg)
-
-**\<Diagram or Table>**
-
-**\<optionally: Explanation of technical interfaces>**
-
-**\<Mapping Input/Output to Channels>**
 
 ## Solution Strategy
 
