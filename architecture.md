@@ -196,8 +196,7 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 ## Whitebox Overall System (C4-Level2)
 
-This corresponds to C4 Model Level 2 [System Context diagram](https://c4model.com/#ContainerDiagram). 
-It describes the system as a whitebox concentrating on the components inside the system their dependencies to external systems.
+This aligns with Level 2 of the C4 Model, specifically the [System Context diagram](https://c4model.com/#ContainerDiagram). This diagram provides an internal view of the system, focusing on its components and their interactions with external systems. In our system, we equate containers with domains, and both terms are used interchangeably.
 
 ![Container Diagram](diagrams/Container.drawio.svg)
 
