@@ -281,13 +281,13 @@ The Analytic domain is responsible for collecting data for reports, creating rep
 
 **Interfaces:**
 
-- Delivers end-of-year reports to the Channel domain
-- Receives notifications directly from the Integration domain for updated information and analysis of agency behavior
-- Reads data from the Trip Organizer domain to collect information about trips and reservations
+- Delivers end-of-year reports by dashboard (Like FE the Dashboard is API driven as well and allows further automation on behalf of the end customer)
+- Receives notifications directly from the Trip Organizer domain
+- Extracts data from the Trip Organizer domain to collect information about trips and reservations over time
 
 **Why we have the domain:**
 
-This domain is separated from others because it can be purchased from a third party. Non-functional requirements for this domain are unclear at the beginning of the project, but generating "end-of-year" reports requires high elasticity at the end of the calendar year.
+This domain is separated from others because it serves for a data driven business model. Non-functional requirements for this domain are unclear at the beginning of the project. Espicially information needs might evolve and requires additional Analytical and ML capabilities
 
 #### User Settings
 
