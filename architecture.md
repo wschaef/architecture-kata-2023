@@ -413,7 +413,6 @@ Trip Manager component - The Trip Manager facilitates users in performing Create
 
 Channel notification - Technical component which distribute notification from Reservation manager to Channel domain.
 
-
 **Interface(s)**
 
 Trip organizer provide following interfaces:
@@ -426,7 +425,6 @@ Trip organizer consume following interfaces:
 * REST interface form Integration domain for reading details about reservation
 * Message interface from Integration domain to recive changes in reservation
  
-
 **Quality/Performance Characteristics**
 
 Following quality attributes are important for components in this domain:
@@ -450,15 +448,42 @@ Following quality attributes are important for components in this domain:
 
 **Purpose/Responsibility**
 
+Notification - The technical component receives data pushes from integration components and generates notifications for the Analytic and Trip Organizer domains.
+
+Integration router - This component supports the logic for determining the appropriate integration method to obtain detailed reservation information and harmonizes the data model across various data sources.
+
+Travel system integration - This component facilitates the integration with Travel Systems. During the detailed design phase, it is anticipated that this component will be subdivided to accommodate each specific Travel System, such as APOLLO and SABRE.
+
+Airlines integrations - This component is designed to facilitate integration with multiple airline systems through the utilization of standard APIs
+
+Car rental integrations - This component is designed to facilitate integration with multiple Car rental systems through the utilization of standard APIs
+
+Hotel integrations - This component is designed to facilitate integration with multiple Hotel (PMS) systems through the utilization of standard APIs
+
+Email reader - This component possesses the capability to access user mailboxes through standard protocols, notably SMTP. It undertakes the task of filtering incoming emails and extracting reservation-related information. It is envisaged that, in the detailed design phase, this component will be further subdivided into 'Mailbox Reader' and 'Email Parser' components.
 
 
 **Interface(s)**
 
+Integration domain consume one interface from User Setting domain - configuration for user mailboxes, filters and whitelists.
+
+Integration domain provide following interfaces:
+* Message interface for notify Analytic and Travel Organizer domains about reservation changes.
+* JSON interface for collect detailed information about reservations.
+
 
 **Quality/Performance Characteristics**
 
+Following quality attributes are important for components in this domain:
+* availability - 99.99%
+* compatibility - we need to follow SABRE, Appolo and standard agency interfaces.
+* tracebility - we need to be able to understand which message and when goes from which source.
+
 
 **This domain covers following Use Cases**
+* UC14 Update travel data
+* UC15 Poll emails
+* UC16 Push notification about changes in trip
 
 
 ### \<Name black box n>
