@@ -205,7 +205,7 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 In the context of our architecture, the decision to split our solution into several domains stems from a fundamental understanding of the necessary functionality and a keen consideration of various non-functional requirements. By dissecting our system into distinct domains and components, we embark on a journey to achieve greater flexibility and efficiency in our development process.
 
-#### Function analyses
+### Function analyses
 
 In our pursuit of an optimized and well-structured solution, we turn our attention to the deliberate division of functionality, specifically the distribution of Use Cases across our distinct domains.
 
@@ -249,7 +249,7 @@ As you can see in table: we have very high independent domains.
 
 _Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
 
-#### Architecture characteristics
+### Architecture characteristics
 
 Even all Architecture characteristics should be taking in account when we design and implement domains, some of Architecture characteristics played more important role and influence significantly on component design and deployment.
 
@@ -264,11 +264,11 @@ Even all Architecture characteristics should be taking in account when we design
 
 Based on this analyses we can see that all domains has different Architecture characteristics and as result we are not able to combine them.
 
-#### Contained Building Blocks
+### Contained Building Blocks
 
 This chapter provides an overview of the different domains that compose the Road Warrior system. Each subchapter describes a domain, its responsibilities, interfaces with other domains, and the rationale behind its existence.
 
-##### Analytic domain
+#### Analytic domain
 
 **What the domain does:**
 
@@ -284,7 +284,7 @@ The Analytic domain is responsible for collecting data for reports, creating rep
 
 This domain is separated from others because it can be purchased from a third party. Non-functional requirements for this domain are unclear at the beginning of the project, but generating "end-of-year" reports requires high elasticity at the end of the calendar year.
 
-##### User Settings
+#### User Settings
 
 **What the domain does:**
 
@@ -299,7 +299,7 @@ The User settings domain manages the configuration of mailboxes for polling, as 
 
 This domain is relatively simple and does not require high performance or many changes during project evolution.
 
-##### Trip Organizer Domain
+#### Trip Organizer Domain
 
 **What the domain does:**
 
@@ -317,7 +317,7 @@ The Trip Organizer domain allows users to manage their trips, create new ones, d
 
 This domain is the core of the business and differentiates the platform from competitors. It requires high evolvability and dedicated security due to the storage of customer data.
 
-##### Channel Domain
+#### Channel Domain
 
 **What the domain does:**
 
@@ -335,7 +335,7 @@ The Channel domain is responsible for providing user interfaces, such as web app
 
 This domain represents the "face" of the platform to end-users and requires high quality (testability) and evolvability. It is critical from a UX perspective and is expected to undergo many changes that need to be delivered to users quickly.
 
-##### IAM Domain
+#### IAM Domain
 
 **What the domain does:**
 
@@ -350,7 +350,7 @@ The IAM domain covers all aspects of user registration, authentication, and auth
 
 It is a standard pattern to have IAM as a separate domain since it is well-developed and independent of the project's business specifics. It typically allows for the reuse of existing out-of-the-box solutions with minimal customization and configuration.
 
-##### Integration Domain
+#### Integration Domain
 
 **What the domain does:**
 
