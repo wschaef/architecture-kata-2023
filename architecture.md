@@ -472,7 +472,7 @@ Following quality attributes are important for components in this domain:
 
  ### User Settings (C4-Level3)
 
-<img src="diagrams/Component-UserSettings.drawio.svg">
+<img src="diagrams/Component-UserSetting.drawio.svg">
 
 **Purpose/Responsibility**
 
