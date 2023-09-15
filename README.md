@@ -34,6 +34,30 @@ As participants, we took part at the initial Architectural Kata event:
 We had about 5 days time to design an architecture for the given [Problem Description](input.md).
 The starting point is the [architecture.md](architecture.md). Have fun with it and feel free to comment.
 
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Architecture description](architecture.md#architecture-description)
+  * [Introduction and Goals](architecture.md#introduction-and-goals)
+  * [Business context and goal](architecture.md#business-context-and-goal)
+  * [Requirements Overview](architecture.md#requirements-overview)
+  * [Quality Goals](architecture.md#architecture.md#quality-goals)
+  * [Stakeholders](architecture.md#stakeholders)
+  * [Architecture Constraints](architecture.md#architecture-constraints)
+  * [System Scope and Context (C4-Level1)](architecture.md#system-scope-and-context)
+  * [Solution Strategy](architecture.md#solution-strategy)
+  * [Building Block View](architecture.md#building-block-view)
+  * [Whitebox Overall System (C4-Level2)](architecture.md#whitebox-overall-system-c4-level2)
+  * [Whitebox view on each Domain (C4-Level3)](architecture.md#whitebox-view-on-each-domain-c4-level3)
+  * [Runtime View](architecture.md#runtime-view)
+  * [Deployment View](architecture.md#deployment-view)
+  * [Cross-cutting Concepts](architecture.md#cross-cutting-concepts)
+  * [Architecture Decisions](architecture.md#architecture-decisions)
+  * [Risks and Technical Debts](architecture.md#risks-and-technical-debts)
+  * [Glossary](architecture.md#glossary)
+  * [References](architecture.md#references)
+
+<!-- TOC end -->
+
 We also happy to share [lessons learned](lessons-learned.md) from some of our team members.
 
 ## Team Members
