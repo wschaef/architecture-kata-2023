@@ -396,10 +396,13 @@ Important Interfaces
 <img src="diagrams/Component-IAM.drawio.svg">
 
 ### Trip Organizer
+The Trip Organizer domain allows users to manage their trips, create new ones, delete trips, and add reservations. Data is ingested from the Integration domain.
+Following diagram represent components which involved in this domain.
 
 <img src="diagrams/Component-TripOrganizer.drawio.svg">
 
-*\<Purpose/Responsibility>*
+*Purpose/Responsibility*
+
 
 *\<Interface(s)>*
 
