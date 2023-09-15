@@ -169,6 +169,9 @@ The Road Warrior platform serves various actors, including Travellers, External 
 
 ### Technical Context (C4-Level1)
 
+This chapter corresponds to C4 Model Level 1 [System Context diagram](https://c4model.com/#SystemContextDiagram). 
+It describes the system as a blackbox concentrating on the external dependencies.
+
 ![Context Diagram](diagrams/Context.drawio.svg)
 
 ## Solution Strategy
