@@ -219,7 +219,7 @@ In more formal terminology, this strategic approach directly contributes to the 
 | IAM domain           | UC01 <br> UC02                                                                                                    | Login in system<br> Register in system                                                                                                                                                                                                                                                                                                                                         |
 | Integration domain   | UC14 <br> UC15 <br> UC16                                                                                          | Update travel data	<br> Poll emails	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                               |
 
-*Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
+_Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
 
 Usecase vs domains tracebility:
 | #    | Use Case                                | Analytic | User settings | Channel | Trip organizer | IAM | Integration |
