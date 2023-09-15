@@ -370,9 +370,6 @@ The Integration domain provides capabilities for collecting information from ext
 
 This domain serves as the gateway to the external travel world, organizing all integrations in a similar way to reduce data model alignment in other domains. It is expected to experience high loads due to the addition of new reservations and the need to request details about these reservations from external partners. Additionally, all active reservations (in active trips) can receive updates via Travel systems, emails, or from agencies.
 
-Important Interfaces  
-*\<Description of important interfaces>*
-
 ## Whitebox view on each Domain (C4-Level3)
 
 ### Channels Domain (C4-Level3)
