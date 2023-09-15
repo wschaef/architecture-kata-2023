@@ -444,6 +444,23 @@ Following quality attributes are important for components in this domain:
 * UC14	Update travel data
 * UC16	Push notification about changes in trip
 
+### Integration domain
+
+<img src="diagrams/Component-Integration.drawio.svg">
+
+**Purpose/Responsibility**
+
+
+
+**Interface(s)**
+
+
+**Quality/Performance Characteristics**
+
+
+**This domain covers following Use Cases**
+
+
 ### \<Name black box n>
 
 *\<black box template>*
