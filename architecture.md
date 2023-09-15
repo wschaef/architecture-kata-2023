@@ -2,9 +2,7 @@
 
 ## Business context and goal
 
-The Road Warrior Travel Management Dashboard
-
-In the ever-evolving landscape of travel, we as new player comes  – a dynamic startup that stands apart from the affiliations of traditional travel agencies.
+The Road Warrior platform serves various actors, including Travellers, External Persons, Analysts, Travel Systems, and the System itself. Travellers can log in, register, view their dashboard, manage reservations and trips, share trips on social media, provide access to external people, view end-of-year reports, configure email settings, and contact the "HelpMe!" agency for support. External Persons can access shared trip information, while Analysts access analytical reports. Travel Systems update travel data, and the System performs tasks such as polling emails, sending notifications, and collecting analytical data for end-of-year reports and analysis.
 
 ### Vision
 
@@ -67,11 +65,11 @@ Non functional requirements are derived from functional and technical requiremen
   - Travel updates must be presented in the app within 5 minutes of generation by the source <- **[TR5]**
 - **[NFR4]** Consistency
   - Travel updates must be presented in the app within 5 minutes of generation by the source <- **[TR5]**
-  - Once the trip is complete, the items should automatically be removed from the dashboard <- **[FR5][FR6]**
+  - Once the trip is complete, the items should automatically be removed from the dashboard <- **[FR5],[FR6]**
   - End Year report must be consistent with active and inactive trips <- **[FR9]**
   - Analytical data must be consistent with operational data <- **[FR10]**
 - **[NFR5]** Cost
-  - system must by cost efficient <- **[FR1]** 
+  - system must by cost efficient <- **[FR1]**
 - **[NFR6]** Evolvability
   - adding an new integration must be efficient <- **[TR1],[FR4],[FR12]**
   - adding new region must be efficient <- **[TR7]**
@@ -105,7 +103,6 @@ Non functional requirements are derived from functional and technical requiremen
 | [TR5]  |              |             |             | x           |      |              |            |
 | [TR6]  |              |             | x           |             |      |              |            |
 | [TR7]  |              |             |             |             |      | x            |            |
-
 
 ## Quality Goals
 
@@ -204,27 +201,25 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 ### Motivation
 
-In the context of our architecture, the decision to split our solution into several domains stems from a fundamental understanding of the necessary functionality and a keen consideration of various non-functional requirements. By dissecting our system into distinct domains and components, we embark on a journey to achieve greater flexibility and efficiency in our development process. 
+In the context of our architecture, the decision to split our solution into several domains stems from a fundamental understanding of the necessary functionality and a keen consideration of various non-functional requirements. By dissecting our system into distinct domains and components, we embark on a journey to achieve greater flexibility and efficiency in our development process.
 
 #### Function analyses
 
-In our pursuit of an optimized and well-structured solution, we turn our attention to the deliberate division of functionality, specifically the distribution of Use Cases across our distinct domains. 
+In our pursuit of an optimized and well-structured solution, we turn our attention to the deliberate division of functionality, specifically the distribution of Use Cases across our distinct domains.
 
 By meticulously organizing an independent set of Use Cases within each domain, we not only foster a more agile and self-contained development process but also reduce the inherent complexities associated with interdependencies
 
 In more formal terminology, this strategic approach directly contributes to the enhancement of 'Loose coupling' and 'Cohesion' within our system, reinforcing the foundational principles that guide our architectural choices
-
-
 | Domain               | Use Case Reference                                                                                                | Use Cases name                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Analytic domain      | UC08 <br> UC12 <br> UC18                                                                                          | Access end-of-year report <br> Access to analytic reports <br> Collect analytical data                                                                                                                                                                                                                                                                                         |
+| Analytic domain      | UC08 <br> UC12 <br> UC18 <br>                                                                                        | Access end-of-year report <br> Access to analytic reports <br> Collect analytical data                                                                                                                                                                                                                                                                                         |
 | Configuration domain | UC09 <br> UC19                                                                                                    | Define filter and whitelist for email <br>   Configure "HelpMe!" Agency                                                                                                                                                                                                                                                                                                                                       |
 | Channel              | UC01 <br> UC02 <br> UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC09<br> UC10<br> UC11 <br> UC12 <br> UC16 | Login in system <br> Register in system <br> View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report  <br>  Define filter and whitelist for email <br> Contact with "HelpMe!" Agency <br> Access to shared trip information <br> Access to analytic reports	<br> Push notification about changes in trip |
 | Trip organizer       | UC03 <br> UC04 <br> UC05 <br> UC14 <br> UC16                                                                      | View dashboard <br> Manage reservations	<br> Manage trip	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                          |
 | IAM domain           | UC01 <br> UC02                                                                                                    | Login in system<br> Register in system                                                                                                                                                                                                                                                                                                                                         |
 | Integration domain   | UC14 <br> UC15 <br> UC16                                                                                          | Update travel data	<br> Poll emails	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                               |
 
-_Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
+*Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
 
 Usecase vs domains tracebility:
 | #    | Use Case                                | Analytic | Configuration | Channel | Trip organizer | IAM | Integration |
@@ -241,9 +236,9 @@ Usecase vs domains tracebility:
 | UC10 | Contact with "HelpMe!" Agency           |          |               | X       |                |     |
 | UC11 | Access to shared trip information       |          |               | X       |                |     |
 | UC12 | Access to analytic reports              | X        |               |         |                |     |
-| UC14 | Update travel data                      |          |               |         | X              |     | X           
-| UC15 | Poll emails                             |          |               |         |                |     | X           
-| UC16 | Push notification about changes in trip |          |               | X       | X              |     | X           
+| UC14 | Update travel data                      |          |               |         | X              |     | X
+| UC15 | Poll emails                             |          |               |         |                |     | X
+| UC16 | Push notification about changes in trip |          |               | X       | X              |     | X
 | UC18 | Collect analytical data                 | X        |               |         |                |     |
 | UC19 | Configure "HelpMe!" Agency              |          |  X            | X       |                |     |
 
@@ -253,24 +248,25 @@ As you can see in table: we have very high independent domains.
 _Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
 
 #### Architecture characteristics
+
 Even all Architecture characteristics should be taking in account when we design and implement domains, some of Architecture characteristics played more important role and influence significantly on component design and deployment.
 
-| quality attributes | Analytic | Configuration | Channel | Trip organizer | IAM    | Integration |
+| Architecture characteristics | Analytic | Configuration | Channel | Trip organizer | IAM    | Integration |
 | ------------------ | -------- | ------------- | ------- | -------------- | ------ | ----------- |
-| availability       | medium   | medium        | High    | High           | High   | High        |
-| compatibility      | High     | low           | low     | low            | High   | High        |
-| evolvability       | High     | low           | High    | high           | low    | medium      |
+| availability       | medium   | medium        | high    | high           | high   | high        |
+| compatibility      | high     | low           | low     | low            | high   | high        |
+| evolvability       | high     | low           | High    | high           | low    | medium      |
 | localizability     | low      | low           | high    | high           | low    | medium      |
 | testability        | low      | low           | high    | high           | medium | medium      |
 | traceability       | high     | low           | low     | medium         | high   | high        |
 
 Based on this analyses we can see that all domains has different Architecture characteristics and as result we are not able to combine them.
 
-### Contained Building Blocks
+#### Contained Building Blocks
 
 This chapter provides an overview of the different domains that compose the Road Warrior system. Each subchapter describes a domain, its responsibilities, interfaces with other domains, and the rationale behind its existence.
 
-#### Analytic Domain
+##### Analytic domain
 
 **What the domain does:**
 
@@ -286,11 +282,11 @@ The Analytic domain is responsible for collecting data for reports, creating rep
 
 This domain is separated from others because it can be purchased from a third party. Non-functional requirements for this domain are unclear at the beginning of the project, but generating "end-of-year" reports requires high elasticity at the end of the calendar year.
 
-#### Configuration Domain
+##### User Settings
 
 **What the domain does:**
 
-The Configuration domain manages the configuration of mailboxes for polling, as well as filter and whitelist definitions.
+The User settings domain manages the configuration of mailboxes for polling, as well as filter and whitelist definitions.
 
 **Interfaces:**
 
@@ -301,7 +297,7 @@ The Configuration domain manages the configuration of mailboxes for polling, as 
 
 This domain is relatively simple and does not require high performance or many changes during project evolution.
 
-#### Trip Organizer Domain
+##### Trip Organizer Domain
 
 **What the domain does:**
 
@@ -319,7 +315,7 @@ The Trip Organizer domain allows users to manage their trips, create new ones, d
 
 This domain is the core of the business and differentiates the platform from competitors. It requires high evolvability and dedicated security due to the storage of customer data.
 
-#### Channel Domain
+##### Channel Domain
 
 **What the domain does:**
 
@@ -337,7 +333,7 @@ The Channel domain is responsible for providing user interfaces, such as web app
 
 This domain represents the "face" of the platform to end-users and requires high quality (testability) and evolvability. It is critical from a UX perspective and is expected to undergo many changes that need to be delivered to users quickly.
 
-#### IAM Domain
+##### IAM Domain
 
 **What the domain does:**
 
@@ -352,7 +348,7 @@ The IAM domain covers all aspects of user registration, authentication, and auth
 
 It is a standard pattern to have IAM as a separate domain since it is well-developed and independent of the project's business specifics. It typically allows for the reuse of existing out-of-the-box solutions with minimal customization and configuration.
 
-#### Integration Domain
+##### Integration Domain
 
 **What the domain does:**
 
