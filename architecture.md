@@ -491,7 +491,9 @@ Mailbox setting, Filters and Whitelists settings, Supporting agency settings - a
 
 **Interface(s)**
 
-User Settings domain provide one interface which user by Channels domain - CRUD operations on settings and by Integration domain - reading configuration for mailboxes, filters and whitelists.
+User Settings domain provide one interface which user by 
+* Channels domain - CRUD operations on settings
+* Integration domain - reading configuration for mailboxes, filters and whitelists.
 
 **This domain covers following Use Cases**
 * UC09 Define filter and whitelist for email
