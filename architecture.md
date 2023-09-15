@@ -387,7 +387,6 @@ Important Interfaces
 ### IAM
 
 <img src="diagrams/Component-IAM.drawio.svg">
-*\<black box template>*
 
 ### Trip Organizer
 
