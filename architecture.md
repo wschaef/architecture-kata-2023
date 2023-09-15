@@ -134,7 +134,7 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | External Person | A person having access to a trip, which is shared by Traveller.                                                                                                 | UC11                                                       |
 | Anaylst         | Business user accessing analytical data.                                                                                                                        | UC01, UC12                                                 |
 | Travel System   | System Actor to deliver information on changes on reservations. It includes Travel systems like APOLLO as well as dedicated Airline/Hotels/Car rental agencies. | U14                                                        |
-| Supporting agency| User selected agency for support and resolve issues													    | U10, U19                                                   |
+| Supporting agency| User selected agency for support and resolve issues. ("HelpMe! agency)                                                           													    | U10, U19                                                   |
 | System          | Some activities are initiated by the system.                                                                                                                    | UC15, UC16, UC18                                           |
 
 ### Use case overview
