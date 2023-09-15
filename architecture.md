@@ -134,6 +134,7 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | External Person | A person having access to a trip, which is shared by Traveller.                                                                                                 | UC11                                                       |
 | Anaylst         | Business user accessing analytical data.                                                                                                                        | UC01, UC12                                                 |
 | Travel System   | System Actor to deliver information on changes on reservations. It includes Travel systems like APOLLO as well as dedicated Airline/Hotels/Car rental agencies. | U14                                                        |
+| Supporting agency| User selected agency for support and resolve issues													    | U10, U19                                                   |
 | System          | Some activities are initiated by the system.                                                                                                                    | UC15, UC16, UC18                                           |
 
 ### Use case overview
@@ -149,7 +150,7 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | UC07 | Provide access to external people       | Traveller gives a direct link to a person to view his trip.                                                           | Traveller          | FR7         |
 | UC08 | Access end-of-year report               | Traveller view the result of the yearly report on his trips.                                                          | Traveller          | FR9         |
 | UC09 | Define filter and whitelist for email   | Traveller configures the email poll, including the filter and whitelisting.                                           | Traveller          | FR3         |
-| UC10 | Contact with "HelpMe!" Agency           | Traveller contact with agency for resoving issues.                                                                    | Traveller          | FR12        |
+| UC10 | Contact with "HelpMe!" Agency           | Traveller contact with agency for resoving issues.                                                                    | Traveller, Supporting agency          | FR12        |
 | UC11 | Access to shared trip information       | External Person view a trip of a Traveller.                                                                           | External Person    | FR7         |
 | UC12 | Access to analytic reports              | Analyst views analytic reports from the system.                                                                       | Analyst            | FR10        |
 | UC14 | Update travel data                      | System updates the received data for a reservation.                                                                   | Travel System      | FR4         |
