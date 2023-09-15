@@ -372,15 +372,15 @@ Important Interfaces
 
 ## Whitebox view on each Domain (C4-Level3)
 
-### Channels (C4-Level3)
+### Channels Domain (C4-Level3)
 
 <img src="diagrams/Component-Channels.drawio.svg">
 
-### IAM (C4-Level3)
+### IAM Domain (C4-Level3)
 
 <img src="diagrams/Component-IAM.drawio.svg">
 
-### Trip Organizer (C4-Level3)
+### Trip Organizer Domain (C4-Level3)
 The Trip Organizer domain allows users to manage their trips, create new ones, delete trips, and add reservations. Data is ingested from the Integration domain.
 Following diagram represent components which involved in this domain.
 
@@ -427,7 +427,7 @@ Following quality attributes are important for components in this domain:
 * UC14	Update travel data
 * UC16	Push notification about changes in trip
 
-### Integration domain (C4-Level3)
+### Integration Domain (C4-Level3)
 
 <img src="diagrams/Component-Integration.drawio.svg">
 
