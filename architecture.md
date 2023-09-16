@@ -635,12 +635,11 @@ Integrating interfaces from various entities like hotels, car agencies, and airl
 
 ## Glossary
 
-| Term             | Definition                                                                                                                                                       |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Trip*           | *\<definition-1>*                                                                                                                                                |
-| *Reservation*    | *\<definition-2>*                                                                                                                                                |
-| *Booking*        | *\<definition-2>*                                                                                                                                                |
-| *Travel angency* | *\<definition-2>*                                                                                                                                                |
+| Term | Definition |
+| ---- | ---------- |
+| *Trip*           | *A trip refers to a journey planned and organized by a traveler, consisting of multiple reservations such as flights, hotels, and car rentals.* |
+| *Reservation*    | *A reservation is a booking made by a traveler for a specific service, such as a flight, hotel, or car rental. * |
+| *Travel angency* | *A travel agency is an organization that provides travel-related services to customers, such as booking flights, hotels, and car rentals.* |
 | *ADR*            | *ADR stands for "Architecture Decision Record." It is a document that captures important architectural decisions made during the software development process.* |
 | *NFR*            | *NFR stands for non functional requirements, derived from input given by the stakeholders*                                                                       |
 | *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect*                                    |
