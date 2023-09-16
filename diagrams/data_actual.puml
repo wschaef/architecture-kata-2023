@@ -1,0 +1,26 @@
+@startuml
+
+autonumber "<font color=magenta> <b> [00]"
+
+participant EmailReader as "Email Reader\n(Integration Domain)"
+participant TravelSystemIntegration as "Travel System\n(Integration Domain)"
+participant ReservationManager as "Reservation Manager\n(Trip Organizer Domain)"
+participant ChannelNotification as "Channel Notificaton\n(Trip Organizer Domain)"
+participant BFF as "BFF\n(Channel Domain)"
+participant WebApplication as "Web Application\n(Channel Domain)"
+participant IOSApp as "iOS App\n(Channel Domain)"
+participant AndroidApp as "Android App\n(Channel Domain)"
+
+group Alternative Sources 
+    EmailReader -> ReservationManager : Input
+    TravelSystemIntegration -> ReservationManager : Input
+end
+ReservationManager ->  ChannelNotification : Forward changed reservation info
+ChannelNotification -> BFF :  Forward changed reservation info
+
+group Inform Traveller on its device
+    BFF -> WebApplication : Push notification
+    BFF -> IOSApp : Push notification
+    BFF -> AndroidApp : Push notification
+end
+@enduml
