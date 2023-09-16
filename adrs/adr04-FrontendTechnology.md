@@ -1,6 +1,6 @@
-# ADR Using Flutter for Cross-Platform Development for Frontends
+# ADR4: Using Flutter for Cross-Platform Development for Frontends
 
-**Status**: Proposed
+**Status**: Accepted
 
 **Date**: 11.09.2023
 
@@ -8,7 +8,8 @@
 - [x] @wschaef
 - [x] @uweTelco
 - [x] @slookin
-- [ ] @mauermbq
+- [x] @mauermbq
+- [x] @ilia
 
 ## Context
 

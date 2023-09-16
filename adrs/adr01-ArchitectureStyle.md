@@ -1,6 +1,6 @@
-# ADR: Decision on Fundamental Architecture Style
+# ADR 1: Decision on Fundamental Architecture Style
 
-**Status**: Proposed / Accepted
+**Status**: Accepted
 
 **Date**: 13th September 2023
 
@@ -9,7 +9,8 @@
 - [x] @wschaef
 - [x] @uweTelco
 - [x] @slookin
-- [ ] @mauermbq
+- [x] @mauermbq
+- [x] @ilia
 
 ## Context
 

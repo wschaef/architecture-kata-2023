@@ -1,6 +1,6 @@
-# ADR Analytics make of buy
+# ADR5: Analytics make of buy
 
-**Status** : proposed / accepted / superseded
+**Status** : Accepted 
 
 **Date** : 11.09.2023
 
@@ -10,6 +10,7 @@
 - [x] @uweTelco
 - [x] @slookin
 - [x] @mauermbq
+- [x] @ilia
 
 ## Context
 
