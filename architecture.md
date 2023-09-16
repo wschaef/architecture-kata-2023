@@ -22,7 +22,6 @@ Route Change Tracking: We understand that travel plans can be subject to unexpec
 
 Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard isn't just an isolated tool – it's your gateway to the travel ecosystem. We're seamlessly integrated with most major airlines, hotel chains, and car rental agencies, making it effortless to manage all aspects of your journey in one place.
 
-
 ## Requirements Overview
 
 ### Functional Requiremens
@@ -419,14 +418,14 @@ The following architectural decision is particularly relevant to the IAM domain:
 
 This decision forms a key component of our strategy within the IAM domain, addressing user onboarding and authentication, which are fundamental aspects of identity and access management.
 
-<img src="diagrams/Component-IAM.drawio.svg">
+![IAM Component Diagram](diagrams/Component-IAM.drawio.svg)
 
 ### Trip Organizer Domain (C4-Level3)
 
 The Trip Organizer domain allows users to manage their trips, create new ones, delete trips, and add reservations. Data is ingested from the Integration domain.
 Following diagram represent components which involved in this domain.
 
-<img src="diagrams/Component-TripOrganizer.drawio.svg">
+![Trip Organizer Component Diagram](diagrams/Component-TripOrganizer.drawio.svg)
 
 **Purpose/Responsibility**:
 
@@ -454,7 +453,7 @@ Trip organizer consume following interfaces:
 - REST interface form Integration domain for reading details about reservation
 - Message interface from Integration domain to recive changes in reservation
 
-**Quality/Performance Characteristics**
+**Quality/Performance Characteristics**:
 
 Following quality attributes are important for components in this domain:
 
@@ -474,7 +473,7 @@ Following quality attributes are important for components in this domain:
 
 ### Integration Domain (C4-Level3)
 
-<img src="diagrams/Component-Integration.drawio.svg">
+![Integration Component Diagram](diagrams/Component-Integration.drawio.svg)
 
 **Purpose/Responsibility**:
 
@@ -517,21 +516,23 @@ Following quality attributes are important for components in this domain:
 
 ### User Settings (C4-Level3)
 
-<img src="diagrams/Component-UserSetting.drawio.svg">
+![User Setting Component Diagram](diagrams/Component-UserSetting.drawio.svg)
 
-**Purpose/Responsibility**
+**Purpose/Responsibility**:
 
 Mailbox setting, Filters and Whitelists settings, Supporting agency settings - allow to manage user specific settings.
 
-**Interface(s)**
+**Interface(s)**:
 
-User Settings domain provide one interface which user by 
-* Channels domain - CRUD operations on settings
-* Integration domain - reading configuration for mailboxes, filters and whitelists.
+User Settings domain provide one interface which user by
 
-**This domain covers following Use Cases**
-* UC09 Define filter and whitelist for email
-* UC19 Configure "HelpMe!" Agency (Supporting agency)
+- Channels domain - CRUD operations on settings
+- Integration domain - reading configuration for mailboxes, filters and whitelists.
+
+**This domain covers following Use Cases**:
+
+- UC09 Define filter and whitelist for email
+- UC19 Configure "HelpMe!" Agency (Supporting agency)
 
 ### Aanlytics Domain (C4-Level3)
 
@@ -569,7 +570,7 @@ Corresponding architecture decision record is [ADR 2 User Onboarding and Authent
 
 ## Deployment View
 
-<img src="diagrams/Deployment.drawio.svg">
+![Deployment Diagram](diagrams/Deployment.drawio.svg)
 
 ## Cross-cutting Concepts
 
@@ -601,7 +602,7 @@ Our security strategy aligns with the "Zero Trust" concept by:
 
 In the diagram below, you can see a high-level view of the explicit trust relationships within our system:
 
-<img src="diagrams/Security.drawio.svg">
+![Security Diagram](diagrams/Security.drawio.svg)
 
 This multi-layered approach to security ensures the protection of our "Road Warrior" system from various threats and vulnerabilities.
 
@@ -617,11 +618,11 @@ This multi-layered approach to security ensures the protection of our "Road Warr
 
 We see following risks:
 
-**Risk: Requesting Email Access**
+**Risk: Requesting Email Access**:
 
 Requesting access to users' emails, whether granted to all or none, poses significant data privacy challenges. This can potentially lead to unintended exposure of sensitive information and raise concerns about user privacy.
 
-**Risk: Diversity in Interface Integration**
+**Risk: Diversity in Interface Integration**:
 
 Integrating interfaces from various entities like hotels, car agencies, and airlines directly can introduce complexities and costs. This approach may hinder system evolution and maintenance, potentially leading to increased expenses and limited adaptability.
 
