@@ -543,7 +543,7 @@ The analytical domain is responsible for collecting data for reports, creating r
 
 ![Component Overview](diagrams/Analytics-logical.drawio.svg)
 
-In order to focus on business development and fast time to market, we decided to start with a lean serverless approach that reduces the effort for infrastructure management and maintenance to a minimum (see [Rationale for Analytics components](adrs/adr05-analytics-make-or-buy.md)). In essence, a serverless data warehouse abstracts away the complexities of infrastructure and management, allowing Road warrior to focus on deriving insights from their data. It offers a combination of flexibility, scalability, and cost-effectiveness that is start of the art in the market. This approach allows us to focus on the core business and to scale the system easily.  
+In order to focus on business development and fast time to market, we decided to start with a lean serverless approach that reduces the effort for infrastructure management and maintenance to a minimum (see [ADR05 Rationale for Analytics components](adrs/adr05-analytics-make-or-buy.md)). In essence, a serverless data warehouse abstracts away the complexities of infrastructure and management, allowing Road warrior to focus on deriving insights from their data. It offers a combination of flexibility, scalability, and cost-effectiveness that is start of the art in the market. This approach allows us to focus on the core business and to scale the system easily.  
 
 Separatoin of concern: User will have access to reports through Dashboard Frontend (Looker), which an optional API acces ([Looker API](https://developers.looker.com/api/overview/)).
 
@@ -565,13 +565,13 @@ Interface(s) for the start:
 ## Runtime View
 In the runtime viwe, two scenarios are referred, first to show the sollution for the TR5, and secondly, to have a clear look on the authentification.
 
-### Runtime Scenario **Update data** 
+### Runtime Scenario 1:**Update data** 
 
-According to TR5, when the system receives an update for a reservation, such as a flight delay, this information must be immediately forwarded to the traveler. For this purpose, asynchronous message forwarding is used. In the shown scenario, the Email Reader or the Travel System provide this information, but any integrated source system for the reservation can initiate this function.
+According to TR5, when the system receives an update for a reservation, such as a flight delay, this information must be immediately forwarded to the traveler. For this purpose, asynchronous message forwarding is used. In the shown scenario, the Email Reader or the Travel System provide this information, but any integrated source system for the reservation can initiate this function. The targeted time for this is less than 60 secounds.
 
 ![Update reservation](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/data_actual.puml)
 
-### Runtime Scenario **authentication**
+### Runtime Scenario 2: **Authentication**
 
 Following flow describes the authentication process with 3rd party Identity Provider (IDP)
 Corresponding architecture decision record is [ADR 2 User Onboarding and Authentication Strategy](adrs/adrs02-authentication.md)
@@ -641,12 +641,12 @@ Integrating interfaces from various entities like hotels, car agencies, and airl
 | Term | Definition |
 | ---- | ---------- |
 | *Trip*           | *A trip refers to a journey planned and organized by a traveler, consisting of multiple reservations such as flights, hotels, and car rentals.* |
-| *Reservation*    | *A reservation is a booking made by a traveler for a specific service, such as a flight, hotel, or car rental. * |
+| *Reservation*    | *A reservation is a booking made by a traveler for a specific service, such as a flight, hotel, or car rental.* |
 | *Travel angency* | *A travel agency is an organization that provides travel-related services to customers, such as booking flights, hotels, and car rentals.* |
 | *ADR*            | *ADR stands for "Architecture Decision Record." It is a document that captures important architectural decisions made during the software development process.* |
-| *NFR*            | *NFR stands for non functional requirements, derived from input given by the stakeholders*                                                                       |
-| *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect*                                    |
-| *BFF*            | *Backend for Frontend is a server responsible to provide data for a frontend line a mobile app or web app*                                                       |
+| *NFR*            | *NFR stands for non functional requirements, derived from input given by the stakeholders.*                                                                       |
+| *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect.*                                    |
+| *BFF*            | *Backend for Frontend is a server responsible to provide data for a frontend line a mobile app or web app.*                                                       |
 
 ## References
 
