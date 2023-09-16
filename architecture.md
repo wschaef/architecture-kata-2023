@@ -261,7 +261,7 @@ In conclusion, understanding the relevant architecture characteristics and their
 | testability        | low      | low           | high    | high           | medium | medium      |
 | traceability       | high     | low           | low     | medium         | high   | high        |
 
-Based on this analyses we can see that all domains has different Architecture characteristics and as result we are not able to combine them.
+Based on this analyses we can see that all domains have different Architecture characteristics and as result we are not to reduce the number of the domains.
 
 ### Strategic Design
 
@@ -279,7 +279,7 @@ This chapter provides an overview of the different domains that compose the Road
 
 **What the domain does:**
 
-The Analytic domain is responsible for collecting data for reports, creating reports, and providing access to reports. This domain handles persistent data like raw analytical data and generated reports.
+The Analytics domain is responsible for collecting data for reports, creating reports, and providing access to reports. This domain handles persistent data like raw analytical data and generated reports.
 
 **Interfaces:**
 
@@ -289,17 +289,17 @@ The Analytic domain is responsible for collecting data for reports, creating rep
 
 **Why we have the domain:**
 
-This domain is separated from others because it serves for a data driven business model. Non-functional requirements for this domain are unclear at the beginning of the project. Espicially information needs might evolve and requires additional Analytical and ML capabilities.
+This domain is separated from others because it serves for a data-driven business model. Non-functional requirements for this domain are unclear at the beginning of the project. Especially information needs might evolve and require additional analytical and ML capabilities.
 
 **Information needs:**
 
-Currently there are no clear requirments on information needs for this domain. Ideation: [First scetch of information model](analytics.md).
+Currently, there are no clear requirements on information needs for this domain. Ideation: [First sketch of information model](analytics.md).
 
 #### User Settings domain
 
 **What the domain does:**
 
-The User settings domain manages the configuration of mailboxes for polling, as well as filter and whitelist definitions.
+The User Settings domain manages the configuration of mailboxes for polling, as well as filter and whitelist definitions.
 
 **Interfaces:**
 
@@ -322,7 +322,7 @@ The Trip Organizer domain allows users to manage their trips, create new ones, d
 - The Trip Organizer sends notifications about changes in reservations to the Channel domain for delivery to end-users
 - The Trip Organizer domain provides an API for client applications (Channel domain) to access information about trips and reservations
 - The Trip Organizer reads detailed data about reservations via the Integration domain from Travel systems and Agencies
-- The Trip Organizer provides data to the Analytic domain about trips and reservations
+- The Trip Organizer provides data to the Analytics domain about trips and reservations
 
 **Why we have the domain:**
 
@@ -339,7 +339,7 @@ The Channel domain is responsible for providing user interfaces, such as web app
 - Receives all notifications about changes in reservations from the Trip Organizer and updates content in user interfaces
 - Uses the API of the Trip Organizer to access information about trips and reservations
 - Uses IAM for user registration and login (token exchange)
-- Receives end-of-year reports from the Analytic domain
+- Receives end-of-year reports from the Analytics domain
 - Provides configuration to the User Settings domain
 
 **Why we have the domain:**
@@ -355,7 +355,7 @@ The IAM domain covers all aspects of user registration, authentication, and auth
 **Interfaces:**
 
 - Manages registration and login processes for the Channel domain (token exchange)
-- Validates tokens for Channel, Analytic, and Trip Organizer domains (not shown in the diagram)
+- Validates tokens for Channel, Analytics, and Trip Organizer domains (not shown in the diagram)
 
 **Why we have the domain:**
 
@@ -369,8 +369,8 @@ The Integration domain provides capabilities for collecting information from ext
 
 **Interfaces:**
 
-- Sends notifications directly to the Analytic domain for updated information and analysis of agency behavior
-- Uses configuration from the  User Settings domain
+- Sends notifications directly to the Analytics domain for updated information and analysis of agency behavior
+- Uses configuration from the User Settings domain
 - Provides detailed data about reservations from Travel systems and agencies to the Trip Organizer domain
 - Sends notifications directly to the Trip Organizer domain to update reservations and inform users
 
