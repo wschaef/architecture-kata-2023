@@ -150,7 +150,7 @@ The Road Warrior platform serves various actors, including Travellers, External 
 | UC01 | Login in system                         | User logs into the system.                                                                                            | Traveller, Analyst |             |
 | UC02 | Register in system                      | Traveller registers as a new user to system.                                                                          | Traveller          |             |
 | UC03 | View dashboard                          | Traveller gets an overview of his trips.                                                                              | Traveller          | FR6         |
-| UC04 | Manage reservations                     | Traveller add, edit removes reservations manually.                                                                    | Traveller          | FR6         |
+| UC04 | Manage reservations                     | Traveller add, edit removes reservations manually.                                                                    | Traveller          | FR5         |
 | UC05 | Manage trip                             | Traveller creates trips, add new reservation to it, etc.                                                              | Traveller          | FR6         |
 | UC06 | Share trip via social networks          | Traveller transfers his trip to social media.                                                                         | Traveller          | FR7         |
 | UC07 | Provide access to external people       | Traveller gives a direct link to a person to view his trip.                                                           | Traveller          | FR7         |
