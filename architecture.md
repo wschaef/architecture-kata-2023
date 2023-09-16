@@ -301,7 +301,7 @@ The User settings domain manages the configuration of mailboxes for polling, as 
 **Interfaces:**
 
 - Users can change configuration for whitelists, filters, and mailboxes via the Channel domain
-- The Integration domain uses the configuration from the Configuration domain
+- The Integration domain uses the configuration from the User Settings domain
 
 **Why we have the domain:**
 
@@ -367,7 +367,7 @@ The Integration domain provides capabilities for collecting information from ext
 **Interfaces:**
 
 - Sends notifications directly to the Analytic domain for updated information and analysis of agency behavior
-- Uses configuration from the Configuration domain
+- Uses configuration from the  User Settings domain
 - Provides detailed data about reservations from Travel systems and agencies to the Trip Organizer domain
 - Sends notifications directly to the Trip Organizer domain to update reservations and inform users
 
@@ -524,7 +524,7 @@ Mailbox setting, Filters and Whitelists settings, Supporting agency settings - a
 
 **Interface(s)**:
 
-User Settings domain provide one interface which user by
+User Settings domain provide one interface which used by
 
 - Channels domain - CRUD operations on settings
 - Integration domain - reading configuration for mailboxes, filters and whitelists.
