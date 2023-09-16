@@ -243,7 +243,14 @@ As demonstrated in the table, we can observe a high level of independence among 
 
 ### Architecture characteristics
 
-Even all Architecture characteristics should be taking in account when we design and implement domains, some of Architecture characteristics played more important role and influence significantly on component design and deployment.
+In the process of designing and implementing domains as part of an architecture description, it is essential to consider all architecture characteristics. However, certain characteristics hold greater importance in defining domain boundaries and ensuring optimal performance.
+
+For instance, availability, compatibility, and traceability are crucial in domains such as Channel, Trip Organizer, IAM, and Integration, contributing to a responsive, adaptable, and user-friendly interface, as well as secure and reliable user authentication and authorization.
+
+On the other hand, domains like Analytic and User Settings prioritize characteristics such as evolvability, localizability, and compatibility, allowing the Analytic domain to analyze and process data effectively while adapting to changes, and ensuring seamless interaction between user preferences and other system components in the User Settings domain.
+
+In conclusion, understanding the relevant architecture characteristics and their impact on domain split is vital in achieving a robust and efficient system architecture. By prioritizing and addressing these significant characteristics, architects can ensure that each domain is optimally designed and deployed to meet the diverse needs of the system and its users.
+
 
 | Architecture characteristics | Analytic | User settings | Channel | Trip organizer | IAM    | Integration |
 | ------------------ | -------- | ------------- | ------- | -------------- | ------ | ----------- |
