@@ -182,7 +182,7 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 
 3. **Exclude analytics and reporting features from the MVP scope**. Focus on the core functionality of trip organization and management, which will allow for faster development and testing of the essential features of the platform.
 
-4. **Integrate only with Travel Systems** (such as SABRE, APOLLO) for retrieving travel information, and skip direct integration with hotels, car rentals, and airlines. This will streamline the development process and allow the platform to focus on a single integration point for travel data.
+4. **Integrate only with Travel Systems** (such as SABRE, APOLLO) for retrieving travel information, and skip direct integration with hotels, car rentals, and airlines. This will streamline the development process and allow the platform to focus on a single integration point for travel data for the start.
 
 5. **Leverage native services in the public cloud (XaaS)** instead of building custom solutions. Utilize cloud-based infrastructure, databases, and other services to reduce development time, maintenance efforts, and costs.
 
