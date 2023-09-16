@@ -42,7 +42,7 @@ In the course of our project, we found that the right tools play a crucial role 
 
 One of the fundamental lessons we learned is that preparation is essential when it comes to choosing and using tools. However, there were instances where we had to rethink our tool choices due to unforeseen challenges:
 
-- **PlantUML Limitations**: While PlantUML is a valuable tool for creating diagrams, we encountered limitations when dealing with larger and more complex diagrams. This prompted us to switch to Draw.io, which offered the flexibility and capabilities required for handling intricate diagrams. The migration effort was necessary but ultimately worthwhile.
+- **PlantUML Limitations**: While PlantUML is a valuable tool for creating diagrams, we encountered limitations when dealing with larger and more complex diagrams. This prompted us to switch to Draw.io, which offered the flexibility and capabilities required for handling intricate diagrams. The migration effort was necessary but ultimately worthwhile. All graphical tools allow real modelling only with certain constraints and discipline. 
 
 ### Markdown: The Good and the Bad
 
@@ -76,7 +76,7 @@ Visualization played a pivotal role in conveying complex architectural concepts.
 
 - **C4 Model Evaluation**: We utilized the C4 model for architectural visualization. Here are the key aspects:
 
-  - **Pros**: The C4 model's clear structure and minimalistic set of elements provided an effective means of drilling down into the entire logical architecture.
+  - **Pros**: The C4 model's clear structure and minimalistic set of elements provided an effective means of drilling down into the entire logical architecture. Especially when tool-based modelling is not used, the clean structuring is helpful for a consistent representation of an architecture. 
 
   - **Cons**: One limitation we encountered was the absence of a single one-pager diagram that we could readily share.
 
