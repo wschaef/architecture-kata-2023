@@ -562,13 +562,13 @@ Interface(s) for the start:
 ## Runtime View
 In the runtime viwe, two scenarios are referred, first to show the sollution for the TR5, and secondly, to have a clear look on the authentification.
 
-### \<Runtime Scenario Update data >
+### Runtime Scenario **Update data** 
 
 According to TR5, when the system receives an update for a reservation, such as a flight delay, this information must be immediately forwarded to the traveler. For this purpose, asynchronous message forwarding is used. In the shown scenario, the Email Reader or the Travel System provide this information, but any integrated source system for the reservation can initiate this function.
 
 ![Update reservation](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/data_actual.puml)
 
-### \<Runtime Scenario authentication >
+### Runtime Scenario **authentication**
 
 Following flow describes the authentication process with 3rd party Identity Provider (IDP)
 Corresponding architecture decision record is [ADR 2 User Onboarding and Authentication Strategy](adrs/adrs02-authentication.md)
