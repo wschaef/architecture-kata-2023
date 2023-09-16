@@ -290,7 +290,7 @@ This domain is separated from others because it serves for a data driven busines
 
 **Information needs:**
 
-Currently there are no clear requirments on information needs for this domain. Ideation: [First scetch of information model](analytic-information-model.md).
+Currently there are no clear requirments on information needs for this domain. Ideation: [First scetch of information model](analytics.md).
 
 #### User Settings domain
 
