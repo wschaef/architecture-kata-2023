@@ -218,8 +218,6 @@ In more formal terminology, this strategic approach directly contributes to the 
 | IAM domain           | UC01 <br> UC02                                                                                                    | Login in system<br> Register in system                                                                                                                                                                                                                                                                                                                                         |
 | Integration domain   | UC14 <br> UC15 <br> UC16                                                                                          | Update travel data	<br> Poll emails	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                               |
 
-_Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
-
 Usecase vs domains tracebility:
 | #    | Use Case                                | Analytic | User settings | Channel | Trip organizer | IAM | Integration |
 | ---- | --------------------------------------- | -------- | ------------- | ------- | -------------- | --- | ----------- |
@@ -241,9 +239,7 @@ Usecase vs domains tracebility:
 | UC18 | Collect analytical data                 | X        |               |         |                |     |
 | UC19 | Configure "HelpMe!" Agency              |          |  X            | X       |                |     |
 
-As you can see in table: we have very high independent domains.
-
-*Remark: In "Channel domain" we mentioned list of Use cases, but only UI part of these US is related to Channel domain._
+As demonstrated in the table, we can observe a high level of independence among the various domains, ensuring a modular and efficient system architecture for managing the use cases. It is important to note that, in the "Channel domain," the listed use cases are only relevant to the user interface aspect, emphasizing the specific focus of this domain on providing user-facing functionality.
 
 ### Architecture characteristics
 
