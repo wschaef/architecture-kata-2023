@@ -5,13 +5,13 @@
 ## Context
 
 This repository contains the results produced by the Team "Magenta Force" during the 
-[Architectural Kata @ O’Reilly](https://learning.oreilly.com/live-events/architectural-katas/0636920097101/0636920097100/?utm_medium=email&utm_source=platform+b2b&utm_campaign=superstream&utm_content=20230910+reminder2+lot)
+[Architectural Kata @ O’Reilly](https://learning.oreilly.com/live-events/architectural-katas/0636920097101/0636920097100/?utm_medium=email&utm_source=platform+b2b&utm_campaign=superstream&utm_content=20230910+reminder2+lot).
 
 An "architectural kata" is a concept borrowed from martial arts and adapted for use in the field of software architecture and design. It refers to a structured and purposeful exercise or practice session where software architects, developers, or teams work on solving a specific architectural problem or challenge.
 
 The term "kata" comes from martial arts, where it represents a choreographed sequence of movements or techniques designed to develop and refine specific skills. In the context of software architecture, an architectural kata is a way to improve architectural skills and promote best practices through deliberate practice.
 
-## Initial Event of the Architectural Kata 
+## Initial Event of the Architectural Kata
 
 As participants, we took part at the initial Architectural Kata event:
 
