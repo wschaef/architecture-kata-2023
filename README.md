@@ -57,6 +57,8 @@ The starting point is the [architecture.md](architecture.md). Have fun with it a
 
 <!-- TOC end -->
 
+There is also an [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4) on the logical and deployment view.
+
 We also happy to share [lessons learned](lessons-learned.md) from some of our team members.
 
 ## Team Members
