@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#main-content {
+    float: left;
+    width: auto;
+}
+
+aside#sidebar {
+    float: none;
+    width: auto;
+}
