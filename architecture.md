@@ -220,6 +220,7 @@ In more formal terminology, this strategic approach directly contributes to the 
 | Integration domain   | UC14 <br> UC15 <br> UC16                                                                                          | Update travel data	<br> Poll emails	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                               |
 
 Usecase vs domains tracebility:
+
 | #    | Use Case                                | Analytic | User settings | Channel | Trip organizer | IAM | Integration |
 | ---- | --------------------------------------- | -------- | ------------- | ------- | -------------- | --- | ----------- |
 | UC01 | Login in system                         |          |               | X       |                | X   |
