@@ -656,3 +656,7 @@ Integrating interfaces from various entities like hotels, car agencies, and airl
 
 - Arc42 Template Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. See <https://arc42.org>.
+
+- The C4 model for visualising software architecture. It was created and is maintained by Simon Brown - @simonbrown | simonbrown.je. See  <<https://c4model.com/>>
+
+- [back to README](README.md)

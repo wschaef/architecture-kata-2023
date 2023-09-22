@@ -60,3 +60,5 @@ Travel information that can be assumed includes:
 ## Potential value of the data
 
 Using these categories of information, machine learning algorithms, data analysis, and personalized recommendation engines can correlate and suggest tailored travel options. By understanding the traveler's preferences, limitations, and context, travel platforms can enhance the overall travel experience with tailored suggestions for flights, accommodations, activities, and more. Real-time data and alerts further enable travelers to make well-informed decisions during their journey.
+
+[back to architecture](architecture.md)

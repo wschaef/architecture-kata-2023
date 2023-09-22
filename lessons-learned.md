@@ -93,3 +93,6 @@ Early in the process, we made a conscious decision to skip Domain-Driven Design 
 ### Addressing Missing Business Case Information
 
 Throughout the Architectural Kata, one recurring challenge we faced was the absence of critical information related to the business case. This gap in our understanding posed hurdles at various stages of the process. As result our suggestion for MVP scopes are based on technical aspects only.
+
+[back to architecture](architecture.md)
+[back to README](README.md)
