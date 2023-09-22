@@ -241,6 +241,7 @@ Usecase vs domains tracebility:
 | UC18 | Collect analytical data                 | X        |               |         |                |     |
 | UC19 | Configure "HelpMe!" Agency              |          |  X            | X       |                |     |
 
+
 As demonstrated in the table, we can observe a high level of independence among the various domains, ensuring a modular and efficient system architecture for managing the use cases. It is important to note that, in the "Channel domain," the listed use cases are only relevant to the user interface aspect, emphasizing the specific focus of this domain on providing user-facing functionality.
 
 ### Architecture characteristics
