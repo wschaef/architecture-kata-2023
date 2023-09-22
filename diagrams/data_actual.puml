@@ -1,5 +1,5 @@
 @startuml
-
+!theme carbon-gray
 autonumber "<font color=magenta> <b> [00]"
 
 participant EmailReader as "Email Reader\n(Integration Domain)"
