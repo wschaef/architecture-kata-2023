@@ -116,11 +116,12 @@ Non functional requirements are derived from functional and technical requiremen
 
  | Name            | Role                               |
  | --------------- | ---------------------------------- |
- | *Neal Ford*     | Architecture Kata 2023 Jury Member |
- | *Mark Richards* | Architecture Kata 2023 Jury Member |
- | *Jacqui Read*   | Architecture Kata 2023 Jury Member |
- | *Clare Sudbery* | Architecture Kata 2023 Jury Member |
- | *Robin Losey*   | Architecture Kata 2023 Jury Member |
+ | *Neal Ford*     | Architectural Kata 2023 Jury Member |
+ | *Mark Richards* | Architectural Kata 2023 Jury Member |
+ | *Mark Richards* | Architectural Kata 2023 Jury Member |
+ | *Jacqui Read*   | Architectural Kata 2023 Jury Member |
+ | *Clare Sudbery* | Architectural Kata 2023 Jury Member |
+ | *Robin Losey*   | Architectural Kata 2023 Jury Member |
 
 ## Architecture Constraints
 

@@ -84,7 +84,7 @@ We recognized the need for a tool that combines the structural clarity of Enterp
 
 ## Approach
 
-In our journey through the Architecture Kata, we adopted a pragmatic approach that was shaped by the unique challenges and constraints we encountered. Here, we reflect on the key aspects of our approach:
+In our journey through the Architectural Kata, we adopted a pragmatic approach that was shaped by the unique challenges and constraints we encountered. Here, we reflect on the key aspects of our approach:
 
 ### Skipping Domain-Driven Design (DDD)
 
@@ -92,4 +92,4 @@ Early in the process, we made a conscious decision to skip Domain-Driven Design 
 
 ### Addressing Missing Business Case Information
 
-Throughout the Architecture Kata, one recurring challenge we faced was the absence of critical information related to the business case. This gap in our understanding posed hurdles at various stages of the process. As result our suggestion for MVP scopes are based on technical aspects only.
+Throughout the Architectural Kata, one recurring challenge we faced was the absence of critical information related to the business case. This gap in our understanding posed hurdles at various stages of the process. As result our suggestion for MVP scopes are based on technical aspects only.
