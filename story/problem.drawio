@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" modified="2023-09-22T10:21:39.170Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="mzzLtqbxSYnEw59iDAp6" version="21.7.5" type="device">
+  <diagram name="Seite-1" id="gXNKbwDwkIkKLQMoeGFg">
+    <mxGraphModel dx="3790" dy="1631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-1" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;strokeWidth=2;shape=mxgraph.lean_mapping.airplane_7;" vertex="1" parent="1">
+          <mxGeometry x="-338" y="303.5" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-2" value="" style="shape=mxgraph.signs.travel.hotel;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-470" y="547" width="99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-4" value="" style="shape=mxgraph.signs.transportation.car_3;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="10" y="303.5" width="99" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-5" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.communications;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="560" width="230" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-7" value="How to remember and manage all of them?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="567" width="118" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-8" value="booked via KIWI&lt;br&gt;19/09 18:45 BER&lt;br&gt;25/09 15:15 MLN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-371" y="345" width="150" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-9" value="booked via booking.com&lt;br&gt;19/09 - 21/09&lt;br&gt;Montebianco Mokinba&lt;br&gt;Via Monte Rosa, 90, 20149 Milano MI, Italien&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-488" y="620" width="150" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-10" value="booked directly&lt;br&gt;21/09 - 25/09&lt;br&gt;&lt;div&gt;Agriturismo Ca&#39; di Racc&lt;/div&gt;&lt;br&gt;Loc. Selvadagnone, snc, 24020 Valgoglio BG, Italien&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-488" y="730" width="150" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-11" value="" style="shape=mxgraph.signs.transportation.train_2;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="192" y="570.5" width="66" height="99" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-12" value="booked via DB&lt;br&gt;25/09 13:17:03&lt;br&gt;Valgoglio -&amp;gt; Milan&lt;div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="669.5" width="150" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="MgmJ57oXZJ4p1A00sesp-13" value="booked in Sixt&lt;br&gt;Silver Tesla, 20/09-24/09 with child seat" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-12" y="360" width="150" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
