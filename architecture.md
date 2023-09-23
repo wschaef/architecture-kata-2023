@@ -6,11 +6,15 @@
 
 In the ever-evolving landscape of travel, we as new player comes – a dynamic startup that stands apart from the affiliations of traditional travel agencies.
 
+![Problem to be solved](diagrams/Problem.drawio.svg)
+
 ### Vision
 
 Our mission? To pioneer the next generation of online trip management dashboard, empowering travelers to take charge of their journeys like never before. We envision a world where your travel experiences are seamlessly organized, accessible at your fingertips, and tailored to your preferences.
 
 Introducing the Road Warrior Dashboard – a user-friendly interface designed to revolutionize the way you manage your trips. Whether you're at your computer or on the go with your mobile device, we've got you covered.
+
+![Vision](diagrams/Vision.drawio.svg)
 
 ### Key Features
 
@@ -28,34 +32,34 @@ Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard i
 
 Functional requirements are derived from input given by the stakeholders documented there [input](input.md).
 
-| # | Requirement |
-|---|-------------|
-| FR1   | Road Warrior is system built and managed by a start up                                                                                                       |
-| FR2   | Poll email looking for travel-related emails                                                                                                                 |
-| FR3   | Filter and whitelist certain emails                                                                                                                          |
-| FR4   | The system must interface with the agency’s existing airline, hotel, and car rental interface system to update travel details (delays, cancellations, etc.) |
-| FR5   | Customers should be able to add, update, or delete existing reservations manually as well                                                                    |
-| FR6   | Items in the dashboard should be able to be grouped by trip, and once the trip is complete, the items should automatically be removed from the dashboard     |
-| FR7   | Users should also be able to share their trip information by interfacing with standard social media sites or allowing targeted people to view your trip      |
-| FR8   | Richest user interface possible across all deployment platforms                                                                                              |
-| FR9   | Provide end-of-year summary reports for users with a wide range of metrics about their travel usage                                                         |
-| FR10  | Road Warrior gathers analytical data from users trips for various purposes - travel trends, locations, airline and hotel vendor preferences, etc.           |
-| FR11  | Customers must be able to use the system through web and mobile apps                                                                                         |
-| FR12  | Must integrate with preferred travel agency for quick problem resolution (help me!)                                                                         |
+| #    | Requirement                                                                                                                                                 |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FR1  | Road Warrior is system built and managed by a start up                                                                                                      |
+| FR2  | Poll email looking for travel-related emails                                                                                                                |
+| FR3  | Filter and whitelist certain emails                                                                                                                         |
+| FR4  | The system must interface with the agency’s existing airline, hotel, and car rental interface system to update travel details (delays, cancellations, etc.) |
+| FR5  | Customers should be able to add, update, or delete existing reservations manually as well                                                                   |
+| FR6  | Items in the dashboard should be able to be grouped by trip, and once the trip is complete, the items should automatically be removed from the dashboard    |
+| FR7  | Users should also be able to share their trip information by interfacing with standard social media sites or allowing targeted people to view your trip     |
+| FR8  | Richest user interface possible across all deployment platforms                                                                                             |
+| FR9  | Provide end-of-year summary reports for users with a wide range of metrics about their travel usage                                                         |
+| FR10 | Road Warrior gathers analytical data from users trips for various purposes - travel trends, locations, airline and hotel vendor preferences, etc.           |
+| FR11 | Customers must be able to use the system through web and mobile apps                                                                                        |
+| FR12 | Must integrate with preferred travel agency for quick problem resolution (help me!)                                                                         |
 
 ### Technical requirements
 
 Technical requirements are derived from input given by the stakeholders documented there [input](input.md)
 
-| #     | Technical Requirement                                                                                          |
-|-------|---------------------------------------------------------------------------------------------------------------|
-| TR1   | Must integrate seamlessly with existing travel systems (i.e, SABRE, APOLLO)                                    |
-| TR2   | 2 million active users/week                                                                                    |
-| TR3   | Total users: 15 million (user accounts)                                                                       |
-| TR4   | Users must be able to access the system at all times (max 5 minutes per month of unplanned downtime)          |
-| TR5   | Travel updates must be presented in the app within 5 minutes of generation by the source                       |
-| TR6   | Response time from web (800ms) and mobile (First-contentful paint of under 1.4 sec)                           |
-| TR7   | Must work internationally                                                                                      |
+| #   | Technical Requirement                                                                                |
+| --- | ---------------------------------------------------------------------------------------------------- |
+| TR1 | Must integrate seamlessly with existing travel systems (i.e, SABRE, APOLLO)                          |
+| TR2 | 2 million active users/week                                                                          |
+| TR3 | Total users: 15 million (user accounts)                                                              |
+| TR4 | Users must be able to access the system at all times (max 5 minutes per month of unplanned downtime) |
+| TR5 | Travel updates must be presented in the app within 5 minutes of generation by the source             |
+| TR6 | Response time from web (800ms) and mobile (First-contentful paint of under 1.4 sec)                  |
+| TR7 | Must work internationally                                                                            |
 
 ### Non Functional
 
@@ -114,8 +118,8 @@ Non functional requirements are derived from functional and technical requiremen
 
 ## Stakeholders
 
- | Name            | Role                               |
- | --------------- | ---------------------------------- |
+ | Name            | Role                                |
+ | --------------- | ----------------------------------- |
  | *Neal Ford*     | Architectural Kata 2023 Jury Member |
  | *Mark Richards* | Architectural Kata 2023 Jury Member |
  | *Mark Richards* | Architectural Kata 2023 Jury Member |
@@ -135,36 +139,36 @@ The Road Warrior platform serves various actors, including Travellers, External 
 
 #### Actors overview
 
-| Actor           | Description                                                                                                                                                     | Use Case Reference                                         |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| Traveller       | Private or Business user using Road Warrior to manage his trips.                                                                                                | UC01, UC02, UC03, UC04, UC05, UC06, UC07, UC08, UC09, UC10 |
-| External Person | A person having access to a trip, which is shared by Traveller.                                                                                                 | UC11                                                       |
-| Anaylst         | Business user accessing analytical data.                                                                                                                        | UC01, UC12                                                 |
-| Travel System   | System Actor to deliver information on changes on reservations. It includes Travel systems like APOLLO as well as dedicated Airline/Hotels/Car rental agencies. | U14                                                        |
-| Supporting agency| User selected agency for support and resolve issues. ("HelpMe! agency)                                                           													    | U10, U19                                                   |
-| System          | Some activities are initiated by the system.                                                                                                                    | UC15, UC16, UC18                                           |
+| Actor             | Description                                                                                                                                                     | Use Case Reference                                         |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Traveller         | Private or Business user using Road Warrior to manage his trips.                                                                                                | UC01, UC02, UC03, UC04, UC05, UC06, UC07, UC08, UC09, UC10 |
+| External Person   | A person having access to a trip, which is shared by Traveller.                                                                                                 | UC11                                                       |
+| Anaylst           | Business user accessing analytical data.                                                                                                                        | UC01, UC12                                                 |
+| Travel System     | System Actor to deliver information on changes on reservations. It includes Travel systems like APOLLO as well as dedicated Airline/Hotels/Car rental agencies. | U14                                                        |
+| Supporting agency | User selected agency for support and resolve issues. ("HelpMe! agency)                                                                                          | U10, U19                                                   |
+| System            | Some activities are initiated by the system.                                                                                                                    | UC15, UC16, UC18                                           |
 
 #### Use case overview
 
-| #    | Use Case                                | Short Description                                                                                                     | Actor              | Requirement |
-| ---- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------ | ----------- |
-| UC01 | Login in system                         | User logs into the system.                                                                                            | Traveller, Analyst |             |
-| UC02 | Register in system                      | Traveller registers as a new user to system.                                                                          | Traveller          |             |
-| UC03 | View dashboard                          | Traveller gets an overview of his trips.                                                                              | Traveller          | FR6         |
-| UC04 | Manage reservations                     | Traveller add, edit removes reservations manually.                                                                    | Traveller          | FR5         |
-| UC05 | Manage trip                             | Traveller creates trips, add new reservation to it, etc.                                                              | Traveller          | FR6         |
-| UC06 | Share trip via social networks          | Traveller transfers his trip to social media.                                                                         | Traveller          | FR7         |
-| UC07 | Provide access to external people       | Traveller gives a direct link to a person to view his trip.                                                           | Traveller          | FR7         |
-| UC08 | Access end-of-year report               | Traveller view the result of the yearly report on his trips.                                                          | Traveller          | FR9         |
-| UC09 | Define filter and whitelist for email   | Traveller configures the email poll, including the filter and whitelisting.                                           | Traveller          | FR3         |
-| UC10 | Contact with "HelpMe!" Agency           | Traveller contact with agency for resoving issues.                                                                    | Traveller, Supporting agency          | FR12        |
-| UC11 | Access to shared trip information       | External Person view a trip of a Traveller.                                                                           | External Person    | FR7         |
-| UC12 | Access to analytic reports              | Analyst views analytic reports from the system.                                                                       | Analyst            | FR10        |
-| UC14 | Update travel data                      | System updates the received data for a reservation.                                                                   | Travel System      | FR4         |
-| UC15 | Poll emails                             | System polls email system of traveller.                                                                               | System             | FR2         |
-| UC16 | Push notification about changes in trip | System pushes the information received from email, Travel system, etc. towards the traveller.                         | System             | FR4         |
-| UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System             | FR10        |
-| UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller          | FR12        |
+| #    | Use Case                                | Short Description                                                                                                     | Actor                        | Requirement |
+| ---- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| UC01 | Login in system                         | User logs into the system.                                                                                            | Traveller, Analyst           |             |
+| UC02 | Register in system                      | Traveller registers as a new user to system.                                                                          | Traveller                    |             |
+| UC03 | View dashboard                          | Traveller gets an overview of his trips.                                                                              | Traveller                    | FR6         |
+| UC04 | Manage reservations                     | Traveller add, edit removes reservations manually.                                                                    | Traveller                    | FR5         |
+| UC05 | Manage trip                             | Traveller creates trips, add new reservation to it, etc.                                                              | Traveller                    | FR6         |
+| UC06 | Share trip via social networks          | Traveller transfers his trip to social media.                                                                         | Traveller                    | FR7         |
+| UC07 | Provide access to external people       | Traveller gives a direct link to a person to view his trip.                                                           | Traveller                    | FR7         |
+| UC08 | Access end-of-year report               | Traveller view the result of the yearly report on his trips.                                                          | Traveller                    | FR9         |
+| UC09 | Define filter and whitelist for email   | Traveller configures the email poll, including the filter and whitelisting.                                           | Traveller                    | FR3         |
+| UC10 | Contact with "HelpMe!" Agency           | Traveller contact with agency for resoving issues.                                                                    | Traveller, Supporting agency | FR12        |
+| UC11 | Access to shared trip information       | External Person view a trip of a Traveller.                                                                           | External Person              | FR7         |
+| UC12 | Access to analytic reports              | Analyst views analytic reports from the system.                                                                       | Analyst                      | FR10        |
+| UC14 | Update travel data                      | System updates the received data for a reservation.                                                                   | Travel System                | FR4         |
+| UC15 | Poll emails                             | System polls email system of traveller.                                                                               | System                       | FR2         |
+| UC16 | Push notification about changes in trip | System pushes the information received from email, Travel system, etc. towards the traveller.                         | System                       | FR4         |
+| UC18 | Collect analytical data                 | System collect information from all Travellers for later analytical work on it and for preparation end-of-year report | System                       | FR10        |
+| UC19 | Configure "HelpMe!" Agency              | Traveller able to choose agency for support him in issues                                                             | Traveller                    | FR12        |
 
 ### Technical Context (C4-Level1)
 
@@ -211,14 +215,14 @@ By meticulously organizing an independent set of Use Cases within each domain, w
 
 In more formal terminology, this strategic approach directly contributes to the enhancement of 'Loose coupling' and 'Cohesion' within our system, reinforcing the foundational principles that guide our architectural choices
 
-| Domain               | Use Case Reference                                                                                                | Use Cases name                                                                                                                                                                                                                                                                                                                                                                 |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Analytic domain      | UC08 <br> UC12 <br> UC18 <br>                                                                                        | Access end-of-year report <br> Access to analytic reports <br> Collect analytical data                                                                                                                                                                                                                                                                                         |
-| User settings domain | UC09 <br> UC19                                                                                                    | Define filter and whitelist for email <br>   Configure "HelpMe!" Agency                                                                                                                                                                                                                                                                                                                                       |
+| Domain               | Use Case Reference                                                                                                         | Use Cases name                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Analytic domain      | UC08 <br> UC12 <br> UC18 <br>                                                                                              | Access end-of-year report <br> Access to analytic reports <br> Collect analytical data                                                                                                                                                                                                                                                                                                                              |
+| User settings domain | UC09 <br> UC19                                                                                                             | Define filter and whitelist for email <br>   Configure "HelpMe!" Agency                                                                                                                                                                                                                                                                                                                                             |
 | Channel              | UC01 <br> UC02 <br> UC03 <br> UC04 <br> UC05 <br> UC06 <br> UC07 <br> UC08 <br> UC09<br> UC10<br> UC11 <br> UC12 <br> UC16 | Login in system <br> Register in system <br> View dashboard <br> Manage reservations <br> Manage trip	<br> Share trip via social networks <br> Provide access to external people <br> Access end-of-year report  <br>  Define filter and whitelist for email <br> Contact with "HelpMe!" Agency <br> Access to shared trip information <br> Access to analytic reports	<br> Push notification about changes in trip |
-| Trip organizer       | UC03 <br> UC04 <br> UC05 <br> UC14 <br> UC16                                                                      | View dashboard <br> Manage reservations	<br> Manage trip	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                          |
-| IAM domain           | UC01 <br> UC02                                                                                                    | Login in system<br> Register in system                                                                                                                                                                                                                                                                                                                                         |
-| Integration domain   | UC14 <br> UC15 <br> UC16                                                                                          | Update travel data	<br> Poll emails	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                               |
+| Trip organizer       | UC03 <br> UC04 <br> UC05 <br> UC14 <br> UC16                                                                               | View dashboard <br> Manage reservations	<br> Manage trip	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                                               |
+| IAM domain           | UC01 <br> UC02                                                                                                             | Login in system<br> Register in system                                                                                                                                                                                                                                                                                                                                                                              |
+| Integration domain   | UC14 <br> UC15 <br> UC16                                                                                                   | Update travel data	<br> Poll emails	<br> Push notification about changes in trip                                                                                                                                                                                                                                                                                                                                    |
 
 Usecase vs domains tracebility:
 
@@ -236,11 +240,11 @@ Usecase vs domains tracebility:
 | UC10 | Contact with "HelpMe!" Agency           |          |               | X       |                |     |
 | UC11 | Access to shared trip information       |          |               | X       |                |     |
 | UC12 | Access to analytic reports              | X        |               |         |                |     |
-| UC14 | Update travel data                      |          |               |         | X              |     | X
-| UC15 | Poll emails                             |          |               |         |                |     | X
-| UC16 | Push notification about changes in trip |          |               | X       | X              |     | X
+| UC14 | Update travel data                      |          |               |         | X              |     | X           |
+| UC15 | Poll emails                             |          |               |         |                |     | X           |
+| UC16 | Push notification about changes in trip |          |               | X       | X              |     | X           |
 | UC18 | Collect analytical data                 | X        |               |         |                |     |
-| UC19 | Configure "HelpMe!" Agency              |          |  X            | X       |                |     |
+| UC19 | Configure "HelpMe!" Agency              |          | X             | X       |                |     |
 
 
 As demonstrated in the table, we can observe a high level of independence among the various domains, ensuring a modular and efficient system architecture for managing the use cases. It is important to note that, in the "Channel domain," the listed use cases are only relevant to the user interface aspect, emphasizing the specific focus of this domain on providing user-facing functionality.
@@ -257,23 +261,23 @@ In conclusion, understanding the relevant architecture characteristics and their
 
 
 | Architecture characteristics | Analytic | User settings | Channel | Trip organizer | IAM    | Integration |
-| ------------------ | -------- | ------------- | ------- | -------------- | ------ | ----------- |
-| availability       | medium   | medium        | high    | high           | high   | high        |
-| compatibility      | high     | low           | low     | low            | high   | high        |
-| evolvability       | high     | low           | High    | high           | low    | medium      |
-| localizability     | low      | low           | high    | high           | low    | medium      |
-| testability        | low      | low           | high    | high           | medium | medium      |
-| traceability       | high     | low           | low     | medium         | high   | high        |
+| ---------------------------- | -------- | ------------- | ------- | -------------- | ------ | ----------- |
+| availability                 | medium   | medium        | high    | high           | high   | high        |
+| compatibility                | high     | low           | low     | low            | high   | high        |
+| evolvability                 | high     | low           | High    | high           | low    | medium      |
+| localizability               | low      | low           | high    | high           | low    | medium      |
+| testability                  | low      | low           | high    | high           | medium | medium      |
+| traceability                 | high     | low           | low     | medium         | high   | high        |
 
 Based on this analyses we can see that all domains have different Architecture characteristics and as result we are not to reduce the number of the domains.
 
 ### Strategic Design
 
-Category    | Domain                   | Explanation
---------    | ------------------------------------ | -----------
-Core        | Channel <br> Trip organizer <br> Integration domain  | A core domain makes an organization unique and different from others. An organization cannot succeed (or even exist) without being exceptionally good in its core domain. Because the core domain is so important, it should receive the highest priority, the biggest effort, and the best developers. 
-Generic     | Analytic domain <br> Integration domain           | Generic domain is a domain that does not contain anything special to the organization but is still needed for the overall solution to work.We can tryi to use off-the-shelf software for your generic subdomains in order to save of time and work.
-Supportive  | User Settings 			            | A supporting domain is a domain that is necessary for succeed, but it does not fall into the core domain category. It is not generic either because it still requires some level of specialization for the organization in question. We can start with an existing solution and tweak it or extend it to your specific needs.
+| Category   | Domain                                              | Explanation                                                                                                                                                                                                                                                                                                                   |
+| ---------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Core       | Channel <br> Trip organizer <br> Integration domain | A core domain makes an organization unique and different from others. An organization cannot succeed (or even exist) without being exceptionally good in its core domain. Because the core domain is so important, it should receive the highest priority, the biggest effort, and the best developers.                       |
+| Generic    | Analytic domain <br> Integration domain             | Generic domain is a domain that does not contain anything special to the organization but is still needed for the overall solution to work.We can tryi to use off-the-shelf software for your generic subdomains in order to save of time and work.                                                                           |
+| Supportive | User Settings                                       | A supporting domain is a domain that is necessary for succeed, but it does not fall into the core domain category. It is not generic either because it still requires some level of specialization for the organization in question. We can start with an existing solution and tweak it or extend it to your specific needs. |
 
 ### Contained Building Blocks
 
@@ -642,15 +646,15 @@ Integrating interfaces from various entities like hotels, car agencies, and airl
 
 ## Glossary
 
-| Term | Definition |
-| ---- | ---------- |
-| *Trip*           | *A trip refers to a journey planned and organized by a traveler, consisting of multiple reservations such as flights, hotels, and car rentals.* |
-| *Reservation*    | *A reservation is a booking made by a traveler for a specific service, such as a flight, hotel, or car rental.* |
-| *Travel angency* | *A travel agency is an organization that provides travel-related services to customers, such as booking flights, hotels, and car rentals.* |
+| Term             | Definition                                                                                                                                                      |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *Trip*           | *A trip refers to a journey planned and organized by a traveler, consisting of multiple reservations such as flights, hotels, and car rentals.*                 |
+| *Reservation*    | *A reservation is a booking made by a traveler for a specific service, such as a flight, hotel, or car rental.*                                                 |
+| *Travel angency* | *A travel agency is an organization that provides travel-related services to customers, such as booking flights, hotels, and car rentals.*                      |
 | *ADR*            | *ADR stands for "Architecture Decision Record." It is a document that captures important architectural decisions made during the software development process.* |
-| *NFR*            | *NFR stands for non functional requirements, derived from input given by the stakeholders.*                                                                       |
-| *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect.*                                    |
-| *BFF*            | *Backend for Frontend is a server responsible to provide data for a frontend line a mobile app or web app.*                                                       |
+| *NFR*            | *NFR stands for non functional requirements, derived from input given by the stakeholders.*                                                                     |
+| *IDP*            | *Identity Provider is a system managing identities of users and provides authentication through protocol like OpenId Connect.*                                  |
+| *BFF*            | *Backend for Frontend is a server responsible to provide data for a frontend line a mobile app or web app.*                                                     |
 
 ## References
 
