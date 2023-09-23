@@ -122,7 +122,6 @@ Non functional requirements are derived from functional and technical requiremen
  | --------------- | ----------------------------------- |
  | *Neal Ford*     | Architectural Kata 2023 Jury Member |
  | *Mark Richards* | Architectural Kata 2023 Jury Member |
- | *Mark Richards* | Architectural Kata 2023 Jury Member |
  | *Jacqui Read*   | Architectural Kata 2023 Jury Member |
  | *Clare Sudbery* | Architectural Kata 2023 Jury Member |
  | *Robin Losey*   | Architectural Kata 2023 Jury Member |
@@ -549,7 +548,7 @@ User Settings domain provide one interface which used by
 
 The analytical domain is responsible for collecting data for reports, creating reports, and providing access to reports. This domain handles persistent data like raw analytical data and generated reports.
 
-![Component Overview](diagrams/Analytics-logical.drawio.svg)
+![Component Overview](diagrams/Component-Analytics.drawio.svg)
 
 In order to focus on business development and fast time to market, we decided to start with a lean serverless approach that reduces the effort for infrastructure management and maintenance to a minimum (see [ADR05 Rationale for Analytics components](adrs/adr05-analytics-make-or-buy.md)). In essence, a serverless data warehouse abstracts away the complexities of infrastructure and management, allowing Road warrior to focus on deriving insights from their data. It offers a combination of flexibility, scalability, and cost-effectiveness that is start of the art in the market. This approach allows us to focus on the core business and to scale the system easily.  
 
