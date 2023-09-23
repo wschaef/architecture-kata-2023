@@ -172,7 +172,8 @@ The Road Warrior platform serves various actors, including Travellers, External 
 ### Technical Context (C4-Level1)
 
 This chapter corresponds to C4 Model Level 1 [System Context diagram](https://c4model.com/#SystemContextDiagram). 
-It describes the system as a blackbox concentrating on the external dependencies.
+It describes the system as a blackbox concentrating on the external dependencies. 
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 ![Context Diagram](diagrams/Context.drawio.svg)
 
@@ -199,6 +200,7 @@ The solution strategy for the Road Warrior Travel Management Dashboard focuses o
 ## Whitebox Overall System (C4-Level2)
 
 This aligns with Level 2 of the C4 Model, specifically the [Container diagram](https://c4model.com/#ContainerDiagram). This diagram provides an internal view of the system, focusing on its components and their interactions with external systems. In our system, we equate containers with domains, and both terms are used interchangeably.
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 ![Container Diagram](diagrams/Container.drawio.svg)
 
@@ -409,6 +411,7 @@ To ensure the effectiveness of our UI channels and to maintain architectural coh
 3. [**ADR 4 Frontend Technology**](adrs/adr04-FrontendTechnology): This decision pertains to the selection of frontend technologies to be used in developing our UI channels.
 
 These decisions should reduce costs and time to market by following best ptractices as "stateful web url", "3rd party login" and open protocols as OpenID connect.
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 <img src="diagrams/Component-Channels.drawio.svg">
 
@@ -427,6 +430,7 @@ The following architectural decision is particularly relevant to the IAM domain:
 - [**ADR 2 User Onboarding and Authentication Strategy**](adrs/adrs02-authentication.md)
 
 This decision forms a key component of our strategy within the IAM domain, addressing user onboarding and authentication, which are fundamental aspects of identity and access management.
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 ![IAM Component Diagram](diagrams/Component-IAM.drawio.svg)
 
@@ -434,6 +438,7 @@ This decision forms a key component of our strategy within the IAM domain, addre
 
 The Trip Organizer domain allows users to manage their trips, create new ones, delete trips, and add reservations. Data is ingested from the Integration domain.
 Following diagram represent components which involved in this domain.
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 ![Trip Organizer Component Diagram](diagrams/Component-TripOrganizer.drawio.svg)
 
@@ -482,6 +487,7 @@ Following quality attributes are important for components in this domain:
 - UC16 Push notification about changes in trip
 
 ### Integration Domain (C4-Level3)
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 ![Integration Component Diagram](diagrams/Component-Integration.drawio.svg)
 
@@ -547,6 +553,7 @@ User Settings domain provide one interface which used by
 ### Aanlytics Domain (C4-Level3)
 
 The analytical domain is responsible for collecting data for reports, creating reports, and providing access to reports. This domain handles persistent data like raw analytical data and generated reports.
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 ![Component Overview](diagrams/Component-Analytics.drawio.svg)
 
@@ -586,6 +593,9 @@ Corresponding architecture decision record is [ADR 2 User Onboarding and Authent
 ![Authentication Flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/wschaef/architecture-kata-2023/main/diagrams/authentication.puml)
 
 ## Deployment View
+
+
+(Try out the [interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html))
 
 ![Deployment Diagram](diagrams/Deployment.drawio.svg)
 
