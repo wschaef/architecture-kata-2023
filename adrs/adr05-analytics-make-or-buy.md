@@ -1,4 +1,4 @@
-# ADR5: Analytics make of buy
+# ADR 5: Analytics make of buy
 
 **Status** : Accepted 
 

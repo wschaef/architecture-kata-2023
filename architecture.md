@@ -30,6 +30,8 @@ Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard i
 
 ![Approach](diagrams/Approach.drawio.png)
 
+[interactive view](https://wschaef.github.io/architecture-kata-2023/diagrams/C4.html)
+
 ## Requirements Overview
 
 ### Functional Requiremens

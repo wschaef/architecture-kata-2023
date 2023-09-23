@@ -1,4 +1,4 @@
-# ADR4: Using Flutter for Cross-Platform Development for Frontends
+# ADR 4: Using Flutter for Cross-Platform Development for Frontends
 
 **Status**: Accepted
 

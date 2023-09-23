@@ -1,4 +1,4 @@
-# ADR3: Share Trips by Reference
+# ADR 3: Share Trips by Reference
 
 **Status**: Accepted
 
