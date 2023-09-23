@@ -14,7 +14,7 @@ Our mission? To pioneer the next generation of online trip management dashboard,
 
 Introducing the Road Warrior Dashboard – a user-friendly interface designed to revolutionize the way you manage your trips. Whether you're at your computer or on the go with your mobile device, we've got you covered.
 
-![Vision](diagrams/Vision.drawio.svg)
+![Vision](diagrams/Vision.drawio.png)
 
 ### Key Features
 
@@ -25,6 +25,10 @@ Web and Mobile Accessibility: Your travel plans should be accessible wherever yo
 Route Change Tracking: We understand that travel plans can be subject to unexpected changes. Our dashboard keeps you informed about any alterations to your routes, ensuring that you're always up to date and prepared for any adjustments.
 
 Integration with Airlines, Hotels, and Car Rentals: The Road Warrior Dashboard isn't just an isolated tool – it's your gateway to the travel ecosystem. We're seamlessly integrated with most major airlines, hotel chains, and car rental agencies, making it effortless to manage all aspects of your journey in one place.
+
+## Approach
+
+![Approach](diagrams/Approach.drawio.png)
 
 ## Requirements Overview
 
