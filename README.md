@@ -3,6 +3,7 @@
 <img src="img/462706_unlimited_master_Koeln_S.jpg">
 
 ## Context
+<img align="right" width="227" height="311" src="img/award.png" alt="Winners!!!">
 
 This repository contains the results produced by the Team "Magenta Force" during the 
 [Architectural Kata @ O’Reilly](https://learning.oreilly.com/live-events/architectural-katas/0636920097101/0636920097100/?utm_medium=email&utm_source=platform+b2b&utm_campaign=superstream&utm_content=20230910+reminder2+lot).
